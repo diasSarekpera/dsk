@@ -196,7 +196,7 @@
       },
       "form": {
         "title": "Envoyer un message",
-        "desc": "Parle-moi de ton projet, d'une idée de collaboration -\nou dis simplement bonjour.",
+        "desc": "Parle-moi de ton projet, d'une idée de collaboration, ou dis simplement bonjour.",
         "name": {
           "label": "Nom complet",
           "placeholder": "Jean Dupont"
@@ -420,7 +420,7 @@
       },
       "form": {
         "title": "Send a message",
-        "desc": "Tell me about your project, a collaboration idea -\nor simply say hello.",
+        "desc": "Tell me about your project, a collaboration idea, or simply say hello.",
         "name": {
           "label": "Full name",
           "placeholder": "John Doe"
@@ -644,7 +644,7 @@
       },
       "form": {
         "title": "Enviar un mensaje",
-        "desc": "Cuéntame tu proyecto, una idea de colaboración -\no simplemente saluda.",
+        "desc": "Cuéntame tu proyecto, una idea de colaboración, o simplemente saluda.",
         "name": {
           "label": "Nombre completo",
           "placeholder": "Juan García"

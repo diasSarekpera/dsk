@@ -219,7 +219,7 @@ const i18n = (() => {
           },
           form: {
             title: "Envoyer un message",
-            desc: "Parle-moi de ton projet, d'une idée de collaboration -\nou dis simplement bonjour.",
+            desc: "Parle-moi de ton projet, d'une idée de collaboration, ou dis simplement bonjour.",
             name:    { label: "Nom complet",    placeholder: "Jean Dupont" },
             email:   { label: "Adresse e-mail", placeholder: "jean@exemple.com" },
             subject: { label: "Objet",          placeholder: "Projet, collaboration, question…" },
@@ -308,7 +308,7 @@ const i18n = (() => {
           },
           form: {
             title: "Send a message",
-            desc: "Tell me about your project, a collaboration idea -\nor simply say hello.",
+            desc: "Tell me about your project, a collaboration idea, or simply say hello.",
             name:    { label: "Full name",      placeholder: "John Doe" },
             email:   { label: "E-mail address", placeholder: "john@example.com" },
             subject: { label: "Subject",        placeholder: "Project, collaboration, question…" },
@@ -397,7 +397,7 @@ const i18n = (() => {
           },
           form: {
             title: "Enviar un mensaje",
-            desc: "Cuéntame tu proyecto, una idea de colaboración -\no simplemente saluda.",
+            desc: "Cuéntame tu proyecto, una idea de colaboración, o simplemente saluda.",
             name:    { label: "Nombre completo",     placeholder: "Juan García" },
             email:   { label: "Dirección de correo", placeholder: "juan@ejemplo.com" },
             subject: { label: "Asunto",              placeholder: "Proyecto, colaboración, pregunta…" },
