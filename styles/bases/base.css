@@ -1,0 +1,352 @@
+/* ============================================================
+   base.css — Styles globaux, typographie, body, utilitaires
+============================================================ */
+
+/* ── Body ── */
+
+body {
+  min-height:              100vh;
+  font-family:             var(--font-body);
+  font-size:               var(--text-xl);
+  line-height:             1.7;
+  color:                   var(--ink-base);
+  background-color:        var(--color-bg);
+  text-rendering:          optimizeLegibility;
+  -webkit-font-smoothing:  antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--caramel-pale);
+  color:            var(--ink-base);
+}
+
+:focus-visible {
+  outline:        2px solid var(--caramel);
+  outline-offset: 3px;
+}
+
+
+/* ── Layout de section ── */
+
+.about,
+.skills,
+.work,
+.blog,
+.contact {
+  position:  relative;
+  max-width: var(--container-max);
+  margin:    0 auto;
+  padding:   var(--space-28) var(--space-24) var(--space-24);
+  overflow:  hidden;
+}
+
+/* Ligne latérale décorative */
+.about::before,
+.skills::before,
+.work::before,
+.blog::before,
+.contact::before {
+  content:          '';
+  position:         absolute;
+  top:              calc(var(--space-28) + var(--space-8));
+  left:             3.25rem;
+  width:            1px;
+  bottom:           var(--space-24);
+  background-color: var(--ink-mid);
+  opacity:          0.30;
+}
+
+/* Le padding interne de chaque section (.about__header, .about__body,
+   etc.) se réduit progressivement jusqu'à 0 sur mobile — c'est donc
+   ce padding externe, partagé par les 5 sections, qui devient la
+   seule respiration horizontale restante. Sans palier responsive
+   ici, il resterait figé à 96px de chaque côté même à 320px de large,
+   ne laissant qu'environ 180px de contenu utilisable. */
+@media (max-width: 1024px) {
+  .about,
+  .skills,
+  .work,
+  .blog,
+  .contact { padding-inline: var(--space-12); }
+}
+
+@media (max-width: 768px) {
+  .about,
+  .skills,
+  .work,
+  .blog,
+  .contact {
+    padding: var(--space-16) var(--space-6) var(--space-14);
+  }
+
+  /* Le numéro de section vertical et la ligne décorative n'ont de
+     sens que lorsqu'il reste de la marge pour les accueillir sans
+     chevaucher le contenu (comme dans le footer, déjà traité ainsi) */
+  .about::before,
+  .skills::before,
+  .work::before,
+  .blog::before,
+  .contact::before { display: none; }
+
+  .about .section-index,
+  .skills .section-index,
+  .work .section-index,
+  .blog .section-index,
+  .contact .section-index { display: none; }
+}
+
+
+/* ── Numéro de section vertical ── */
+
+.section-index {
+  position:         absolute;
+  top:              var(--space-28);
+  left:             2.85rem;
+  font-family:      var(--font-body);
+  font-size:        var(--text-xs);
+  font-weight:      500;
+  letter-spacing:   0.14em;
+  text-transform:   uppercase;
+  color:            var(--ink-mid);
+  writing-mode:     vertical-rl;
+  text-orientation: mixed;
+}
+
+
+/* ── Eyebrow ── */
+
+.section-eyebrow {
+  display:        block;
+  font-family:    var(--font-body);
+  font-size:      var(--text-sm);
+  font-weight:    500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color:          var(--ink-mid);
+  margin-bottom:  var(--space-4);
+}
+
+
+/* ── Titre de section ── */
+
+.section-title {
+  font-family:    var(--font-display);
+  font-size:      clamp(3rem, 6vw, 5.5rem);
+  font-weight:    300;
+  font-style:     italic;
+  letter-spacing: -0.02em;
+  line-height:    0.95;
+  color:          var(--ink-deep);
+}
+
+
+/* ── Règle accent ── */
+
+.section-title-rule {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-3);
+  margin-top:  var(--space-6);
+}
+
+.section-title-rule__line {
+  display:          block;
+  width:            40px;
+  height:           1px;
+  background-color: var(--caramel);
+}
+
+.section-title-rule__dot {
+  display:          block;
+  width:            5px;
+  height:           5px;
+  border-radius:    var(--radius-pill);
+  background-color: var(--caramel-light);
+}
+
+
+/* ── Séparateur bas de section ── */
+
+.section-divider {
+  display:      flex;
+  align-items:  center;
+  gap:          var(--space-6);
+  margin-top:   var(--space-20);
+  padding-left: var(--space-14);
+  opacity:      0;
+  animation:    fade-up 600ms cubic-bezier(0, 0, 0.3, 1) 700ms forwards;
+}
+
+.section-divider__line {
+  flex:             1;
+  height:           1px;
+  background-color: var(--border);
+}
+
+.section-divider__label {
+  font-family:    var(--font-body);
+  font-size:      var(--text-xs);
+  font-weight:    500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color:          var(--ink-mid);
+}
+
+
+/* ── Système de reveal au scroll ──────────────────────────
+   Voir script/scroll-reveal.js pour la logique de déclenchement
+   (IntersectionObserver). Un seul système pour toutes les
+   sections, au lieu d'une @keyframes + délai fixe par élément. */
+
+[data-reveal] {
+  opacity:    0;
+  transform:  translateY(24px);
+  transition:
+    opacity   600ms cubic-bezier(0, 0, 0.3, 1),
+    transform 600ms cubic-bezier(0, 0, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal="right"] { transform: translateX(-20px); }
+
+[data-reveal].is-inview {
+  opacity:   1;
+  transform: none;
+}
+
+
+/* ── Bouton partagé ── */
+
+.btn {
+  display:        inline-flex;
+  align-items:    center;
+  gap:            var(--space-2-5);
+  padding:        0.875rem var(--space-7);
+  font-family:    var(--font-body);
+  font-size:      var(--text-sm);
+  font-weight:    500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border:         1px solid var(--ink-deep);
+  color:          var(--ink-deep);
+  background:     transparent;
+  border-radius:  var(--radius-sm);
+  cursor:         pointer;
+  white-space:    nowrap;
+  transition:
+    background 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    color      300ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform  100ms ease;
+}
+
+.btn:hover  { background: var(--ink-deep); color: var(--color-bg); }
+.btn:active { transform: scale(0.97); }
+
+.btn:disabled {
+  opacity:        0.45;
+  cursor:         not-allowed;
+  pointer-events: none;
+}
+
+.btn--caramel {
+  border-color: var(--caramel);
+  color:        var(--caramel);
+}
+
+.btn--caramel:hover {
+  background: var(--caramel);
+  color:      var(--ivory-card);
+}
+
+.btn__arrow {
+  width:      14px;
+  height:     14px;
+  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn:hover .btn__arrow { transform: translateX(4px); }
+
+
+/* ── Sélecteur de langue ── */
+
+.lang-switcher {
+  display:       flex;
+  align-items:   center;
+  border:        1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow:      hidden;
+}
+
+.lang-switcher__btn {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  padding:         0.3rem 0.6rem;
+  font-family:     var(--font-body);
+  font-size:       var(--text-xs);
+  font-weight:     500;
+  letter-spacing:  0.1em;
+  text-transform:  uppercase;
+  color:           var(--ink-mid);
+  background:      transparent;
+  border:          none;
+  border-right:    1px solid var(--border);
+  cursor:          pointer;
+  line-height:     1;
+  transition:
+    background 200ms ease,
+    color      200ms ease;
+}
+
+.lang-switcher__btn:last-child  { border-right: none; }
+.lang-switcher__btn:hover       { background: var(--caramel-pale); color: var(--ink-deep); }
+.lang-switcher__btn:active      { background: var(--caramel); color: var(--ivory-card); }
+.lang-switcher__btn.is-active   { background: var(--ink-deep);     color: var(--ivory-card); }
+
+
+/* ── Keyframes globales ── */
+
+@keyframes dot-pulse {
+  0%, 100% { opacity: 1;   transform: scale(1);    }
+  50%       { opacity: 0.6; transform: scale(0.85); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes fade-right {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0);     }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes line-grow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes line-grow-v {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+
+
+/* ── Accessibilité — prefers-reduced-motion ── */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration:        0.01ms !important;
+    animation-iteration-count: 1      !important;
+    transition-duration:       0.01ms !important;
+    scroll-behavior:           auto   !important;
+  }
+}

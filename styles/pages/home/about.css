@@ -1,0 +1,188 @@
+/* ============================================================
+   about.css — Section 02 · À propos
+============================================================ */
+
+.about__header {
+  margin-bottom: var(--space-16);
+  padding-left:  var(--space-14);
+}
+
+.about__body {
+  display:      flex;
+  gap:          var(--space-18);
+  align-items:  flex-start;
+  padding-left: var(--space-14);
+}
+
+.about__photo-col {
+  flex:  0 0 auto;
+  width: 340px;
+}
+
+.about__photo-frame { position: relative; }
+
+.about__photo-frame::before {
+  content:       '';
+  position:      absolute;
+  inset:         -10px -10px 10px 10px;
+  border:        1px solid var(--caramel-pale);
+  border-radius: 4px;
+  z-index:       var(--z-base);
+  transition:    inset 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about__photo-frame:hover::before { inset: -14px -14px 14px 14px; }
+
+.about__photo {
+  display:         block;
+  position:        relative;
+  z-index:         var(--z-raised);
+  width:           100%;
+  height:          460px;
+  object-fit:      cover;
+  object-position: center top;
+  border-radius:   4px;
+  filter:          saturate(0.9);
+  transition:      filter 400ms ease;
+}
+
+.about__photo:hover { filter: saturate(1); }
+
+.about__availability {
+  display:       flex;
+  align-items:   center;
+  gap:           var(--space-2-5);
+  margin-top:    var(--space-5);
+  padding:       var(--space-2-5) var(--space-4);
+  background:    var(--ivory-card);
+  border:        1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.about__availability-dot {
+  width:            7px;
+  height:           7px;
+  border-radius:    var(--radius-pill);
+  background-color: var(--status-online);
+  flex-shrink:      0;
+  animation:        dot-pulse 2.4s ease infinite;
+}
+
+.about__availability-label {
+  font-size:      var(--text-sm);
+  font-weight:    500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color:          var(--ink-base);
+}
+
+.about__content {
+  flex:      1 1 0;
+  min-width: 0;
+}
+
+.about__role {
+  font-family:    var(--font-display);
+  font-size:      clamp(1.5rem, 2.5vw, 2rem);
+  font-weight:    500;
+  letter-spacing: -0.01em;
+  line-height:    1.15;
+  color:          var(--ink-deep);
+  margin-bottom:  var(--space-3);
+}
+
+.about__role-dot { color: var(--caramel); }
+
+.about__tagline {
+  font-family:    var(--font-display);
+  font-style:     italic;
+  font-size:      var(--text-xl);
+  font-weight:    300;
+  color:          var(--ink-mid);
+  line-height:    1.75;
+  margin-bottom:  var(--space-10);
+  padding-bottom: var(--space-10);
+  border-bottom:  1px solid var(--border);
+}
+
+.about__info-grid {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap:            var(--space-10);
+  margin-bottom:         var(--space-10);
+}
+
+.about__info-item {
+  display:       flex;
+  align-items:   center;
+  gap:           var(--space-3);
+  padding:       var(--space-4) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.about__info-label {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-2-5);
+  min-width:   105px;
+  flex-shrink: 0;
+}
+
+.about__info-label dt {
+  font-size:      var(--text-base);
+  font-weight:    600;
+  letter-spacing: 0.05em;
+  color:          var(--ink-base);
+  white-space:    nowrap;
+}
+
+.about__info-icon {
+  width:        17px;
+  height:       17px;
+  flex-shrink:  0;
+  color:        var(--caramel);
+  stroke-width: 1.5;
+}
+
+.about__info-item dd {
+  font-size:   var(--text-md);
+  font-weight: 400;
+  color:       var(--ink-base);
+  white-space: nowrap;
+}
+
+.about__bio {
+  font-size:     var(--text-lg);
+  font-weight:   400;
+  color:         var(--ink-mid);
+  line-height:   1.85;
+  margin-bottom: var(--space-10);
+}
+
+.about__cta {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-6);
+}
+
+
+/* ── Responsive ── */
+
+@media (max-width: 1024px) {
+  .about__header,
+  .about__body { padding-left: var(--space-10); }
+}
+
+@media (max-width: 900px) {
+  .about__body      { flex-direction: column; gap: var(--space-12); }
+  .about__photo-col { width: 100%; max-width: 380px; }
+  .about__photo     { height: 400px; }
+}
+
+@media (max-width: 768px) {
+  .about__header,
+  .about__body    { padding-left: 0; }
+
+  .about__info-grid { grid-template-columns: 1fr; }
+  .about__cta       { flex-direction: column; align-items: flex-start; }
+}

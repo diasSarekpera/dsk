@@ -1,0 +1,189 @@
+/* ============================================================
+   blog.css — Section 05 · Blog / Articles
+============================================================ */
+
+.blog__header {
+  display:         flex;
+  align-items:     flex-end;
+  justify-content: space-between;
+  padding-left:    var(--space-14);
+  margin-bottom:   var(--space-16);
+}
+
+.blog__header-left {
+  display:        flex;
+  flex-direction: column;
+}
+
+.blog__grid {
+  display:               grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap:            var(--space-7);
+  align-items:           stretch;
+  padding-left:          var(--space-14);
+}
+
+.post {
+  display:          flex;
+  flex-direction:   column;
+  height:           100%;
+  background-color: var(--ivory-card);
+  border:           1px solid var(--border);
+  border-radius:    var(--radius-md);
+  overflow:         hidden;
+}
+
+.post__link {
+  display:        flex;
+  flex-direction: column;
+  height:         100%;
+  color:          inherit;
+}
+
+.post__image-wrapper {
+  width:        100%;
+  aspect-ratio: 3 / 2;
+  overflow:     hidden;
+  flex-shrink:  0;
+  position:     relative;
+}
+
+.post__image-tag {
+  position:        absolute;
+  bottom:          var(--space-4);
+  left:            var(--space-4);
+  z-index:         var(--z-sticky);
+  font-family:     var(--font-body);
+  font-size:       var(--text-xs);
+  font-weight:     500;
+  letter-spacing:  0.12em;
+  text-transform:  uppercase;
+  color:           var(--ivory-card);
+  background:      rgba(var(--ink-deep-rgb), var(--alpha-60));
+  backdrop-filter: blur(6px);
+  padding:         0.3rem var(--space-2-5);
+  border-radius:   var(--radius-sm);
+}
+
+.post__image {
+  display:         block;
+  width:           100%;
+  height:          100%;
+  object-fit:      cover;
+  object-position: center;
+  filter:          saturate(0.88);
+  transition:
+    transform 450ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter    450ms ease;
+}
+
+.post__link:hover .post__image { transform: scale(1.05); filter: saturate(1); }
+
+.post__body {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-3);
+  padding:        1.625rem var(--space-7) var(--space-7);
+  flex:           1 1 0;
+}
+
+.post__meta {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-2);
+}
+
+.post__category {
+  font-family:    var(--font-body);
+  font-size:      var(--text-xs);
+  font-weight:    500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color:          var(--caramel);
+}
+
+.post__separator {
+  font-size:   var(--text-sm);
+  color:       var(--ink-mid);
+  line-height: 1;
+}
+
+.post__date {
+  font-family: var(--font-body);
+  font-size:   var(--text-base);
+  font-weight: 400;
+  color:       var(--ink-mid);
+}
+
+.post__title {
+  font-family:    var(--font-display);
+  font-size:      clamp(1.1875rem, 1.5vw, 1.5rem);
+  font-weight:    400;
+  letter-spacing: -0.01em;
+  line-height:    1.25;
+  color:          var(--ink-deep);
+}
+
+.post__rule {
+  width:            28px;
+  height:           1px;
+  background-color: var(--caramel-pale);
+  flex-shrink:      0;
+}
+
+.post__excerpt {
+  font-family: var(--font-body);
+  font-size:   var(--text-md);
+  font-weight: 400;
+  color:       var(--ink-mid);
+  line-height: 1.8;
+  flex:        1 1 0;
+}
+
+.post__read-more {
+  display:        inline-flex;
+  align-items:    center;
+  gap:            var(--space-2);
+  font-family:    var(--font-body);
+  font-size:      var(--text-sm);
+  font-weight:    500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color:          var(--ink-mid);
+  margin-top:     var(--space-2);
+  width:          fit-content;
+  transition:
+    color 200ms ease,
+    gap   250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.post__read-more svg {
+  width:      12px;
+  height:     12px;
+  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.post__link:hover .post__read-more     { color: var(--caramel); gap: var(--space-3); }
+.post__link:hover .post__read-more svg { transform: translateX(3px); }
+
+
+/* ── Responsive ── */
+
+@media (max-width: 1024px) {
+  .blog__header,
+  .blog__grid          { padding-left: var(--space-10); }
+  .blog__grid          { column-gap: var(--space-5); }
+}
+
+@media (max-width: 900px) {
+  .blog__grid            { grid-template-columns: repeat(2, 1fr); row-gap: var(--space-6); }
+  .post:nth-child(3)     { grid-column: 1 / -1; max-width: calc(50% - 0.625rem); }
+}
+
+@media (max-width: 768px) {
+  .blog__header      { flex-direction: column; align-items: flex-start; gap: var(--space-8); }
+  .blog__header,
+  .blog__grid        { padding-left: 0; }
+  .blog__grid        { grid-template-columns: 1fr; row-gap: var(--space-6); }
+  .post:nth-child(3) { grid-column: auto; max-width: 100%; }
+}
