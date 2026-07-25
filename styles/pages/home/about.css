@@ -101,8 +101,6 @@
   color:          var(--ink-mid);
   line-height:    1.75;
   margin-bottom:  var(--space-10);
-  padding-bottom: var(--space-10);
-  border-bottom:  1px solid var(--border);
 }
 
 .about__info-grid {
@@ -110,6 +108,7 @@
   grid-template-columns: 1fr 1fr;
   column-gap:            var(--space-10);
   margin-bottom:         var(--space-10);
+  border-top:            1px solid var(--border);
 }
 
 .about__info-item {
