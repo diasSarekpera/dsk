@@ -77,7 +77,7 @@ body {
   .work,
   .blog,
   .contact {
-    padding: var(--space-16) var(--space-6) var(--space-14);
+    padding: var(--space-16) var(--space-5) var(--space-14);
   }
 
   /* Le numéro de section vertical et la ligne décorative n'ont de
@@ -94,6 +94,17 @@ body {
   .work .section-index,
   .blog .section-index,
   .contact .section-index { display: none; }
+}
+
+/* Petit smartphone : encore un peu moins de marge latérale pour que
+   le contenu (cartes, formulaire, listes) ait davantage de largeur
+   pour respirer plutôt que de se sentir compressé au centre. */
+@media (max-width: 480px) {
+  .about,
+  .skills,
+  .work,
+  .blog,
+  .contact { padding-inline: var(--space-4); }
 }
 
 

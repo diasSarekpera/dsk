@@ -33,7 +33,7 @@
 
   /* ── Polices ──────────────────────────────────────────── */
   --font-display:  'Cormorant Garamond', Georgia, serif;
-  --font-body:     'DM Sans', system-ui, sans-serif;
+  --font-body:     'Jost', system-ui, sans-serif;
 
   /* ── Couleurs de base ─────────────────────────────────── */
   --color-bg:      #f0ede8;
@@ -142,4 +142,8 @@
   --z-sticky:   2;
   --z-overlay:  200;
   --z-modal:    300;
+  --z-header:   400; /* toujours au-dessus du panneau plein écran du
+                         menu mobile, pour que le bouton burger reste
+                         cliquable (comme bouton de fermeture) une
+                         fois le menu ouvert */
 }
