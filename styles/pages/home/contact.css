@@ -436,14 +436,14 @@
      avec le padding externe de la section pour resserrer le contenu
      au centre de l'écran. On le réduit ici pour que la carte respire
      davantage sur mobile. */
-  .contact__info         { padding: var(--space-8) var(--space-5); }
-  .contact__form-wrapper { padding: var(--space-8) var(--space-5); }
+  .contact__info         { padding: var(--space-8) var(--space-4); }
+  .contact__form-wrapper { padding: var(--space-8) var(--space-4); }
 
   .contact__info-list   { flex-direction: column; }
   .contact__info-item   { flex: 1 1 auto; }
   .contact__form-row    { grid-template-columns: 1fr; }
   .contact__form-footer { flex-direction: column; align-items: stretch; }
-  .contact__submit      { justify-content: center; }
+  .contact__submit      { width: 100%; justify-content: center; }
 
   /* On garde uniquement le repère "06 / 07" — le copyright est déjà
      répété dans le footer du site juste en dessous, inutile de le
@@ -453,5 +453,5 @@
 
 @media (max-width: 480px) {
   .contact__info,
-  .contact__form-wrapper { padding-inline: var(--space-4); }
+  .contact__form-wrapper { padding-inline: var(--space-3); }
 }

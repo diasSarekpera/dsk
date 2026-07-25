@@ -5,9 +5,16 @@
 .above-fold {
   position:   relative;
   width:      100%;
-  height:     100vh;
-  height:     100dvh; /* évite le saut de mise en page quand la barre
-                          d'adresse mobile apparaît/disparaît */
+  height:     100vh;  /* repli pour les très vieux navigateurs */
+  height:     100svh; /* hauteur de viewport "small" : figée dès le
+                          départ sur le plus petit espace possible
+                          (barre d'adresse visible), donc ne se
+                          recalcule jamais pendant le scroll — contrai-
+                          rement à 100dvh qui, lui, change en direct
+                          à mesure que la barre du navigateur se
+                          réduit/réapparaît, ce qui donnait l'impression
+                          que la section "recalculait" sa hauteur au
+                          moment de passer le hero. */
   min-height: 600px;
   overflow:   hidden;
 }

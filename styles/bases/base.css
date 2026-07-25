@@ -77,7 +77,15 @@ body {
   .work,
   .blog,
   .contact {
-    padding: var(--space-16) var(--space-5) var(--space-14);
+    padding: var(--space-16) var(--space-4) var(--space-14);
+  }
+
+  /* Boutons pleine largeur sur mobile : plus faciles à toucher et
+     visuellement plus affirmés qu'un bouton qui hugge son texte au
+     milieu d'un écran étroit. */
+  .btn {
+    width:           100%;
+    justify-content: center;
   }
 
   /* Le numéro de section vertical et la ligne décorative n'ont de
@@ -104,7 +112,7 @@ body {
   .skills,
   .work,
   .blog,
-  .contact { padding-inline: var(--space-4); }
+  .contact { padding-inline: var(--space-3); }
 }
 
 
