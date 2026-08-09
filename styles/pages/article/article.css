@@ -187,8 +187,7 @@
 .article__quote {
   margin:       var(--space-10) 0;
   font-family:  var(--font-display);
-  font-style:   italic;
-  font-weight:  500;
+  font-weight:  600;
   font-size:    var(--text-xl);
   line-height:  1.6;
   color:        var(--ink-deep);
