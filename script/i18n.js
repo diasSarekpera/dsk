@@ -58,6 +58,51 @@ const i18n = (() => {
     }
   }
 
+  /* ── Langue passée dans l'URL (?lang=en) ─────────────────
+     C'est la source de vérité principale pour propager la langue
+     d'une page à l'autre : contrairement à sessionStorage, un
+     paramètre d'URL fonctionne toujours, même en ouvrant le site
+     directement depuis les fichiers locaux (protocole file://),
+     où le stockage du navigateur est parfois bloqué ou cloisonné
+     par page. Il survit aussi nativement à un rechargement, puisque
+     le navigateur conserve l'URL complète. */
+  function getUrlLang() {
+    try {
+      const value = new URLSearchParams(window.location.search).get('lang');
+      return SUPPORTED_LANGS.includes(value) ? value : null;
+    } catch (err) {
+      return null;
+    }
+  }
+
+  /* Ajoute/replace ?lang=xx sur un href relatif, sans toucher au
+     reste du chemin, de la requête existante ni de l'ancre (#...). */
+  function withLangParam(href, lang) {
+    const hashIndex = href.indexOf('#');
+    const hash = hashIndex >= 0 ? href.slice(hashIndex) : '';
+    const pathAndQuery = hashIndex >= 0 ? href.slice(0, hashIndex) : href;
+    const qIndex = pathAndQuery.indexOf('?');
+    const path  = qIndex >= 0 ? pathAndQuery.slice(0, qIndex) : pathAndQuery;
+    const query = qIndex >= 0 ? pathAndQuery.slice(qIndex + 1) : '';
+    const params = new URLSearchParams(query);
+    params.set('lang', lang);
+    return path + '?' + params.toString() + hash;
+  }
+
+  /* ── Répercuter la langue active sur tous les liens internes ─
+     Ainsi, en cliquant sur n'importe quel lien du site, la page
+     suivante reçoit ?lang=xx dans son URL et démarre directement
+     dans la bonne langue - avant même que sessionStorage entre en jeu. */
+  function syncInternalLinks() {
+    document.querySelectorAll('a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      if (!href || href === '' || href.startsWith('#')) return;
+      if (/^[a-z][a-z0-9+.\-]*:/i.test(href)) return; // http:, https:, mailto:, tel:, javascript:...
+      if (href.startsWith('//')) return;               // URL protocole-relative externe
+      a.setAttribute('href', withLangParam(href, currentLang));
+    });
+  }
+
   /* ── Résolution d'une clé pointée "a.b.c" ─────────────── */
   function resolvePath(obj, path) {
     return path.split('.').reduce((acc, key) => {
@@ -183,6 +228,7 @@ const i18n = (() => {
     storeLang(lang);
     applyTranslations();
     updateLangButtons(lang);
+    syncInternalLinks();
   }
 
   /* ── Retourner la langue active ─────────────────────────── */
@@ -515,10 +561,20 @@ const i18n = (() => {
        c'est ce qui permet de garder la langue choisie en passant
        d'une page à l'autre, tout en repartant du français à chaque
        nouvelle visite du site. */
-    currentLang = getStoredLang() || 'fr';
+    /* Ordre de priorité pour déterminer la langue au chargement :
+       1. Paramètre ?lang= dans l'URL (fonctionne toujours, même en
+          local via file://, et survit à un simple rechargement).
+       2. Langue choisie plus tôt dans sessionStorage, si le
+          navigateur le permet.
+       3. Français par défaut - ce qui garantit qu'une toute
+          nouvelle visite du site (sans ?lang= et sans session)
+          démarre bien en français. */
+    currentLang = getUrlLang() || getStoredLang() || 'fr';
+    storeLang(currentLang);
     applyTranslations();
     updateLangButtons(currentLang);
     bindButtons();
+    syncInternalLinks();
   }
 
   /* Lancer après le chargement du DOM */
