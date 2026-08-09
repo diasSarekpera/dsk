@@ -55,9 +55,9 @@
 }
 
 .journal-masthead__feather {
-  width:         30px;
-  height:        30px;
-  margin-bottom: var(--space-5);
+  width:         auto;
+  height:        clamp(72px, 11vw, 112px);
+  margin-bottom: var(--space-6);
   color:         var(--caramel);
 }
 
