@@ -177,8 +177,6 @@
   color:       var(--ink-deep);
 }
 
-.article__body em { font-style: italic; color: var(--ink-deep); }
-
 .article__rule {
   width:         40px;
   height:        1px;
