@@ -139,16 +139,19 @@
   .work__grid          { column-gap: var(--space-5); }
 }
 
+/* 3 cartes sur une grille 2 colonnes laisse un 3e élément seul
+   sur sa ligne : on l'élargit pour qu'il occupe la moitié de la
+   largeur plutôt que de rester collé à gauche. */
 @media (max-width: 900px) {
-  .work__grid               { grid-template-columns: repeat(2, 1fr); row-gap: var(--space-10); }
-  .project:nth-child(3)     { grid-column: 1 / -1; max-width: calc(50% - 0.625rem); }
+  .work__grid           { grid-template-columns: repeat(2, 1fr); row-gap: var(--space-10); }
+  .project:nth-child(3) { grid-column: 1 / -1; max-width: calc(50% - 0.625rem); }
 }
 
 @media (max-width: 768px) {
   .work__header         { flex-direction: column; align-items: flex-start; gap: var(--space-8); }
   .work__header,
   .work__grid           { padding-left: 0; }
-  .work__grid           { grid-template-columns: 1fr; row-gap: var(--space-10); }
+  .work__grid            { grid-template-columns: 1fr; row-gap: var(--space-10); }
   .project:nth-child(3) { grid-column: auto; max-width: 100%; }
 
   /* Colonne pleine largeur : le ratio 6/5 des grilles 2-3 colonnes

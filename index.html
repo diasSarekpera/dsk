@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="./styles/pages/home/skills.css" />
   <link rel="stylesheet" href="./styles/pages/home/work.css" />
   <link rel="stylesheet" href="./styles/pages/home/blog.css" />
+  <link rel="stylesheet" href="./styles/pages/blog-page/journal.css" />
   <link rel="stylesheet" href="./styles/pages/home/contact.css" />
   <link rel="stylesheet" href="./styles/pages/home/footer.css" />
 </head>
@@ -39,7 +40,7 @@
     <header class="header" id="header">
       <div class="header__inner">
 
-        <a href="#" class="header__logo" aria-label="DSK - Retour en haut">
+        <a href="index.html" class="header__logo" aria-label="DSK - Retour à l'accueil">
           <span class="header__logo-text">DSK</span>
         </a>
 
@@ -47,19 +48,19 @@
         <nav class="header__nav" aria-label="Navigation principale">
           <ul class="header__nav-list">
             <li class="header__nav-item is-active">
-              <a href="#"        class="header__nav-link" data-i18n="nav.home">Accueil</a>
+              <a href="index.html" class="header__nav-link" data-i18n="nav.home">Accueil</a>
             </li>
             <li class="header__nav-item">
-              <a href="#about"   class="header__nav-link" data-i18n="nav.about">À propos</a>
+              <a href="#about" class="header__nav-link" data-i18n="nav.about">À propos</a>
             </li>
             <li class="header__nav-item">
               <a href="#skills"  class="header__nav-link" data-i18n="nav.skills">Compétences</a>
             </li>
             <li class="header__nav-item">
-              <a href="#work"    class="header__nav-link" data-i18n="nav.work">Projets</a>
+              <a href="#work" class="header__nav-link" data-i18n="nav.work">Projets</a>
             </li>
             <li class="header__nav-item">
-              <a href="#blog"    class="header__nav-link" data-i18n="nav.blog">Blog</a>
+              <a href="#blog"  class="header__nav-link" data-i18n="nav.blog">Blog</a>
             </li>
             <li class="header__nav-item">
               <a href="#contact" class="header__nav-link" data-i18n="nav.contact">Contact</a>
@@ -139,19 +140,19 @@
     <nav aria-label="Navigation mobile">
       <ul class="mobile-menu__list">
         <li class="mobile-menu__item is-active">
-          <a href="#"        class="mobile-menu__link" data-i18n="nav.home">Accueil</a>
+          <a href="index.html" class="mobile-menu__link" data-i18n="nav.home">Accueil</a>
         </li>
         <li class="mobile-menu__item">
-          <a href="#about"   class="mobile-menu__link" data-i18n="nav.about">À propos</a>
+          <a href="#about" class="mobile-menu__link" data-i18n="nav.about">À propos</a>
         </li>
         <li class="mobile-menu__item">
           <a href="#skills"  class="mobile-menu__link" data-i18n="nav.skills">Compétences</a>
         </li>
         <li class="mobile-menu__item">
-          <a href="#work"    class="mobile-menu__link" data-i18n="nav.work">Projets</a>
+          <a href="#work" class="mobile-menu__link" data-i18n="nav.work">Projets</a>
         </li>
         <li class="mobile-menu__item">
-          <a href="#blog"    class="mobile-menu__link" data-i18n="nav.blog">Blog</a>
+          <a href="#blog"  class="mobile-menu__link" data-i18n="nav.blog">Blog</a>
         </li>
         <li class="mobile-menu__item">
           <a href="#contact" class="mobile-menu__link" data-i18n="nav.contact">Contact</a>
@@ -260,7 +261,7 @@
               </svg>
               <dt data-i18n="about.info.birthday.label">Date de naissance</dt>
             </div>
-            <dd data-i18n="about.info.birthday.value">1er mai 1995</dd>
+            <dd data-i18n="about.info.birthday.value">5 décembre 2006</dd>
           </div>
 
           <div class="about__info-item">
@@ -270,7 +271,7 @@
               </svg>
               <dt data-i18n="about.info.age.label">Âge</dt>
             </div>
-            <dd data-i18n="about.info.age.value">30 ans</dd>
+            <dd data-i18n="about.info.age.value">20 ans</dd>
           </div>
 
           <div class="about__info-item">
@@ -280,7 +281,7 @@
               </svg>
               <dt data-i18n="about.info.website.label">Site web</dt>
             </div>
-            <dd data-i18n="about.info.website.value">www.example.com</dd>
+            <dd data-i18n="about.info.website.value">dsk.ink</dd>
           </div>
 
           <div class="about__info-item">
@@ -300,7 +301,7 @@
               </svg>
               <dt data-i18n="about.info.phone.label">Téléphone</dt>
             </div>
-            <dd data-i18n="about.info.phone.value">+123 456 7890</dd>
+            <dd data-i18n="about.info.phone.value">+229 01 91 15 19 44</dd>
           </div>
 
           <div class="about__info-item">
@@ -310,7 +311,7 @@
               </svg>
               <dt data-i18n="about.info.email.label">E-mail</dt>
             </div>
-            <dd data-i18n="about.info.email.value">email@example.com</dd>
+            <dd data-i18n="about.info.email.value">diassarekpera@mail.com</dd>
           </div>
 
           <div class="about__info-item">
@@ -349,13 +350,13 @@
 
         <!-- Appels à l'action -->
         <div class="about__cta">
-          <a href="#about" class="btn" aria-label="En savoir plus sur moi">
+          <a href="pages/about/index.html" class="btn" aria-label="En savoir plus sur moi">
             <span data-i18n="about.cta.contact">En savoir plus</span>
             <svg class="btn__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
             </svg>
           </a>
-          <a href="#work" class="btn btn--caramel" aria-label="Voir mes projets réalisés">
+          <a href="pages/projets/index.html" class="btn btn--caramel" aria-label="Voir mes projets réalisés">
             <span data-i18n="about.cta.cv">Voir mes projets</span>
             <svg class="btn__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
@@ -552,7 +553,7 @@
           <span class="section-title-rule__dot"></span>
         </div>
       </div>
-      <a href="#" class="btn" aria-label="Voir tous les projets" data-i18n-aria-label="work.cta_aria">
+      <a href="pages/projets/index.html" class="btn" aria-label="Voir tous les projets" data-i18n-aria-label="work.cta_aria">
         <span data-i18n="work.cta">Voir tous les projets</span>
         <svg class="btn__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <line x1="5" y1="12" x2="19" y2="12"/>
@@ -564,13 +565,14 @@
     <!-- Grille de projets -->
     <div class="work__grid">
 
+      <!-- Projet 1 : Cultivora Land -->
       <article class="project" data-reveal>
         <a href="#" class="project__link" aria-label="Voir Cultivora Land" data-i18n-aria-label="work.project1.aria">
           <div class="project__image-wrapper">
             <span class="project__num" aria-hidden="true">01</span>
             <img
               class="project__image"
-              src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80"
+              src="/assets/images/logo-cultivora-land.png"
               alt="Cultivora Land - Le Jardin du Savoir"
               data-i18n-alt="work.project1.img.alt"
               width="600"
@@ -596,26 +598,26 @@
         </a>
       </article>
 
-      <!-- Projet 2 -->
+      <!-- Projet 2 : T3W -->
       <article class="project" data-reveal style="--reveal-delay: 120ms">
-        <a href="#" class="project__link" aria-label="Voir The DSK Journal" data-i18n-aria-label="work.project2.aria">
+        <a href="#" class="project__link" aria-label="Voir T3W" data-i18n-aria-label="work.project2.aria">
           <div class="project__image-wrapper">
             <span class="project__num" aria-hidden="true">02</span>
             <img
               class="project__image"
-              src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80"
-              alt="The DSK Journal - carnet de réflexions" data-i18n-alt="work.project2.img.alt"
+              src="/assets/images/logo-t3w.png"
+              alt="T3W - The 3 Words, plateforme d'apprentissage" data-i18n-alt="work.project2.img.alt"
               width="600"
               height="400"
             />
           </div>
           <div class="project__body">
             <div class="project__body-text">
-              <span class="project__category" data-i18n="work.project2.category">Blog &amp; Réflexions</span>
-              <h3 class="project__name" data-i18n="work.project2.name">The DSK Journal</h3>
+              <span class="project__category" data-i18n="work.project2.category">Éducation &amp; Apprentissage</span>
+              <h3 class="project__name" data-i18n="work.project2.name">T3W</h3>
               <p class="project__desc" data-i18n="work.project2.desc">
-                Un espace d'écriture pour partager des idées,<br />
-                observer et réfléchir sur le monde.
+                The 3 Words - une plateforme d'apprentissage<br />
+                pensée pour aller à l'essentiel et progresser efficacement.
               </p>
             </div>
             <span class="project__arrow" aria-hidden="true">
@@ -628,26 +630,26 @@
         </a>
       </article>
 
-      <!-- Projet 3 -->
+      <!-- Projet 3 : The DSK Journal -->
       <article class="project" data-reveal style="--reveal-delay: 240ms">
-        <a href="#" class="project__link" aria-label="Voir Portfolio DSK" data-i18n-aria-label="work.project3.aria">
+        <a href="#" class="project__link" aria-label="Voir The DSK Journal" data-i18n-aria-label="work.project3.aria">
           <div class="project__image-wrapper">
             <span class="project__num" aria-hidden="true">03</span>
             <img
               class="project__image"
-              src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80"
-              alt="Portfolio DSK - interface web moderne" data-i18n-alt="work.project3.img.alt"
+              src="/assets/images/logo-the-dsk-journal.png"
+              alt="The DSK Journal - carnet de réflexions" data-i18n-alt="work.project3.img.alt"
               width="600"
               height="400"
             />
           </div>
           <div class="project__body">
             <div class="project__body-text">
-              <span class="project__category" data-i18n="work.project3.category">Site vitrine</span>
-              <h3 class="project__name" data-i18n="work.project3.name">Portfolio DSK</h3>
+              <span class="project__category" data-i18n="work.project3.category">Blog &amp; Réflexions</span>
+              <h3 class="project__name" data-i18n="work.project3.name">The DSK Journal</h3>
               <p class="project__desc" data-i18n="work.project3.desc">
-                Conception et développement de ce portfolio -<br />
-                HTML, CSS, JavaScript, fait avec soin.
+                Un espace d'écriture pour partager des idées,<br />
+                observer et réfléchir sur le monde.
               </p>
             </div>
             <span class="project__arrow" aria-hidden="true">
@@ -689,7 +691,7 @@
           <span class="section-title-rule__dot"></span>
         </div>
       </div>
-      <a href="#" class="btn" aria-label="Voir tous les articles" data-i18n-aria-label="blog.cta_aria">
+      <a href="pages/blog/index.html" class="btn" aria-label="Voir tous les articles" data-i18n-aria-label="blog.cta_aria">
         <span data-i18n="blog.cta">Tous les articles</span>
         <svg class="btn__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <line x1="5" y1="12" x2="19" y2="12"/>
@@ -699,124 +701,50 @@
     </div>
 
     <!-- Grille d'articles -->
-    <div class="blog__grid">
+<div class="journal-grid">
 
-      <!-- Article 1 -->
-      <article class="post" data-reveal>
-        <a href="#" class="post__link" aria-label="Lire : Pourquoi j'apprends à coder seul - et ce que ça m'a appris sur moi" data-i18n-aria-label="blog.post1.aria">
-          <div class="post__image-wrapper">
-            <span class="post__image-tag" aria-hidden="true" data-i18n="blog.post1.tag">Développement</span>
-            <img
-              class="post__image"
-              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=700&q=80"
-              alt="Écran d'ordinateur affichant du code"
-              data-i18n-alt="blog.post1.img.alt"
-              width="700"
-              height="380"
-            />
+      <article class="journal-card" data-reveal data-category="philosophie">
+        <a href="pages/blog/article-la-vitrine-et-larriere-boutique.html" class="journal-card__link" aria-label="Lire : La vitrine et l'arrière-boutique">
+          <span class="journal-card__eyebrow">Article</span>
+          <div class="journal-card__rule" aria-hidden="true"></div>
+          <h3 class="journal-card__title" data-i18n-html="articles.la-vitrine-et-larriere-boutique.title">La vitrine et l'arrière-boutique</h3>
+          <div class="journal-card__quote">
+            <span class="journal-card__quote-mark" aria-hidden="true">&ldquo;</span>
+            <p data-i18n-html="articles.la-vitrine-et-larriere-boutique.quote">La vitrine attire.<br>L'arrière-boutique fait rester.</p>
           </div>
-          <div class="post__body">
-            <div class="post__meta">
-              <span class="post__category" data-i18n="blog.post1.category">Développement</span>
-              <span class="post__separator" aria-hidden="true">·</span>
-              <time class="post__date" datetime="2025-03-08" data-i18n="blog.post1.date">8 mars 2025</time>
-            </div>
-            <h3 class="post__title" data-i18n="blog.post1.title">
-              Pourquoi j'apprends à coder seul - et ce que ça m'a appris sur moi
-            </h3>
-            <div class="post__rule" aria-hidden="true"></div>
-            <p class="post__excerpt" data-i18n="blog.post1.excerpt">
-              Apprendre le développement web sans école ni mentor, c'est une aventure
-              autant technique qu'humaine. Voici ce que le chemin m'a enseigné.
-            </p>
-            <span class="post__read-more">
-              <span data-i18n="blog.readmore">Lire la suite</span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </span>
-          </div>
+          <time class="journal-card__byline" datetime="2026-04-09"><span data-i18n="blog_page.byline_prefix">Par The DSK Journal</span> · 9 avril 2026</time>
         </a>
       </article>
 
-      <!-- Article 2 -->
-      <article class="post" data-reveal style="--reveal-delay: 120ms">
-        <a href="#" class="post__link" aria-label="Lire : L'éducation comme outil de transformation sociale" data-i18n-aria-label="blog.post2.aria">
-          <div class="post__image-wrapper">
-            <span class="post__image-tag" aria-hidden="true" data-i18n="blog.post2.tag">Éducation</span>
-            <img
-              class="post__image"
-              src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=700&q=80"
-              alt="Livres et cahiers ouverts sur un bureau" data-i18n-alt="blog.post2.img.alt"
-              width="700"
-              height="380"
-            />
+      <article class="journal-card" data-reveal
+        style="--reveal-delay: 120ms" data-category="apprentissage">
+        <a href="pages/blog/article-nous-ne-sommes-pas-limites-par-notre-passe.html" class="journal-card__link" aria-label="Lire : Nous ne sommes pas limités par notre passé">
+          <span class="journal-card__eyebrow">Article</span>
+          <div class="journal-card__rule" aria-hidden="true"></div>
+          <h3 class="journal-card__title" data-i18n-html="articles.nous-ne-sommes-pas-limites-par-notre-passe.title">Nous ne sommes pas limités par notre passé</h3>
+          <div class="journal-card__quote">
+            <span class="journal-card__quote-mark" aria-hidden="true">&ldquo;</span>
+            <p data-i18n-html="articles.nous-ne-sommes-pas-limites-par-notre-passe.quote">Nous ne choisissons pas toujours notre point de départ.<br>Mais nous choisissons la direction.</p>
           </div>
-          <div class="post__body">
-            <div class="post__meta">
-              <span class="post__category" data-i18n="blog.post2.category">Éducation</span>
-              <span class="post__separator" aria-hidden="true">·</span>
-              <time class="post__date" datetime="2025-02-21" data-i18n="blog.post2.date">21 fév. 2025</time>
-            </div>
-            <h3 class="post__title" data-i18n="blog.post2.title">
-              L'éducation comme outil de transformation sociale
-            </h3>
-            <div class="post__rule" aria-hidden="true"></div>
-            <p class="post__excerpt" data-i18n="blog.post2.excerpt">
-              Je crois que apprendre peut changer une société. Voici pourquoi je consacre
-              une partie de mon énergie à rendre le savoir plus accessible et plus vivant.
-            </p>
-            <span class="post__read-more">
-              <span data-i18n="blog.readmore">Lire la suite</span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </span>
-          </div>
+          <time class="journal-card__byline" datetime="2026-04-05"><span data-i18n="blog_page.byline_prefix">Par The DSK Journal</span> · 5 avril 2026</time>
         </a>
       </article>
 
-      <!-- Article 3 -->
-      <article class="post" data-reveal style="--reveal-delay: 240ms">
-        <a href="#" class="post__link" aria-label="Lire : L'échec comme enseignant - réflexions sur la progression" data-i18n-aria-label="blog.post3.aria">
-          <div class="post__image-wrapper">
-            <span class="post__image-tag" aria-hidden="true" data-i18n="blog.post3.tag">Développement personnel</span>
-            <img
-              class="post__image"
-              src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=700&q=80"
-              alt="Bureau avec carnet et stylo ouvert" data-i18n-alt="blog.post3.img.alt"
-              width="700"
-              height="380"
-            />
+      <article class="journal-card" data-reveal
+        style="--reveal-delay: 240ms" data-category="discipline">
+        <a href="pages/blog/article-day-200.html" class="journal-card__link" aria-label="Lire : Jour 200 : ce que la patience m'a appris">
+          <span class="journal-card__eyebrow">Article</span>
+          <div class="journal-card__rule" aria-hidden="true"></div>
+          <h3 class="journal-card__title" data-i18n-html="articles.day-200.title">Jour 200 : ce que la patience m'a appris</h3>
+          <div class="journal-card__quote">
+            <span class="journal-card__quote-mark" aria-hidden="true">&ldquo;</span>
+            <p data-i18n-html="articles.day-200.quote">Si je ne fais rien, rien ne change.<br>Alors je choisis de continuer.</p>
           </div>
-          <div class="post__body">
-            <div class="post__meta">
-              <span class="post__category" data-i18n="blog.post3.category">Développement personnel</span>
-              <span class="post__separator" aria-hidden="true">·</span>
-              <time class="post__date" datetime="2025-01-14" data-i18n="blog.post3.date">14 jan. 2025</time>
-            </div>
-            <h3 class="post__title" data-i18n="blog.post3.title">
-              L'échec comme enseignant - réflexions sur la progression
-            </h3>
-            <div class="post__rule" aria-hidden="true"></div>
-            <p class="post__excerpt" data-i18n="blog.post3.excerpt">
-              Chaque erreur contient une leçon. Voici comment j'ai appris à regarder
-              mes difficultés non pas comme des obstacles, mais comme des étapes.
-            </p>
-            <span class="post__read-more">
-              <span data-i18n="blog.readmore">Lire la suite</span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </span>
-          </div>
+          <time class="journal-card__byline" datetime="2026-08-07"><span data-i18n="blog_page.byline_prefix">Par The DSK Journal</span> · 7 août 2026</time>
         </a>
       </article>
 
-    </div><!-- /blog__grid -->
+    </div><!-- /journal-grid -->
 
     <!-- Séparateur de section -->
     <div class="section-divider" aria-hidden="true">
@@ -862,7 +790,7 @@
         <ul class="contact__info-list" role="list">
 
           <li class="contact__info-item">
-            <a href="mailto:email@example.com" class="contact__info-item-link">
+            <a href="mailto:diassarekpera@mail.com" class="contact__info-item-link">
               <div class="contact__info-icon-wrapper" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
@@ -870,13 +798,13 @@
               </div>
               <div class="contact__info-text">
                 <span class="contact__info-label" data-i18n="contact.info.email.label">E-mail</span>
-                <span class="contact__info-value">email@example.com</span>
+                <span class="contact__info-value">diassarekpera@mail.com</span>
               </div>
             </a>
           </li>
 
           <li class="contact__info-item">
-            <a href="tel:+1234567890" class="contact__info-item-link">
+            <a href="tel:+2290191151944" class="contact__info-item-link">
               <div class="contact__info-icon-wrapper" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.45 5.45l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
@@ -884,7 +812,7 @@
               </div>
               <div class="contact__info-text">
                 <span class="contact__info-label" data-i18n="contact.info.phone.label">Téléphone</span>
-                <span class="contact__info-value">+123 456 7890</span>
+                <span class="contact__info-value">+229 01 91 15 19 44</span>
               </div>
             </a>
           </li>
@@ -1024,20 +952,17 @@
 
       <div class="footer__top-divider" aria-hidden="true" data-reveal>
         <div class="footer__top-divider-line"></div>
-        <span class="footer__top-divider-label">DSK - 2025</span>
+        <span class="footer__top-divider-label">&copy; 2025 DSK</span>
         <div class="footer__top-divider-line"></div>
       </div>
 
       <div class="footer__main" data-reveal>
 
-        <a href="#" class="footer__logo" aria-label="Dias - Retour en haut">
+        <a href="index.html" class="footer__logo" aria-label="Dias - Retour à l'accueil">
           <span class="footer__logo-text">Dias<span class="footer__logo-dot">.</span></span>
         </a>
 
-        <p class="footer__tagline" data-i18n="footer.tagline">
-          Développeur web, curieux insatiable, passionné de savoir.<br>
-          Je crée, j'apprends, je transmets - chaque jour un peu plus.
-        </p>
+        <p class="footer__tagline" data-i18n="footer.tagline">Je crée, j'apprends, je transmets.</p>
 
         <div class="footer__status">
           <span class="footer__status-dot" aria-hidden="true"></span>
@@ -1077,31 +1002,14 @@
 
       </div><!-- /footer__main -->
 
-    </footer>
-
-    <div class="footer__bottom-wrap">
-      <div class="footer__bottom">
-
-        <nav class="footer__nav" aria-label="Navigation du pied de page">
-          <ul class="footer__nav-list">
-            <li><a href="#"        class="footer__nav-link" data-i18n="nav.home">Accueil</a></li>
-            <li class="footer__nav-sep" aria-hidden="true"></li>
-            <li><a href="#about"   class="footer__nav-link" data-i18n="nav.about">À propos</a></li>
-            <li class="footer__nav-sep" aria-hidden="true"></li>
-            <li><a href="#skills"  class="footer__nav-link" data-i18n="nav.skills">Compétences</a></li>
-            <li class="footer__nav-sep" aria-hidden="true"></li>
-            <li><a href="#work"    class="footer__nav-link" data-i18n="nav.work">Projets</a></li>
-            <li class="footer__nav-sep" aria-hidden="true"></li>
-            <li><a href="#blog"    class="footer__nav-link" data-i18n="nav.blog">Blog</a></li>
-            <li class="footer__nav-sep" aria-hidden="true"></li>
-            <li><a href="#contact" class="footer__nav-link" data-i18n="nav.contact">Contact</a></li>
-          </ul>
-        </nav>
-
-        <p class="footer__copy" data-i18n="footer.copy">&copy; 2025 Dias Sare Kpera - Tous droits réservés.</p>
-
+      <!-- Séparateur de bas de section — même motif que les autres sections -->
+      <div class="section-divider" aria-hidden="true">
+        <div class="section-divider__line"></div>
+        <span class="section-divider__label">07 / 07</span>
+        <div class="section-divider__line"></div>
       </div>
-    </div>
+
+    </footer>
 
   </div><!-- /footer-wrap -->
 

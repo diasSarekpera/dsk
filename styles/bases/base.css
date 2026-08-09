@@ -33,6 +33,7 @@ body {
 .skills,
 .work,
 .blog,
+.article,
 .contact {
   position:  relative;
   max-width: var(--container-max);
@@ -46,6 +47,7 @@ body {
 .skills::before,
 .work::before,
 .blog::before,
+.article::before,
 .contact::before {
   content:          '';
   position:         absolute;
@@ -68,6 +70,7 @@ body {
   .skills,
   .work,
   .blog,
+  .article,
   .contact { padding-inline: var(--space-12); }
 }
 
@@ -76,6 +79,7 @@ body {
   .skills,
   .work,
   .blog,
+  .article,
   .contact {
     padding: var(--space-16) var(--space-4) var(--space-14);
   }
@@ -95,6 +99,7 @@ body {
   .skills::before,
   .work::before,
   .blog::before,
+  .article::before,
   .contact::before { display: none; }
 
   .about .section-index,
@@ -112,6 +117,7 @@ body {
   .skills,
   .work,
   .blog,
+  .article,
   .contact { padding-inline: var(--space-3); }
 }
 
