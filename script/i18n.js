@@ -226,13 +226,13 @@ const i18n = (() => {
         },
         blog: {
           eyebrow: "Écrits & réflexions",
-          title: "Le\njournal.",
+          title: "THE DSK JOURNAL",
           cta: "Tous les articles",
           cta_aria: "Voir tous les articles",
           readmore: "Lire la suite",
-          post1: { aria: "Lire : Pourquoi j'apprends à coder seul", tag: "Développement",        img: { alt: "Écran d'ordinateur affichant du code" },        category: "Développement",         date: "8 mars 2025",      title: "Pourquoi j'apprends à coder seul - et ce que ça m'a appris sur moi",      excerpt: "Apprendre le développement web sans école ni mentor, c'est une aventure autant technique qu'humaine. Voici ce que le chemin m'a enseigné.", pullquote: "Le code obéit tout de suite.\nComprendre pourquoi prend plus de temps.", byline: "Par The DSK Journal · 8 mars 2025" },
-          post2: { aria: "Lire : L'éducation comme outil de transformation sociale", tag: "Éducation", img: { alt: "Livres et cahiers ouverts sur un bureau" }, category: "Éducation",             date: "21 fév. 2025",     title: "L'éducation comme outil de transformation sociale",                        excerpt: "Je crois que apprendre peut changer une société. Voici pourquoi je consacre une partie de mon énergie à rendre le savoir plus accessible et plus vivant.", pullquote: "Le diplôme ouvre une porte.\nLe savoir, lui, éclaire le chemin.", byline: "Par The DSK Journal · 21 février 2025" },
-          post3: { aria: "Lire : L'échec comme enseignant",          tag: "Développement personnel", img: { alt: "Bureau avec carnet et stylo ouvert" },       category: "Développement personnel", date: "14 jan. 2025",    title: "L'échec comme enseignant - réflexions sur la progression",                excerpt: "Chaque erreur contient une leçon. Voici comment j'ai appris à regarder mes difficultés non pas comme des obstacles, mais comme des étapes.", pullquote: "L'échec ferme une porte.\nIl en ouvre une autre, plus honnête.", byline: "Par The DSK Journal · 14 janvier 2025" }
+          post1: { aria: "Lire : Pourquoi j'apprends à coder seul", tag: "Développement",        img: { alt: "Écran d'ordinateur affichant du code" },        category: "Développement",         date: "8 mars 2025",      title: "Pourquoi j'apprends à coder seul - et ce que ça m'a appris sur moi",      excerpt: "Apprendre le développement web sans école ni mentor, c'est une aventure autant technique qu'humaine. Voici ce que le chemin m'a enseigné.", pullquote: "Le code obéit tout de suite.\nComprendre pourquoi prend plus de temps." },
+          post2: { aria: "Lire : L'éducation comme outil de transformation sociale", tag: "Éducation", img: { alt: "Livres et cahiers ouverts sur un bureau" }, category: "Éducation",             date: "21 fév. 2025",     title: "L'éducation comme outil de transformation sociale",                        excerpt: "Je crois que apprendre peut changer une société. Voici pourquoi je consacre une partie de mon énergie à rendre le savoir plus accessible et plus vivant.", pullquote: "Le diplôme ouvre une porte.\nLe savoir, lui, éclaire le chemin." },
+          post3: { aria: "Lire : L'échec comme enseignant",          tag: "Développement personnel", img: { alt: "Bureau avec carnet et stylo ouvert" },       category: "Développement personnel", date: "14 jan. 2025",    title: "L'échec comme enseignant - réflexions sur la progression",                excerpt: "Chaque erreur contient une leçon. Voici comment j'ai appris à regarder mes difficultés non pas comme des obstacles, mais comme des étapes.", pullquote: "L'échec ferme une porte.\nIl en ouvre une autre, plus honnête." }
         },
         blog_page: {
           meta: { title: "Blog - Dias Sare Kpera" },
@@ -240,8 +240,7 @@ const i18n = (() => {
           tagline: "Réflexions sur le développement humain",
           card_eyebrow: "Article",
           filters: { all: "Tous", philosophie: "Philosophie & valeurs", apprentissage: "Apprentissage", discipline: "Discipline & habitudes" },
-          empty: "Aucun article dans cette catégorie pour le moment.",
-          byline_prefix: "Par The DSK Journal"
+          empty: "Aucun article dans cette catégorie pour le moment."
         },
         contact: {
           eyebrow: "Prendre contact",
@@ -325,13 +324,13 @@ const i18n = (() => {
         },
         blog: {
           eyebrow: "Writings & reflections",
-          title: "The\njournal.",
+          title: "THE DSK JOURNAL",
           cta: "All articles",
           cta_aria: "View all articles",
           readmore: "Read more",
-          post1: { aria: "Read: Why I learn to code alone",              tag: "Development",         img: { alt: "Computer screen displaying code" },               category: "Development",         date: "March 8, 2025",  title: "Why I learn to code alone - and what it taught me about myself",  excerpt: "Learning web development without school or mentor is an adventure as much technical as human. Here is what the journey taught me.", pullquote: "The code obeys instantly.\nUnderstanding why takes longer.", byline: "By The DSK Journal · March 8, 2025" },
-          post2: { aria: "Read: Education as a tool for social transformation", tag: "Education",   img: { alt: "Books and notebooks open on a desk" },            category: "Education",           date: "Feb. 21, 2025",  title: "Education as a tool for social transformation",                   excerpt: "I believe that learning can change a society. Here is why I dedicate part of my energy to making knowledge more accessible and alive.", pullquote: "A diploma opens a door.\nKnowledge lights the way.", byline: "By The DSK Journal · February 21, 2025" },
-          post3: { aria: "Read: Failure as a teacher",                   tag: "Personal development", img: { alt: "Desk with open notebook and pen" },             category: "Personal development", date: "Jan. 14, 2025",  title: "Failure as a teacher - reflections on progress",                  excerpt: "Every mistake contains a lesson. Here is how I learned to see my difficulties not as obstacles, but as steps forward.", pullquote: "Failure closes one door.\nIt opens another, more honest one.", byline: "By The DSK Journal · January 14, 2025" }
+          post1: { aria: "Read: Why I learn to code alone",              tag: "Development",         img: { alt: "Computer screen displaying code" },               category: "Development",         date: "March 8, 2025",  title: "Why I learn to code alone - and what it taught me about myself",  excerpt: "Learning web development without school or mentor is an adventure as much technical as human. Here is what the journey taught me.", pullquote: "The code obeys instantly.\nUnderstanding why takes longer." },
+          post2: { aria: "Read: Education as a tool for social transformation", tag: "Education",   img: { alt: "Books and notebooks open on a desk" },            category: "Education",           date: "Feb. 21, 2025",  title: "Education as a tool for social transformation",                   excerpt: "I believe that learning can change a society. Here is why I dedicate part of my energy to making knowledge more accessible and alive.", pullquote: "A diploma opens a door.\nKnowledge lights the way." },
+          post3: { aria: "Read: Failure as a teacher",                   tag: "Personal development", img: { alt: "Desk with open notebook and pen" },             category: "Personal development", date: "Jan. 14, 2025",  title: "Failure as a teacher - reflections on progress",                  excerpt: "Every mistake contains a lesson. Here is how I learned to see my difficulties not as obstacles, but as steps forward.", pullquote: "Failure closes one door.\nIt opens another, more honest one." }
         },
         blog_page: {
           meta: { title: "Blog - Dias Sare Kpera" },
@@ -339,8 +338,7 @@ const i18n = (() => {
           tagline: "Reflections on human development",
           card_eyebrow: "Article",
           filters: { all: "All", philosophie: "Philosophy & values", apprentissage: "Learning", discipline: "Discipline & habits" },
-          empty: "No article in this category yet.",
-          byline_prefix: "By The DSK Journal"
+          empty: "No article in this category yet."
         },
         contact: {
           eyebrow: "Get in touch",
@@ -424,13 +422,13 @@ const i18n = (() => {
         },
         blog: {
           eyebrow: "Escritos & reflexiones",
-          title: "El\ndiario.",
+          title: "THE DSK JOURNAL",
           cta: "Todos los artículos",
           cta_aria: "Ver todos los artículos",
           readmore: "Leer más",
-          post1: { aria: "Leer: Por qué aprendo a programar solo",                   tag: "Desarrollo",          img: { alt: "Pantalla de ordenador mostrando código" },           category: "Desarrollo",          date: "8 de marzo de 2025", title: "Por qué aprendo a programar solo - y lo que eso me enseñó sobre mí",    excerpt: "Aprender desarrollo web sin escuela ni mentor es una aventura tan técnica como humana. Esto es lo que el camino me ha enseñado.", pullquote: "El código obedece al instante.\nEntender por qué toma más tiempo.", byline: "Por The DSK Journal · 8 de marzo de 2025" },
-          post2: { aria: "Leer: La educación como herramienta de transformación social", tag: "Educación",      img: { alt: "Libros y cuadernos abiertos sobre un escritorio" },  category: "Educación",           date: "21 feb. 2025",       title: "La educación como herramienta de transformación social",              excerpt: "Creo que aprender puede cambiar una sociedad. Aquí explico por qué dedico parte de mi energía a hacer el conocimiento más accesible y vivo.", pullquote: "El diploma abre una puerta.\nEl saber, en cambio, ilumina el camino.", byline: "Por The DSK Journal · 21 de febrero de 2025" },
-          post3: { aria: "Leer: El fracaso como maestro",                              tag: "Desarrollo personal", img: { alt: "Escritorio con cuaderno y bolígrafo abierto" },   category: "Desarrollo personal", date: "14 ene. 2025",       title: "El fracaso como maestro - reflexiones sobre el progreso",             excerpt: "Cada error contiene una lección. Así aprendí a ver mis dificultades no como obstáculos, sino como etapas.", pullquote: "El fracaso cierra una puerta.\nAbre otra, más honesta.", byline: "Por The DSK Journal · 14 de enero de 2025" }
+          post1: { aria: "Leer: Por qué aprendo a programar solo",                   tag: "Desarrollo",          img: { alt: "Pantalla de ordenador mostrando código" },           category: "Desarrollo",          date: "8 de marzo de 2025", title: "Por qué aprendo a programar solo - y lo que eso me enseñó sobre mí",    excerpt: "Aprender desarrollo web sin escuela ni mentor es una aventura tan técnica como humana. Esto es lo que el camino me ha enseñado.", pullquote: "El código obedece al instante.\nEntender por qué toma más tiempo." },
+          post2: { aria: "Leer: La educación como herramienta de transformación social", tag: "Educación",      img: { alt: "Libros y cuadernos abiertos sobre un escritorio" },  category: "Educación",           date: "21 feb. 2025",       title: "La educación como herramienta de transformación social",              excerpt: "Creo que aprender puede cambiar una sociedad. Aquí explico por qué dedico parte de mi energía a hacer el conocimiento más accesible y vivo.", pullquote: "El diploma abre una puerta.\nEl saber, en cambio, ilumina el camino." },
+          post3: { aria: "Leer: El fracaso como maestro",                              tag: "Desarrollo personal", img: { alt: "Escritorio con cuaderno y bolígrafo abierto" },   category: "Desarrollo personal", date: "14 ene. 2025",       title: "El fracaso como maestro - reflexiones sobre el progreso",             excerpt: "Cada error contiene una lección. Así aprendí a ver mis dificultades no como obstáculos, sino como etapas.", pullquote: "El fracaso cierra una puerta.\nAbre otra, más honesta." }
         },
         blog_page: {
           meta: { title: "Blog - Dias Sare Kpera" },
@@ -438,8 +436,7 @@ const i18n = (() => {
           tagline: "Reflexiones sobre el desarrollo humano",
           card_eyebrow: "Artículo",
           filters: { all: "Todos", philosophie: "Filosofía & valores", apprentissage: "Aprendizaje", discipline: "Disciplina & hábitos" },
-          empty: "Todavía no hay artículos en esta categoría.",
-          byline_prefix: "Por The DSK Journal"
+          empty: "Todavía no hay artículos en esta categoría."
         },
         contact: {
           eyebrow: "Ponerse en contacto",

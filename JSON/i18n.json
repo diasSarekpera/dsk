@@ -150,8 +150,7 @@
         "date": "8 mars 2025",
         "title": "Pourquoi j'apprends à coder seul - et ce que ça m'a appris sur moi",
         "excerpt": "Apprendre le développement web sans école ni mentor, c'est une aventure autant technique qu'humaine. Voici ce que le chemin m'a enseigné.",
-        "pullquote": "Le code obéit tout de suite.\nComprendre pourquoi prend plus de temps.",
-        "byline": "Par The DSK Journal · 8 mars 2025"
+        "pullquote": "Le code obéit tout de suite.\nComprendre pourquoi prend plus de temps."
       },
       "post2": {
         "aria": "Lire : L'éducation comme outil de transformation sociale",
@@ -163,8 +162,7 @@
         "date": "21 fév. 2025",
         "title": "L'éducation comme outil de transformation sociale",
         "excerpt": "Je crois que apprendre peut changer une société. Voici pourquoi je consacre une partie de mon énergie à rendre le savoir plus accessible et plus vivant.",
-        "pullquote": "Le diplôme ouvre une porte.\nLe savoir, lui, éclaire le chemin.",
-        "byline": "Par The DSK Journal · 21 février 2025"
+        "pullquote": "Le diplôme ouvre une porte.\nLe savoir, lui, éclaire le chemin."
       },
       "post3": {
         "aria": "Lire : L'échec comme enseignant",
@@ -176,8 +174,7 @@
         "date": "14 jan. 2025",
         "title": "L'échec comme enseignant - réflexions sur la progression",
         "excerpt": "Chaque erreur contient une leçon. Voici comment j'ai appris à regarder mes difficultés non pas comme des obstacles, mais comme des étapes.",
-        "pullquote": "L'échec ferme une porte.\nIl en ouvre une autre, plus honnête.",
-        "byline": "Par The DSK Journal · 14 janvier 2025"
+        "pullquote": "L'échec ferme une porte.\nIl en ouvre une autre, plus honnête."
       }
     },
     "contact": {
@@ -255,7 +252,7 @@
         "title": "Blog - Dias Sare Kpera"
       },
       "eyebrow": "Écrits & réflexions",
-      "title": "Le\njournal.",
+      "title": "THE DSK JOURNAL",
       "subtitle": "Développement, éducation, développement personnel - tout ce que l'expérience m'apprend, mis en mots ici.",
       "filters": {
         "all": "Tous",
@@ -265,8 +262,7 @@
       },
       "empty": "Aucun article dans cette catégorie pour le moment.",
       "tagline": "Réflexions sur le développement humain",
-      "card_eyebrow": "Article",
-      "byline_prefix": "Par The DSK Journal"
+      "card_eyebrow": "Article"
     },
     "articles": {
       "certaines-reussites-demandent-du-temps": {
@@ -862,8 +858,7 @@
         "date": "March 8, 2025",
         "title": "Why I learn to code alone - and what it taught me about myself",
         "excerpt": "Learning web development without school or mentor is an adventure as much technical as human. Here is what the journey taught me.",
-        "pullquote": "The code obeys instantly.\nUnderstanding why takes longer.",
-        "byline": "By The DSK Journal · March 8, 2025"
+        "pullquote": "The code obeys instantly.\nUnderstanding why takes longer."
       },
       "post2": {
         "aria": "Read: Education as a tool for social transformation",
@@ -875,8 +870,7 @@
         "date": "Feb. 21, 2025",
         "title": "Education as a tool for social transformation",
         "excerpt": "I believe that learning can change a society. Here is why I dedicate part of my energy to making knowledge more accessible and alive.",
-        "pullquote": "A diploma opens a door.\nKnowledge lights the way.",
-        "byline": "By The DSK Journal · February 21, 2025"
+        "pullquote": "A diploma opens a door.\nKnowledge lights the way."
       },
       "post3": {
         "aria": "Read: Failure as a teacher",
@@ -888,8 +882,7 @@
         "date": "Jan. 14, 2025",
         "title": "Failure as a teacher - reflections on progress",
         "excerpt": "Every mistake contains a lesson. Here is how I learned to see my difficulties not as obstacles, but as steps forward.",
-        "pullquote": "Failure closes one door.\nIt opens another, more honest one.",
-        "byline": "By The DSK Journal · January 14, 2025"
+        "pullquote": "Failure closes one door.\nIt opens another, more honest one."
       }
     },
     "contact": {
@@ -967,7 +960,7 @@
         "title": "Blog - Dias Sare Kpera"
       },
       "eyebrow": "Writing & reflections",
-      "title": "The\njournal.",
+      "title": "THE DSK JOURNAL",
       "subtitle": "Development, education, personal growth - everything experience teaches me, put into words here.",
       "filters": {
         "all": "All",
@@ -977,8 +970,7 @@
       },
       "empty": "No article in this category yet.",
       "tagline": "Reflections on human development",
-      "card_eyebrow": "Article",
-      "byline_prefix": "By The DSK Journal"
+      "card_eyebrow": "Article"
     },
     "articles": {
       "certaines-reussites-demandent-du-temps": {
@@ -1574,8 +1566,7 @@
         "date": "8 de marzo de 2025",
         "title": "Por qué aprendo a programar solo - y lo que eso me enseñó sobre mí",
         "excerpt": "Aprender desarrollo web sin escuela ni mentor es una aventura tan técnica como humana. Esto es lo que el camino me ha enseñado.",
-        "pullquote": "El código obedece al instante.\nEntender por qué toma más tiempo.",
-        "byline": "Por The DSK Journal · 8 de marzo de 2025"
+        "pullquote": "El código obedece al instante.\nEntender por qué toma más tiempo."
       },
       "post2": {
         "aria": "Leer: La educación como herramienta de transformación social",
@@ -1587,8 +1578,7 @@
         "date": "21 feb. 2025",
         "title": "La educación como herramienta de transformación social",
         "excerpt": "Creo que aprender puede cambiar una sociedad. Aquí explico por qué dedico parte de mi energía a hacer el conocimiento más accesible y vivo.",
-        "pullquote": "El diploma abre una puerta.\nEl saber, en cambio, ilumina el camino.",
-        "byline": "Por The DSK Journal · 21 de febrero de 2025"
+        "pullquote": "El diploma abre una puerta.\nEl saber, en cambio, ilumina el camino."
       },
       "post3": {
         "aria": "Leer: El fracaso como maestro",
@@ -1600,8 +1590,7 @@
         "date": "14 ene. 2025",
         "title": "El fracaso como maestro - reflexiones sobre el progreso",
         "excerpt": "Cada error contiene una lección. Así aprendí a ver mis dificultades no como obstáculos, sino como etapas.",
-        "pullquote": "El fracaso cierra una puerta.\nAbre otra, más honesta.",
-        "byline": "Por The DSK Journal · 14 de enero de 2025"
+        "pullquote": "El fracaso cierra una puerta.\nAbre otra, más honesta."
       }
     },
     "contact": {
@@ -1679,7 +1668,7 @@
         "title": "Blog - Dias Sare Kpera"
       },
       "eyebrow": "Escritos & reflexiones",
-      "title": "El\ndiario.",
+      "title": "THE DSK JOURNAL",
       "subtitle": "Desarrollo, educación, crecimiento personal - todo lo que la experiencia me enseña, puesto en palabras aquí.",
       "filters": {
         "all": "Todos",
@@ -1689,8 +1678,7 @@
       },
       "empty": "Todavía no hay artículos en esta categoría.",
       "tagline": "Reflexiones sobre el desarrollo humano",
-      "card_eyebrow": "Artículo",
-      "byline_prefix": "Por The DSK Journal"
+      "card_eyebrow": "Artículo"
     },
     "articles": {
       "certaines-reussites-demandent-du-temps": {

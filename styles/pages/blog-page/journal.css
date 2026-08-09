@@ -62,10 +62,11 @@
 }
 
 .journal-masthead__title {
-  font-family:    var(--font-display);
-  font-weight:    500;
-  font-size:      clamp(2rem, 4.5vw, 3.25rem);
-  letter-spacing: 0.06em;
+  font-family:    'Pirata One', var(--font-display), cursive;
+  font-weight:    400;
+  font-size:      clamp(2.25rem, 5vw, 3.75rem);
+  letter-spacing: 0.04em;
+  line-height:    1.1;
   color:          var(--ink-deep);
 }
 
