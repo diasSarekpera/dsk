@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr" translate="no">
+<head>
+  <meta name="google" content="notranslate" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Comment je construis un site web de bout en bout : collecte d'information, design system, maquettes, code assisté par IA, jusqu'à la version finale." />
+  <title>Ma méthode de création d'un site web, de A à Z - The DSK Journal</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../styles/bases/variables.css" />
+  <link rel="stylesheet" href="../../styles/bases/reset.css" />
+  <link rel="stylesheet" href="../../styles/bases/base.css" />
+  <link rel="stylesheet" href="../../styles/components/header.css" />
+  <link rel="stylesheet" href="../../styles/pages/home/footer.css" />
+  <link rel="stylesheet" href="../../styles/pages/article/article.css" />
+  <link rel="stylesheet" href="../../styles/pages/blog-page/journal.css" />
+</head>
+<body>
+
+  <!-- EN-TÊTE (identique au reste du site) -->
+  <header class="header" id="header">
+    <div class="header__inner">
+
+      <a href="../../index.html" class="header__logo" aria-label="DSK - Retour à l'accueil">
+        <span class="header__logo-text">DSK</span>
+      </a>
+
+      <nav class="header__nav" aria-label="Navigation principale">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="../../index.html"         class="header__nav-link" data-i18n="nav.home">Accueil</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../../index.html#about"   class="header__nav-link" data-i18n="nav.about">À propos</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../../index.html#skills"  class="header__nav-link" data-i18n="nav.skills">Compétences</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../../index.html#work"    class="header__nav-link" data-i18n="nav.work">Projets</a>
+          </li>
+          <li class="header__nav-item is-active">
+            <a href="../../index.html#blog"    class="header__nav-link" data-i18n="nav.blog">Blog</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../../index.html#contact" class="header__nav-link" data-i18n="nav.contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="lang-switcher header__lang-desktop" role="group" aria-label="Sélecteur de langue">
+        <button class="lang-switcher__btn is-active" data-lang="fr" aria-pressed="true">FR</button>
+        <button class="lang-switcher__btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-switcher__btn" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+
+      <button
+        class="header__burger"
+        aria-label="Ouvrir le menu"
+        data-i18n-aria-label="header.burger.open"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- MENU MOBILE -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Navigation mobile">
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a href="../../index.html"         class="mobile-menu__link" data-i18n="nav.home">Accueil</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="../../index.html#about"   class="mobile-menu__link" data-i18n="nav.about">À propos</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="../../index.html#skills"  class="mobile-menu__link" data-i18n="nav.skills">Compétences</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="../../index.html#work"    class="mobile-menu__link" data-i18n="nav.work">Projets</a>
+        </li>
+        <li class="mobile-menu__item is-active">
+          <a href="../../index.html#blog"    class="mobile-menu__link" data-i18n="nav.blog">Blog</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="../../index.html#contact" class="mobile-menu__link" data-i18n="nav.contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="mobile-menu__footer">
+      <div class="mobile-menu__lang" role="group" aria-label="Sélecteur de langue">
+        <button class="lang-switcher__btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-switcher__btn is-active" data-lang="fr" aria-pressed="true">FR</button>
+        <button class="lang-switcher__btn" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+
+      <div class="mobile-menu__socials" aria-label="Réseaux sociaux">
+        <a href="#" class="mobile-menu__social-link" aria-label="WhatsApp">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+        </a>
+        <a href="#" class="mobile-menu__social-link" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+        <a href="#" class="mobile-menu__social-link" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        <a href="#" class="mobile-menu__social-link" aria-label="X">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <rect x="-2" y="10.5" width="28" height="3" rx="1.5" transform="rotate(45 12 12)"/>
+            <rect x="-2" y="10.5" width="28" height="3" rx="1.5" transform="rotate(-45 12 12)"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BANNIÈRE AUTEUR / PUBLICATION -->
+  <div class="article-banner">
+    <div class="article-banner__inner">
+      <a href="../about/index.html" class="article-banner__author" aria-label="À propos de l'auteur">
+        <img class="article-banner__photo" src="../../assets/images/portrait.png" alt="Dias Sare Kpera" width="48" height="48" />
+        <span class="article-banner__author-text">
+          <span class="article-banner__name">Dias Sare Kpera</span>
+          <span class="article-banner__pub">The DSK Journal · <em>le blog</em></span>
+        </span>
+      </a>
+      <span class="article-banner__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.5 3.5c-4.2 0-11.3 2-14.4 9.2-1.3 2.9-1.6 5.7-1.6 7.3 3.1-1 6.2-3.1 8.3-6.2M12 15 20.5 3.5"/>
+          <path d="M8.3 13.6c-1.6 1.1-3.2 1.6-4.8 1.6"/>
+        </svg>
+        <span>The DSK Journal</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- ARTICLE -->
+  <main class="article" id="article" aria-label="Article">
+
+    <a href="index.html" class="article__back">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+      </svg>
+      Tous les articles
+    </a>
+
+    <div class="article__header">
+      <span class="article__category" data-i18n="blog_page.filters.apprentissage">Apprentissage</span>
+      <h1 class="article__title" data-i18n-html="articles.ma-methode-de-creation-dun-site-web.title">Ma méthode de création d'un site web, de A à Z</h1>
+      <time class="article__date" datetime="2026-08-10">10 août 2026</time>
+    </div>
+
+    <div class="article__body">
+      <p data-i18n-html="articles.ma-methode-de-creation-dun-site-web.body.p0">Quand j'ai un projet de création de site web, la première chose que je fais n'est pas d'ouvrir VS Code pour commencer à écrire des lignes de code. Je commence d'abord par comprendre le mieux possible le projet en question, en récoltant le plus d'informations possible sur le besoin du client.</p>
+
+      <p data-i18n-html="articles.ma-methode-de-creation-dun-site-web.body.p1">Un site web ne se résume pas à un enchaînement de blocs d'interface : un bon site sert avant tout à transmettre de l'information, à informer le public. Sans information pertinente, on ne crée à la fin qu'un template visuellement soigné, mais qui ne transmet rien d'utile.</p>
+
+      <p data-i18n-html="articles.ma-methode-de-creation-dun-site-web.body.p2">Après cette étape de collecte et de compréhension, je passe à l'organisation de ces informations. Après avoir posé mes questions au client, je me retrouve avec beaucoup de matière, mais sans classification logique : ce ne sont que des données brutes.</p>
+
+      <p data-i18n-html="articles.ma-methode-de-creation-dun-site-web.body.p3">Dès le début de la collecte, je crée un dossier au nom du projet, un nom simple et court. À l'intérieur, je crée un sous-dossier docs, dans lequel j'écris toutes les informations recueillies.</p>
+
+      <p data-i18n-html="articles.ma-methode-de-creation-dun-site-web.body.p4">Pour la classification, j'utilise un outil d'IA conversationnelle comme ChatGPT : je lui explique brièvement le projet et je lui transmets le fichier en pièce jointe pour qu'il en organise le contenu. Si le projet est plus complexe et que le fichier de collecte est volumineux, ou qu'il y a plusieurs fichiers, j'utilise plutôt Claude AI, pour sa capacité à traiter de grands volumes de texte. Une fois le document bien classé et ordonné, je l'enregistre dans le dossier docs du projet.</p>
+
+      <p data-i18n-html="articles.ma-methode-de-creation-dun-site-web.body.p5">À partir des données collectées, je passe à la définition des pages à créer, puis, pour chaque page, des sections qui la composent. Je demande une proposition cohérente dans la même conversation, puis un document au format Markdown listant les pages et leurs sections. Je le relis et j'ajuste si nécessaire.</p>
+
+      <p data-i18n-html="articles.ma-methode-de-creation-dun-site-web.body.p6">Je passe ensuite à l'établissement du document de design system. Ce document doit être rédigé avec le plus grand soin, car c'est lui qui définira l'identité visuelle du site.</p>
+
+      <p data-i18n-html="articles.ma-methode-de-creation-dun-site-web.body.p7">Selon le projet, je fais des recherches sur le web à la recherche de sites déjà conçus sur un sujet similaire. Je visite ces sites et j'ouvre un document Markdown vierge dans lequel je note toutes les remarques qui me plaisent : couleurs, structures, etc. Un simple brouillon.</p>
+
+      <p data-i18n-html="articles.ma-methode-de-creation-dun-site-web.body.p8">Je transmets ensuite ce brouillon à l'IA, dans la même conversation, en lui expliquant qu'il s'agit de l'ensemble des éléments que j'ai remarqués sur des sites déjà bien conçus. Je lui demande de rédiger le document complet du design system : palette de couleurs, typographie, et le reste. Je relis, je corrige si nécessaire, je valide, puis je colle le résultat dans le fichier définitif.</p>
+
+      <p data-i18n-html="articles.ma-methode-de-creation-dun-site-web.body.p9">Vient ensuite la création de la maquette visuelle de chaque section de chaque page. Je demande à l'IA de me rédiger le prompt de création de la maquette pour une section donnée, en respectant à la lettre les règles du design system. À cette étape, on peut utiliser le générateur d'images de son choix - peu importe l'outil, il faut simplement qu'il soit performant. Le but est d'avoir une base visuelle, un plan concret de l'objectif à atteindre, avant de se lancer dans le code.</p>
+
+      <p data-i18n-html="articles.ma-methode-de-creation-dun-site-web.body.p10">C'est ici que commence le codage. Je retourne dans le dossier du projet, où il n'y a jusqu'ici que le dossier docs, et je crée les dossiers assets, pages, scripts, styles, ainsi qu'un fichier index.html à la racine. Je laisse ce fichier de côté pour l'instant et je crée un dossier nommé ui-system, avec un sous-dossier par page, puis par section, où je place chaque maquette.</p>
+
+      <p data-i18n-html="articles.ma-methode-de-creation-dun-site-web.body.p11">Dans chaque dossier de section, je crée un fichier index.html et un fichier style.css, à côté de la maquette, et je code intégralement le rendu visible en HTML et CSS. Avec l'aide d'une IA comme Claude AI, je précise bien que je ne veux pas qu'elle code toute la maquette d'un coup : d'abord le HTML complet, ensuite le CSS nécessaire pour obtenir un layout bien positionné, puis seulement le code final pour obtenir exactement le rendu de la maquette.</p>
+
+      <p data-i18n-html="articles.ma-methode-de-creation-dun-site-web.body.p12">Toujours avec Claude AI, j'assemble ensuite les sections page par page, jusqu'à obtenir le fichier HTML complet et le fichier style.css complet de chaque page du site.</p>
+
+      <p data-i18n-html="articles.ma-methode-de-creation-dun-site-web.body.p13">Je reviens alors au dossier du projet pour tout mettre en place : un dossier par page dans pages, chacun contenant son index.html ; le fichier de la page d'accueil directement à la racine ; un dossier par page dans styles, plus un dossier shared pour les fichiers partagés par toutes les pages (reset, base, variables). Je relie enfin chaque fichier HTML à son fichier de style.</p>
+
+      <p data-i18n-html="articles.ma-methode-de-creation-dun-site-web.body.p14">Il ne reste plus qu'à adopter un regard critique : évaluer chaque page, se poser les bonnes questions, et corriger ce qui est mal codé. Je signale les incohérences à Claude AI - l'alignement d'un bouton, la couleur d'un titre - et je place les images dans des sous-dossiers cohérents du dossier assets.</p>
+
+      <p data-i18n-html="articles.ma-methode-de-creation-dun-site-web.body.p15">Une fois toutes les pages en place, je zippe le dossier complet et je le transmets à Claude AI, en lui demandant de garantir une cohérence totale entre les pages : liens internes, header, footer, fichiers partagés. Je vérifie ensuite si les pages sont responsives, et sinon, j'utilise un prompt déjà préparé à cet effet.</p>
+
+      <p data-i18n-html="articles.ma-methode-de-creation-dun-site-web.body.p16">Une fois le travail terminé, je vérifie le résultat. S'il reste des corrections, je les signale précisément et je demande une nouvelle version zippée. Je répète ce processus tant qu'il reste des améliorations à apporter.</p>
+
+      <p data-i18n-html="articles.ma-methode-de-creation-dun-site-web.body.p17"><strong>C'est cette méthode que j'applique à chaque projet, étape par étape, jusqu'à obtenir, au final, un site propre.</strong></p>
+    </div>
+
+    <div class="article__author-card">
+      <img class="article__author-photo" src="../../assets/images/portrait.png" alt="Dias Sare Kpera" width="56" height="56" />
+      <div class="article__author-info">
+        <div class="article__author-name">Dias Sare Kpera</div>
+        <div class="article__author-role">Développeur web full stack &amp; aventurier du savoir</div>
+      </div>
+      <a href="../about/index.html" class="article__author-link">À propos</a>
+    </div>
+
+    <div class="article__footer-nav">
+      <a href="index.html" class="article__back">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+        </svg>
+        Retour à tous les articles
+      </a>
+    </div>
+
+  </main>
+
+  <!-- PIED DE PAGE -->
+  <div class="footer-wrap">
+    <footer class="footer" id="footer" aria-label="Pied de page">
+
+      <div class="footer__top-divider" aria-hidden="true" data-reveal>
+        <div class="footer__top-divider-line"></div>
+        <span class="footer__top-divider-label">&copy; 2025 DSK</span>
+        <div class="footer__top-divider-line"></div>
+      </div>
+
+      <div class="footer__main" data-reveal>
+
+        <a href="../../index.html" class="footer__logo" aria-label="Dias - Retour à l'accueil">
+          <span class="footer__logo-text">Dias<span class="footer__logo-dot">.</span></span>
+        </a>
+
+        <p class="footer__tagline" data-i18n="footer.tagline">Je crée, j'apprends, je transmets.</p>
+
+        <div class="footer__status">
+          <span class="footer__status-dot" aria-hidden="true"></span>
+          <span class="footer__status-label" data-i18n="footer.status">Disponible pour des projets</span>
+        </div>
+
+        <div class="footer__socials" aria-label="Réseaux sociaux">
+
+          <a href="#" class="footer__social-link" aria-label="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+          </a>
+
+          <a href="#" class="footer__social-link" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+
+          <a href="#" class="footer__social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+
+          <a href="#" class="footer__social-link" aria-label="X">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <rect x="-2" y="10.5" width="28" height="3" rx="1.5" transform="rotate(45 12 12)"/>
+              <rect x="-2" y="10.5" width="28" height="3" rx="1.5" transform="rotate(-45 12 12)"/>
+            </svg>
+          </a>
+
+        </div>
+
+      </div><!-- /footer__main -->
+
+    </footer>
+  </div><!-- /footer-wrap -->
+
+  <!-- SCRIPTS -->
+  <script src="../../script/sticky-header.js" defer></script>
+  <script src="../../script/burger-menu.js" defer></script>
+  <script src="../../script/scroll-reveal.js" defer></script>
+  <script src="../../script/nav-indicator.js" defer></script>
+  <script src="../../script/i18n.js" defer></script>
+</body>
+</html>

@@ -132,6 +132,33 @@
         "category": "Blog & Réflexions",
         "name": "The DSK Journal",
         "desc": "Un espace d'écriture pour partager des idées,\nobserver et réfléchir sur le monde."
+      },
+      "project4": {
+        "aria": "Voir VIGO Services",
+        "img": {
+          "alt": "VIGO Services - site institutionnel professionnel"
+        },
+        "category": "Site institutionnel",
+        "name": "VIGO Services",
+        "desc": "Site institutionnel pour une entreprise de\nprestations administratives, clair et rassurant."
+      },
+      "project5": {
+        "aria": "Voir Arie's Accessoires",
+        "img": {
+          "alt": "Arie's Accessoires - site e-commerce premium"
+        },
+        "category": "Site e-commerce",
+        "name": "Arie's Accessoires",
+        "desc": "Boutique en ligne d'accessoires, au design\npremium pensé pour convertir et séduire."
+      },
+      "project6": {
+        "aria": "Voir Eliano Shoes",
+        "img": {
+          "alt": "Eliano Shoes - site vitrine premium pour marque de chaussures"
+        },
+        "category": "Site de marque",
+        "name": "Eliano Shoes",
+        "desc": "Site premium pour une marque de chaussures\nen cuir, à l'identité forte et soignée."
       }
     },
     "blog": {
@@ -235,7 +262,8 @@
       "filters": {
         "all": "Tous",
         "education": "Éducation & Apprentissage",
-        "blog": "Blog & Réflexions"
+        "blog": "Blog & Réflexions",
+        "vitrine": "Sites vitrines"
       },
       "empty": "Aucun projet dans cette catégorie pour le moment."
     },
@@ -704,6 +732,30 @@
           "p3": "<strong>Je veux comprendre. Je veux en savoir plus qu'hier. Je ne veux pas être intellectuellement paresseux. Je veux comprendre ce que je fais mal et ce que je peux améliorer. Je veux comprendre le monde plus profondément, et je crois que tout commence par une question à la fois.</strong>",
           "p4": "Merci de m'avoir lu."
         }
+      },
+      "ma-methode-de-creation-dun-site-web": {
+        "title": "Ma méthode de création d'un site web, de A à Z",
+        "quote": "Avant d'écrire une seule ligne de code,<br>je commence toujours par comprendre.",
+        "body": {
+          "p0": "Quand j'ai un projet de création de site web, la première chose que je fais n'est pas d'ouvrir VS Code pour commencer à écrire des lignes de code. Je commence d'abord par comprendre le mieux possible le projet en question, en récoltant le plus d'informations possible sur le besoin du client.",
+          "p1": "Un site web ne se résume pas à un enchaînement de blocs d'interface : un bon site sert avant tout à transmettre de l'information, à informer le public. Sans information pertinente, on ne crée à la fin qu'un template visuellement soigné, mais qui ne transmet rien d'utile.",
+          "p2": "Après cette étape de collecte et de compréhension, je passe à l'organisation de ces informations. Après avoir posé mes questions au client, je me retrouve avec beaucoup de matière, mais sans classification logique : ce ne sont que des données brutes.",
+          "p3": "Dès le début de la collecte, je crée un dossier au nom du projet, un nom simple et court. À l'intérieur, je crée un sous-dossier docs, dans lequel j'écris toutes les informations recueillies.",
+          "p4": "Pour la classification, j'utilise un outil d'IA conversationnelle comme ChatGPT : je lui explique brièvement le projet et je lui transmets le fichier en pièce jointe pour qu'il en organise le contenu. Si le projet est plus complexe et que le fichier de collecte est volumineux, ou qu'il y a plusieurs fichiers, j'utilise plutôt Claude AI, pour sa capacité à traiter de grands volumes de texte. Une fois le document bien classé et ordonné, je l'enregistre dans le dossier docs du projet.",
+          "p5": "À partir des données collectées, je passe à la définition des pages à créer, puis, pour chaque page, des sections qui la composent. Je demande une proposition cohérente dans la même conversation, puis un document au format Markdown listant les pages et leurs sections. Je le relis et j'ajuste si nécessaire.",
+          "p6": "Je passe ensuite à l'établissement du document de design system. Ce document doit être rédigé avec le plus grand soin, car c'est lui qui définira l'identité visuelle du site.",
+          "p7": "Selon le projet, je fais des recherches sur le web à la recherche de sites déjà conçus sur un sujet similaire. Je visite ces sites et j'ouvre un document Markdown vierge dans lequel je note toutes les remarques qui me plaisent : couleurs, structures, etc. Un simple brouillon.",
+          "p8": "Je transmets ensuite ce brouillon à l'IA, dans la même conversation, en lui expliquant qu'il s'agit de l'ensemble des éléments que j'ai remarqués sur des sites déjà bien conçus. Je lui demande de rédiger le document complet du design system : palette de couleurs, typographie, et le reste. Je relis, je corrige si nécessaire, je valide, puis je colle le résultat dans le fichier définitif.",
+          "p9": "Vient ensuite la création de la maquette visuelle de chaque section de chaque page. Je demande à l'IA de me rédiger le prompt de création de la maquette pour une section donnée, en respectant à la lettre les règles du design system. À cette étape, on peut utiliser le générateur d'images de son choix - peu importe l'outil, il faut simplement qu'il soit performant. Le but est d'avoir une base visuelle, un plan concret de l'objectif à atteindre, avant de se lancer dans le code.",
+          "p10": "C'est ici que commence le codage. Je retourne dans le dossier du projet, où il n'y a jusqu'ici que le dossier docs, et je crée les dossiers assets, pages, scripts, styles, ainsi qu'un fichier index.html à la racine. Je laisse ce fichier de côté pour l'instant et je crée un dossier nommé ui-system, avec un sous-dossier par page, puis par section, où je place chaque maquette.",
+          "p11": "Dans chaque dossier de section, je crée un fichier index.html et un fichier style.css, à côté de la maquette, et je code intégralement le rendu visible en HTML et CSS. Avec l'aide d'une IA comme Claude AI, je précise bien que je ne veux pas qu'elle code toute la maquette d'un coup : d'abord le HTML complet, ensuite le CSS nécessaire pour obtenir un layout bien positionné, puis seulement le code final pour obtenir exactement le rendu de la maquette.",
+          "p12": "Toujours avec Claude AI, j'assemble ensuite les sections page par page, jusqu'à obtenir le fichier HTML complet et le fichier style.css complet de chaque page du site.",
+          "p13": "Je reviens alors au dossier du projet pour tout mettre en place : un dossier par page dans pages, chacun contenant son index.html ; le fichier de la page d'accueil directement à la racine ; un dossier par page dans styles, plus un dossier shared pour les fichiers partagés par toutes les pages (reset, base, variables). Je relie enfin chaque fichier HTML à son fichier de style.",
+          "p14": "Il ne reste plus qu'à adopter un regard critique : évaluer chaque page, se poser les bonnes questions, et corriger ce qui est mal codé. Je signale les incohérences à Claude AI - l'alignement d'un bouton, la couleur d'un titre - et je place les images dans des sous-dossiers cohérents du dossier assets.",
+          "p15": "Une fois toutes les pages en place, je zippe le dossier complet et je le transmets à Claude AI, en lui demandant de garantir une cohérence totale entre les pages : liens internes, header, footer, fichiers partagés. Je vérifie ensuite si les pages sont responsives, et sinon, j'utilise un prompt déjà préparé à cet effet.",
+          "p16": "Une fois le travail terminé, je vérifie le résultat. S'il reste des corrections, je les signale précisément et je demande une nouvelle version zippée. Je répète ce processus tant qu'il reste des améliorations à apporter.",
+          "p17": "<strong>C'est cette méthode que j'applique à chaque projet, étape par étape, jusqu'à obtenir, au final, un site propre.</strong>"
+        }
       }
     }
   },
@@ -840,6 +892,33 @@
         "category": "Blog & Reflections",
         "name": "The DSK Journal",
         "desc": "A writing space to share ideas,\nobserve and reflect on the world."
+      },
+      "project4": {
+        "aria": "View VIGO Services",
+        "img": {
+          "alt": "VIGO Services - professional institutional website"
+        },
+        "category": "Institutional Website",
+        "name": "VIGO Services",
+        "desc": "Professional institutional website for an\nadministrative services company - clear and reassuring."
+      },
+      "project5": {
+        "aria": "View Arie's Accessoires",
+        "img": {
+          "alt": "Arie's Accessoires - premium e-commerce website"
+        },
+        "category": "E-commerce Website",
+        "name": "Arie's Accessoires",
+        "desc": "Premium online accessories boutique, with an\nelegant design built to convert and delight."
+      },
+      "project6": {
+        "aria": "View Eliano Shoes",
+        "img": {
+          "alt": "Eliano Shoes - premium website for a shoe brand"
+        },
+        "category": "Brand Website",
+        "name": "Eliano Shoes",
+        "desc": "Premium website for a leather shoe brand,\nwith a bold, carefully crafted identity."
       }
     },
     "blog": {
@@ -943,7 +1022,8 @@
       "filters": {
         "all": "All",
         "education": "Education & Learning",
-        "blog": "Blog & Reflections"
+        "blog": "Blog & Reflections",
+        "vitrine": "Showcase Websites"
       },
       "empty": "No project in this category yet."
     },
@@ -1412,6 +1492,30 @@
           "p3": "<strong>I want to understand. I want to know more than I did yesterday. I don't want to be intellectually lazy. I want to understand what I am doing wrong and what I can do better. I want to understand the world more deeply, and I believe it all begins with one question at a time.</strong>",
           "p4": "Thanks for listening."
         }
+      },
+      "ma-methode-de-creation-dun-site-web": {
+        "title": "My method for building a website, from A to Z",
+        "quote": "Before writing a single line of code,<br>I always start by understanding.",
+        "body": {
+          "p0": "When I start a website project, the first thing I do is not open VS Code and start writing lines of code. I begin by understanding the project as thoroughly as possible, gathering as much information as I can about the client's needs.",
+          "p1": "A website isn't just a sequence of interface blocks. A good website exists above all to convey information, to inform the public. Without relevant information, all you end up creating is a visually polished template that communicates nothing useful.",
+          "p2": "After this gathering and understanding phase, I move on to organizing that information. Once I've asked the client my questions, I end up with plenty of material, but with no logical classification - just raw data.",
+          "p3": "From the very start of the collection process, I create a folder named after the project, with a short, simple name. Inside it, I create a docs subfolder, where I write down everything I've gathered.",
+          "p4": "For classification, I use a conversational AI tool like ChatGPT: I briefly explain the project and send it the file as an attachment so it can organize the content. If the project is more complex and the file is heavier - or there are several files - I use Claude AI instead, for its ability to handle large volumes of text. Once the document is properly classified and ordered, I save it in the project's docs folder.",
+          "p5": "Based on the information gathered, I move on to defining the pages to create, then, for each page, the sections that make it up. I ask for a proposal consistent with the project in the same conversation, then a Markdown document listing the pages and their sections. I review it and adjust if needed.",
+          "p6": "Next comes the design system document. It has to be written with the greatest care, because it defines the entire visual identity of the site.",
+          "p7": "Depending on the project, I research the web for sites already built on a similar subject. I visit them and open a blank Markdown document where I note down everything I like: colors, structure, and so on. Just a rough draft.",
+          "p8": "I then hand this draft to the AI, in the same conversation, explaining that these are all the things I noticed on already well-designed sites. I ask it to write the complete design system document: color palette, typography, and the rest. I review it, correct it if needed, validate it, then paste the result into the final file.",
+          "p9": "Then comes creating the visual mockup for each section of each page. I ask the AI to write me the prompt for generating the mockup of a given section, strictly following the rules in the design system. At this stage, you can use any image generator you like - the tool doesn't matter, as long as it's capable enough. The goal is to have a visual foundation, a concrete plan of what to aim for, before writing a single line of code.",
+          "p10": "This is where the coding begins. I go back to the project folder, which so far only contains the docs folder, and I create the assets, pages, scripts and styles folders, along with an index.html file at the root. I set that file aside for now and create a folder called ui-system, with a subfolder per page, then per section, where I place each mockup.",
+          "p11": "In each section folder, I create an index.html and a style.css file next to the mockup, and I code the exact visual result in HTML and CSS. With the help of an AI like Claude AI, I make it clear that I don't want it to code the whole mockup at once: first the full HTML, then the CSS needed to get a properly positioned layout, and only then the final code to match the mockup exactly.",
+          "p12": "Still with Claude AI, I then assemble the sections page by page, until I get the complete HTML file and the complete style.css file for each page of the site.",
+          "p13": "I then go back to the project folder to put everything in place: one folder per page inside pages, each containing its index.html; the homepage file placed directly at the root; one folder per page inside styles, plus a shared folder for the files used by every page (reset, base, variables). Finally, I link each HTML file to its stylesheet.",
+          "p14": "All that's left is to take a critical look: review each page, ask the right questions, and fix anything poorly coded. I flag inconsistencies to Claude AI - a button's alignment, a heading's color - and I place images in consistently named subfolders inside assets.",
+          "p15": "Once every page is in place, I zip the whole project folder and send it to Claude AI, asking it to ensure total consistency across pages: internal links, header, footer, shared files. I then check whether the pages are responsive, and if not, I use a prompt I've already prepared for that.",
+          "p16": "Once the work is done, I check the result. If anything still needs fixing, I point it out precisely and ask for a new zipped version. I repeat this process for as long as there are improvements to make.",
+          "p17": "<strong>This is the method I apply to every project, step by step, until I end up with a clean, finished website.</strong>"
+        }
       }
     }
   },
@@ -1548,6 +1652,33 @@
         "category": "Blog & Reflexiones",
         "name": "The DSK Journal",
         "desc": "Un espacio de escritura para compartir ideas,\nobservar y reflexionar sobre el mundo."
+      },
+      "project4": {
+        "aria": "Ver VIGO Services",
+        "img": {
+          "alt": "VIGO Services - sitio institucional profesional"
+        },
+        "category": "Sitio institucional",
+        "name": "VIGO Services",
+        "desc": "Sitio institucional profesional para una empresa\nde servicios administrativos, claro y confiable."
+      },
+      "project5": {
+        "aria": "Ver Arie's Accessoires",
+        "img": {
+          "alt": "Arie's Accessoires - sitio e-commerce premium"
+        },
+        "category": "Sitio e-commerce",
+        "name": "Arie's Accessoires",
+        "desc": "Tienda en línea de accesorios, con un diseño\npremium pensado para convertir y seducir."
+      },
+      "project6": {
+        "aria": "Ver Eliano Shoes",
+        "img": {
+          "alt": "Eliano Shoes - sitio premium para marca de zapatos"
+        },
+        "category": "Sitio de marca",
+        "name": "Eliano Shoes",
+        "desc": "Sitio premium para una marca de zapatos de\ncuero, con una identidad fuerte y cuidada."
       }
     },
     "blog": {
@@ -1651,7 +1782,8 @@
       "filters": {
         "all": "Todos",
         "education": "Educación & Aprendizaje",
-        "blog": "Blog & Reflexiones"
+        "blog": "Blog & Reflexiones",
+        "vitrine": "Sitios vitrina"
       },
       "empty": "Todavía no hay proyectos en esta categoría."
     },
@@ -2119,6 +2251,30 @@
           "p2": "Hoy, tengo la suerte de vivir en una época en la que se está desarrollando la IA conversacional. ChatGPT se ha convertido en mi lugar favorito para hacer preguntas, porque puedo preguntar cualquier cosa sin que nadie me diga «ya es suficiente».",
           "p3": "<strong>Quiero entender. Quiero saber más que ayer. No quiero ser intelectualmente perezoso. Quiero entender lo que hago mal y lo que puedo mejorar. Quiero comprender el mundo más profundamente, y creo que todo empieza con una pregunta a la vez.</strong>",
           "p4": "Gracias por leerme."
+        }
+      },
+      "ma-methode-de-creation-dun-site-web": {
+        "title": "Mi método para crear un sitio web, de la A a la Z",
+        "quote": "Antes de escribir una sola línea de código,<br>siempre empiezo por comprender.",
+        "body": {
+          "p0": "Cuando tengo un proyecto de creación de un sitio web, lo primero que hago no es abrir VS Code y empezar a escribir líneas de código. Empiezo por comprender lo mejor posible el proyecto, recopilando la mayor cantidad de información posible sobre las necesidades del cliente.",
+          "p1": "Un sitio web no se reduce a una sucesión de bloques de interfaz. Un buen sitio sirve, ante todo, para transmitir información, para informar al público. Sin información relevante, al final solo se crea una plantilla visualmente cuidada, pero que no transmite nada útil.",
+          "p2": "Después de esta etapa de recopilación y comprensión, paso a organizar esa información. Tras hacerle mis preguntas al cliente, me encuentro con mucho material, pero sin ninguna clasificación lógica: son solo datos en bruto.",
+          "p3": "Desde el inicio de la recopilación, creo una carpeta con el nombre del proyecto, un nombre simple y corto. Dentro, creo una subcarpeta docs, donde escribo toda la información recopilada.",
+          "p4": "Para la clasificación, uso una herramienta de IA conversacional como ChatGPT: le explico brevemente el proyecto y le envío el archivo adjunto para que organice el contenido. Si el proyecto es más complejo y el archivo de recopilación es voluminoso - o hay varios archivos - uso Claude AI, por su capacidad para procesar grandes volúmenes de texto. Una vez clasificado y bien ordenado el documento, lo guardo en la carpeta docs del proyecto.",
+          "p5": "A partir de la información recopilada, paso a definir las páginas a crear y, para cada página, las secciones que la componen. Pido una propuesta coherente en la misma conversación, y luego un documento en formato Markdown que liste las páginas y sus secciones. Lo reviso y ajusto si es necesario.",
+          "p6": "Luego paso a elaborar el documento de design system. Debe redactarse con el mayor cuidado, porque es el que definirá toda la identidad visual del sitio.",
+          "p7": "Según el proyecto, investigo en la web sitios ya diseñados sobre un tema similar. Los visito y abro un documento Markdown en blanco donde anoto todo lo que me gusta: colores, estructuras, etc. Un simple borrador.",
+          "p8": "Luego le paso ese borrador a la IA, en la misma conversación, explicándole que se trata de todo lo que he notado en sitios ya bien diseñados. Le pido que redacte el documento completo del design system: paleta de colores, tipografía, y el resto. Reviso, corrijo si hace falta, valido, y pego el resultado en el archivo definitivo.",
+          "p9": "Luego llega la creación de la maqueta visual de cada sección de cada página. Le pido a la IA que me redacte el prompt para generar la maqueta de una sección determinada, respetando al pie de la letra las reglas del design system. En esta etapa se puede usar el generador de imágenes que se prefiera - la herramienta no importa, solo que sea lo bastante potente. El objetivo es tener una base visual, un plan concreto del resultado a alcanzar, antes de escribir una sola línea de código.",
+          "p10": "Aquí es donde empieza la programación. Vuelvo a la carpeta del proyecto, que hasta ahora solo tiene la carpeta docs, y creo las carpetas assets, pages, scripts y styles, además de un archivo index.html en la raíz. Dejo ese archivo de lado por ahora y creo una carpeta llamada ui-system, con una subcarpeta por página y luego por sección, donde coloco cada maqueta.",
+          "p11": "En cada carpeta de sección, creo un archivo index.html y un archivo style.css junto a la maqueta, y programo íntegramente el resultado visible en HTML y CSS. Con la ayuda de una IA como Claude AI, dejo claro que no quiero que programe toda la maqueta de una vez: primero el HTML completo, luego el CSS necesario para lograr un layout bien posicionado, y solo después el código final para igualar exactamente la maqueta.",
+          "p12": "Siempre con Claude AI, ensamblo luego las secciones página por página, hasta obtener el archivo HTML completo y el archivo style.css completo de cada página del sitio.",
+          "p13": "Vuelvo entonces a la carpeta del proyecto para poner todo en su lugar: una carpeta por página dentro de pages, cada una con su index.html; el archivo de la página de inicio colocado directamente en la raíz; una carpeta por página dentro de styles, más una carpeta shared para los archivos compartidos por todas las páginas (reset, base, variables). Finalmente, conecto cada archivo HTML con su hoja de estilos.",
+          "p14": "Solo queda adoptar una mirada crítica: evaluar cada página, hacerse las preguntas correctas y corregir lo que esté mal programado. Señalo las incoherencias a Claude AI - la alineación de un botón, el color de un título - y coloco las imágenes en subcarpetas coherentes dentro de assets.",
+          "p15": "Una vez que todas las páginas están listas, comprimo la carpeta completa del proyecto y se la envío a Claude AI, pidiéndole que garantice una coherencia total entre las páginas: enlaces internos, header, footer, archivos compartidos. Luego verifico si las páginas son responsive, y si no lo son, uso un prompt que ya tengo preparado para eso.",
+          "p16": "Una vez terminado el trabajo, reviso el resultado. Si quedan correcciones por hacer, las señalo con precisión y pido una nueva versión comprimida. Repito este proceso mientras queden mejoras por hacer.",
+          "p17": "<strong>Este es el método que aplico en cada proyecto, paso a paso, hasta obtener, al final, un sitio limpio y terminado.</strong>"
         }
       }
     }
