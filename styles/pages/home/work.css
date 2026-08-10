@@ -19,6 +19,7 @@
   display:               grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap:            var(--space-7);
+  row-gap:               var(--space-7);
   padding-left:          var(--space-14);
 }
 
