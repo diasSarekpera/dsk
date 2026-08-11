@@ -210,7 +210,7 @@
       "copyright": "© 2025 Dias Sare Kpera - Tous droits réservés.",
       "info": {
         "title": "Une idée, un projet,\nune question ?",
-        "subtitle": "N'hésite pas à m'écrire - je lis chaque\nmessage et réponds sous 24 heures.",
+        "subtitle": "N'hésitez pas à m'écrire - je lis chaque\nmessage et réponds sous 24 heures.",
         "email": {
           "label": "E-mail",
           "value": "email@example.com"
@@ -226,7 +226,7 @@
       },
       "form": {
         "title": "Envoyer un message",
-        "desc": "Parle-moi de ton projet, d'une idée de collaboration, ou dis simplement bonjour.",
+        "desc": "Parlez-moi de votre projet, d'une idée de collaboration, ou dites simplement bonjour.",
         "name": {
           "label": "Nom complet",
           "placeholder": "Jean Dupont"
@@ -241,14 +241,14 @@
         },
         "message": {
           "label": "Message",
-          "placeholder": "Décris-moi ton projet ou simplement ce qui t'a amené ici…"
+          "placeholder": "Décrivez-moi votre projet ou simplement ce qui vous a amené ici…"
         },
         "note": "Je réponds sous 24 heures.",
         "submit": "Envoyer le message"
       }
     },
     "footer": {
-      "tagline": "Je crée, j'apprends, je transmets.",
+      "tagline": "La discipline, c'est faire ce qui doit être fait.",
       "status": "Disponible pour des projets",
       "copy": "© 2025 Dias Sare Kpera - Tous droits réservés."
     },
@@ -289,7 +289,7 @@
         "discipline": "Discipline & habitudes"
       },
       "empty": "Aucun article dans cette catégorie pour le moment.",
-      "tagline": "Réflexions sur le développement humain",
+      "tagline": "Mon carnet de bord : apprentissages, réflexions et ce que je comprends en chemin.",
       "card_eyebrow": "Article"
     },
     "articles": {
@@ -1008,7 +1008,7 @@
       }
     },
     "footer": {
-      "tagline": "I create, I learn, I share.",
+      "tagline": "Discipline is doing what must be done.",
       "status": "Available for projects",
       "copy": "© 2025 Dias Sare Kpera - All rights reserved."
     },
@@ -1049,7 +1049,7 @@
         "discipline": "Discipline & habits"
       },
       "empty": "No article in this category yet.",
-      "tagline": "Reflections on human development",
+      "tagline": "My learning log: what I'm figuring out, one step at a time.",
       "card_eyebrow": "Article"
     },
     "articles": {
@@ -1768,7 +1768,7 @@
       }
     },
     "footer": {
-      "tagline": "Creo, aprendo, comparto.",
+      "tagline": "La disciplina es hacer lo que debe hacerse.",
       "status": "Disponible para proyectos",
       "copy": "© 2025 Dias Sare Kpera - Todos los derechos reservados."
     },
@@ -1809,7 +1809,7 @@
         "discipline": "Disciplina & hábitos"
       },
       "empty": "Todavía no hay artículos en esta categoría.",
-      "tagline": "Reflexiones sobre el desarrollo humano",
+      "tagline": "Mi cuaderno de bitácora: lo que voy comprendiendo, paso a paso.",
       "card_eyebrow": "Artículo"
     },
     "articles": {

@@ -80,14 +80,6 @@
   color:          var(--ink-mid);
 }
 
-.journal-masthead__rule {
-  width:      40px;
-  height:     1px;
-  margin-top: var(--space-8);
-  background: var(--caramel);
-}
-
-
 /* ── Filtres : centrés sous le masthead ─────────────────────
    La palette vient déjà de blog-page.css (thème clair) ; on
    ajuste seulement l'alignement pour suivre le masthead centré. */
@@ -148,13 +140,11 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color:          var(--caramel);
+  margin-bottom:  var(--space-8);
 }
 
 .journal-card__rule {
-  width:      28px;
-  height:     1px;
-  margin:     var(--space-3) 0 var(--space-6);
-  background: var(--caramel-light);
+  display: none;
 }
 
 .journal-card__title {

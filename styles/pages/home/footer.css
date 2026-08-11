@@ -40,27 +40,6 @@
   opacity:          0.25;
 }
 
-/* Watermark typographique en fond */
-.footer::after {
-  content:             'DSK';
-  position:            absolute;
-  bottom:              0;
-  left:                50%;
-  transform:           translateX(-50%);
-  font-family:         var(--font-display);
-  font-size:           clamp(9rem, 20vw, 18rem);
-  font-weight:         300;
-  letter-spacing:      -0.04em;
-  color:               transparent;
-  -webkit-text-stroke: 1px rgba(var(--ink-base-rgb), 0.045);
-  white-space:         nowrap;
-  pointer-events:      none;
-  user-select:         none;
-  line-height:         1;
-  z-index:             var(--z-base);
-}
-
-
 /* ── Numéro de section latéral ── */
 
 .footer__index {
