@@ -1,0 +1,33 @@
+/* ============================================================
+   reset.css — Reset moderne & normalisation navigateur
+============================================================ */
+
+*,
+*::before,
+*::after {
+  margin:     0;
+  padding:    0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior:          smooth;
+  scroll-padding-top:       80px;
+  font-size:                16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+ul { list-style: none; }
+
+a {
+  text-decoration: none;
+  color:           inherit;
+}
+
+button {
+  cursor:     pointer;
+  background: none;
+  border:     none;
+  font:       inherit;
+  color:      inherit;
+}

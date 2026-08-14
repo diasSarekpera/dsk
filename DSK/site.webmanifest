@@ -1,0 +1,11 @@
+{
+  "name": "Dias Sare Kpera — Portfolio",
+  "short_name": "DSK",
+  "icons": [
+    { "src": "/assets/favicon/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/favicon/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#f0ede8",
+  "background_color": "#f0ede8",
+  "display": "standalone"
+}

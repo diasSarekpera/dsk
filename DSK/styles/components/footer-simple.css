@@ -1,0 +1,137 @@
+/* ============================================================
+   footer-simple.css — Pied de page compact (toutes les pages
+   sauf l'accueil, qui garde son grand footer dédié — voir
+   styles/pages/home/footer.css)
+
+   Architecture :
+     .site-footer                — bande sombre pleine largeur
+       .site-footer__inner       — conteneur centré (logo + socials)
+         .site-footer__brand     — logo + tagline + règle accent
+         .site-footer__socials   — liens réseaux sociaux
+       .site-footer__copyright   — ligne de copyright, centrée en bas
+============================================================ */
+
+.site-footer {
+  position:         relative;
+  background-color: var(--ink-deep);
+  padding:           var(--space-10) var(--space-8) var(--space-6);
+}
+
+.site-footer__inner {
+  max-width:      var(--container-max);
+  margin:         0 auto;
+  display:        flex;
+  align-items:    center;
+  justify-content: space-between;
+  gap:            var(--space-8);
+}
+
+
+/* ── Marque (logo + tagline) ── */
+
+.site-footer__brand {
+  display:        flex;
+  flex-direction: column;
+  align-items:    flex-start;
+}
+
+.site-footer__logo {
+  display:        block;
+  font-family:    var(--font-display);
+  font-style:     italic;
+  font-weight:    300;
+  font-size:      clamp(2.25rem, 3.5vw, 3rem);
+  line-height:    1;
+  letter-spacing: -0.02em;
+  color:          var(--ivory-card);
+  transition:     color 250ms ease;
+}
+
+.site-footer__logo:hover { color: var(--caramel-light); }
+
+.site-footer__logo-dot { color: var(--caramel); }
+
+.site-footer__tagline {
+  margin-top:  var(--space-2);
+  font-family: var(--font-body);
+  font-size:   var(--text-md);
+  font-weight: 400;
+  color:       var(--text-on-ink-strong);
+}
+
+.site-footer__brand .section-title-rule { margin-top: var(--space-3); }
+
+
+/* ── Réseaux sociaux ── */
+
+.site-footer__socials {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-3);
+  flex-shrink: 0;
+}
+
+.site-footer__social-link {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  width:           42px;
+  height:          42px;
+  border:          1px solid var(--border-on-ink-soft);
+  border-radius:   var(--radius-full);
+  color:           var(--text-on-ink-strong);
+  transition:
+    background   250ms ease,
+    border-color 250ms ease,
+    color        250ms ease,
+    transform    100ms ease;
+}
+
+.site-footer__social-link:hover {
+  background:   var(--ivory-card);
+  border-color: var(--ivory-card);
+  color:        var(--ink-deep);
+}
+
+.site-footer__social-link:active { transform: scale(0.92); }
+
+.site-footer__social-link svg {
+  width:  17px;
+  height: 17px;
+}
+
+
+/* ── Copyright ── */
+
+.site-footer__copyright {
+  margin-top:     var(--space-8);
+  font-family:    var(--font-body);
+  font-size:      var(--text-sm);
+  font-weight:    400;
+  letter-spacing: 0.02em;
+  color:          var(--text-on-ink-mid);
+  text-align:     center;
+}
+
+
+/* ── Responsive ── */
+
+@media (max-width: 768px) {
+  .site-footer { padding: var(--space-10) var(--space-6) var(--space-6); }
+
+  .site-footer__inner {
+    flex-direction: column;
+    align-items:    center;
+    text-align:     center;
+    gap:            var(--space-6);
+  }
+
+  .site-footer__brand { align-items: center; }
+}
+
+@media (max-width: 480px) {
+  .site-footer__socials { gap: var(--space-2); }
+}
+
+
+/* ── prefers-reduced-motion : géré globalement dans base.css ── */
