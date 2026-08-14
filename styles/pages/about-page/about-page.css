@@ -28,9 +28,10 @@
   border-top: 1px solid var(--border);
 }
 
-/* Bandes pleine largeur (citation, CTA final) */
+/* Bandes pleine largeur (citation, CTA final) — fond plat et
+   identique sur les deux bandes, aligné sur la maquette. */
 .about-page__section--band {
-  background: linear-gradient(180deg, var(--caramel-pale) 0%, rgba(232, 213, 196, 0.55) 100%);
+  background: #f5ece1;
 }
 
 .about-page__section--band .about-page__inner {
