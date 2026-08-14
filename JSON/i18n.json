@@ -271,8 +271,122 @@
       "meta": {
         "title": "À propos - Dias Sare Kpera"
       },
-      "cta": {
-        "contact": "Me contacter"
+      "hero": {
+        "eyebrow": "À propos",
+        "title": "Curiosité\nen mouvement.",
+        "subtitle": "Développeur full-stack en formation, aventurier du savoir. Basé à Cotonou, Bénin.",
+        "photo_alt": "Portrait de Dias Sare Kpera",
+        "availability": "Disponible pour de nouveaux projets",
+        "stamp": "depuis\nCotonou, Bénin",
+        "cta_contact": "Me contacter",
+        "cta_projects": "Voir mes projets"
+      },
+      "timeline": {
+        "eyebrow": "Parcours",
+        "title": "Un voyage\nautodidacte.",
+        "item1": {
+          "label": "L'étincelle",
+          "desc": "Découverte du code via des tutoriels en ligne. Une simple curiosité qui s'est transformée en passion."
+        },
+        "item2": {
+          "label": "Apprentissage",
+          "desc": "Des heures d'apprentissage, de pratique et d'erreurs. HTML, CSS, JavaScript deviennent mes premiers outils."
+        },
+        "item3": {
+          "label": "Premiers pas",
+          "desc": "Réalisation de mes premiers projets personnels et exploration du monde du développement backend."
+        },
+        "item4": {
+          "label": "Cultivora",
+          "desc": "Création de Cultivora Land et de The DSK Journal, mes deux projets personnels."
+        },
+        "item5": {
+          "label": "Aujourd'hui",
+          "desc": "Je continue d'apprendre, de construire et de partager pour avoir un impact plus grand."
+        }
+      },
+      "philosophy": {
+        "eyebrow": "Philosophie",
+        "title": "Des valeurs\nqui guident.",
+        "card1": {
+          "title": "Curiosité",
+          "desc": "Toujours explorer, toujours apprendre, ne jamais cesser de poser des questions."
+        },
+        "card2": {
+          "title": "Discipline",
+          "desc": "La régularité et la rigueur sont mes alliées pour transformer les idées en réalité."
+        },
+        "card3": {
+          "title": "Apprentissage continu",
+          "desc": "Le savoir évolue chaque jour. Je m'engage à évoluer avec lui."
+        },
+        "card4": {
+          "title": "Attention au détail",
+          "desc": "Chaque détail compte pour créer des solutions fiables et élégantes."
+        }
+      },
+      "beyond": {
+        "eyebrow": "Au-delà du code",
+        "title": "L'amour d'apprendre,\npartout, toujours.",
+        "p1": "Je suis convaincu que le code n'est qu'un moyen. Ce qui me motive vraiment, c'est la compréhension du monde, des idées et des gens.",
+        "p2": "À travers mon journal personnel, je partage mes réflexions, mes lectures et mes apprentissages sur le développement, la productivité et la croissance.",
+        "p3": "Écrire pour penser. Partager pour inspirer.",
+        "journal_title": "The DSK Journal",
+        "journal_desc": "Réflexions, apprentissages et idées sur le code, la croissance et la vie de tous les jours.",
+        "journal_cta": "Lire le journal"
+      },
+      "stats": {
+        "eyebrow": "En chiffres",
+        "item1": {
+          "label": "Projets"
+        },
+        "item2": {
+          "label": "Technologies"
+        },
+        "item3": {
+          "label": "Années"
+        },
+        "item4": {
+          "label": "Langues"
+        }
+      },
+      "quote": {
+        "text": "« Chaque difficulté est une opportunité de grandir. »",
+        "attribution": "Dias Sare Kpera"
+      },
+      "details": {
+        "eyebrow": "Détails",
+        "title": "Les infos\nessentielles.",
+        "birthday": {
+          "label": "Date de naissance",
+          "value": "5 décembre 2006"
+        },
+        "age": {
+          "label": "Âge",
+          "value": "20 ans"
+        },
+        "city": {
+          "label": "Ville",
+          "value": "Cotonou, Bénin"
+        },
+        "availability": {
+          "label": "Disponibilité",
+          "value": "Disponible pour de nouveaux projets"
+        },
+        "formation": {
+          "label": "Formation",
+          "value": "Développeur full-stack en formation autonome"
+        },
+        "contact": {
+          "label": "Contact",
+          "value": "diassarekpera@mail.com<br>+229 01 91 15 19 44"
+        }
+      },
+      "final": {
+        "eyebrow": "Travaillons ensemble",
+        "title": "Parlons de\nvotre projet.",
+        "cta_contact": "Me contacter",
+        "cta_projects": "Voir mes projets"
       }
     },
     "blog_page": {
@@ -756,6 +870,74 @@
           "p16": "Une fois le travail terminé, je vérifie le résultat. S'il reste des corrections, je les signale précisément et je demande une nouvelle version zippée. Je répète ce processus tant qu'il reste des améliorations à apporter.",
           "p17": "<strong>C'est cette méthode que j'applique à chaque projet, étape par étape, jusqu'à obtenir, au final, un site propre.</strong>"
         }
+      },
+      "tout-le-monde-peut-il-devenir-riche": {
+        "title": "Tout le monde peut-il devenir riche ?",
+        "quote": "La richesse n'est pas une quantité limitée à partager.<br>C'est une valeur qu'il faut apprendre à créer.",
+        "body": {
+          "p0": "Un soir, en sortant du lycée, je marchais au milieu d'une foule d'élèves. Il y avait du bruit partout. Nous étions nombreux, vraiment nombreux. Et soudain, en regardant cette foule, une question m'est venue à l'esprit : si tout le monde cherche un jour à devenir riche, est-ce que tout le monde peut réellement le devenir ?",
+          "p1": "À l'époque, ma réponse était immédiate : non. Je me représentais le monde comme une immense chasse au trésor. Des millions de personnes couraient toutes vers le même objectif : la liberté financière et la richesse économique. Et dans ma tête, il n'y avait tout simplement pas assez de place pour tout le monde. Je ne savais pas vraiment sur quoi reposait cette conviction, mais je la défendais profondément.",
+          "p2": "Puis les années ont passé. J'ai continué à observer le monde, à écouter des débats, à regarder des documentaires, à lire et à essayer de comprendre davantage l'économie et la manière dont les sociétés fonctionnent. Et récemment, alors que je réfléchissais encore à la notion de richesse économique, une idée m'est revenue. Je me suis dit : et si tout le monde pouvait, au sens théorique, devenir riche ?",
+          "p3": "Cette pensée m'a moi-même surpris, parce que je me suis souvenu que quelques années auparavant, je pensais exactement l'inverse. Alors je me suis demandé : qu'est-ce qui avait changé dans ma manière de penser ? Je crois que c'est principalement ma compréhension de la richesse.",
+          "p4": "J'ai progressivement compris que l'argent n'est pas la richesse elle-même. L'argent est plutôt un moyen de représenter, d'échanger et de conserver une partie de la valeur créée dans l'économie. Derrière l'argent, il y a donc une question beaucoup plus fondamentale : quelle valeur apportons-nous aux autres ?",
+          "p5": "Prenons l'exemple d'un entrepreneur comme Aliko Dangote. Sa richesse ne vient pas simplement du nombre inscrit sur ses comptes bancaires. Elle est liée à la valeur économique de ce qu'il possède et contrôle : des entreprises, des infrastructures, des systèmes de production et des produits dont d'autres personnes ont besoin. C'est cette capacité à produire et à apporter de la valeur à grande échelle qui lui permet de générer d'importantes ressources financières.",
+          "p6": "Pour mieux comprendre cette idée, imaginons un monde dans lequel il n'existe que deux personnes : X et Y. X possède quelque chose dont Y a besoin. Y possède quelque chose dont X a besoin. Ils décident d'échanger. Avant même de parler d'argent, chacun possède déjà quelque chose qui a de la valeur pour l'autre. L'argent ne fait alors que faciliter l'échange.",
+          "p7": "Maintenant, agrandissons ce petit monde. Deux personnes deviennent cent. Cent deviennent mille. Mille deviennent des millions. Nous obtenons alors une immense économie dans laquelle les individus créent des produits, développent des compétences et proposent des services que d'autres sont prêts à utiliser et, dans certains cas, à payer.",
+          "p8": "C'est à partir de là que ma réflexion a changé. Je ne pense plus simplement que la richesse est une quantité limitée d'argent que tout le monde doit se partager. Je comprends davantage la richesse comme quelque chose qui peut aussi être créée à travers la production de valeur.",
+          "p9": "Mais cela m'amène immédiatement à une autre question : si tout le monde peut théoriquement créer de la valeur, pourquoi tout le monde n'est-il pas riche ? Et c'est là que la réalité devient beaucoup plus complexe.",
+          "p10": "Tout le monde ne possède pas les mêmes ressources. Tout le monde ne bénéficie pas des mêmes opportunités. Tout le monde ne reçoit pas la même éducation. Tout le monde ne grandit pas dans les mêmes conditions. Tout le monde n'a pas accès aux mêmes réseaux, aux mêmes marchés, aux mêmes infrastructures ou aux mêmes capitaux.",
+          "p11": "Et même lorsqu'une personne crée énormément de valeur, cela ne signifie pas automatiquement qu'elle deviendra riche. La valeur créée doit aussi pouvoir être transformée en revenu ou en patrimoine, et cela dépend de nombreux facteurs.",
+          "p12": "C'est pourquoi je fais aujourd'hui une distinction entre ce qui est possible et ce qui est réellement accessible dans les conditions présentes. Quelque chose peut être théoriquement possible sans être facilement accessible à tout le monde.",
+          "p13": "Je ne prétends donc pas avoir trouvé une formule absolue permettant à chacun de devenir riche. Je pense simplement que ma manière de voir la richesse a évolué. Je suis passé de « tout le monde ne peut pas être riche parce que les ressources sont limitées » à une réflexion beaucoup plus nuancée : « la capacité de créer de la valeur peut être largement développée, mais les conditions permettant de transformer cette valeur en richesse financière ne sont pas les mêmes pour tout le monde. »",
+          "p14": "Et finalement, cette réflexion me pousse à regarder ma propre vie différemment. Plutôt que de simplement vouloir posséder de l'argent, je dois apprendre à créer quelque chose qui a suffisamment de valeur pour être recherché par d'autres. Une compétence. Un produit. Un service. Une entreprise. Une solution à un problème.",
+          "p15": "<strong>Et peut-être que la vraie question n'est donc pas seulement « Comment devenir riche ? » Mais plutôt : « Quelle valeur suis-je capable de créer, et comment puis-je la rendre utile à suffisamment de personnes pour qu'elle devienne économiquement importante ? » C'est cette question que je préfère me poser aujourd'hui. Et je reste ouvert à changer encore d'avis, parce que je sais que ma compréhension actuelle n'est probablement qu'une étape supplémentaire dans mon apprentissage.</strong>"
+        }
+      },
+      "les-choses-devraient-etre-des-plus-pas-des-remplacants": {
+        "title": "Les choses devraient être des plus, pas des remplaçants",
+        "quote": "Les choses devraient être des plus pour nous,<br>et non des remplaçants.",
+        "body": {
+          "p0": "Je pense que les choses dans la vie devraient être des plus pour nous, et non des remplaçants.",
+          "p1": "Nous avons souvent une certaine dépendance à certaines choses. Moi, par exemple, je suis souvent dépendant de ma connexion Internet. Quand je n'ai pas de connexion, je me mets dans tous mes états, parce qu'une grande partie de ce que je fais reste en pause. Et cela me met hors de moi.",
+          "p2": "Mais est-ce vraiment une bonne chose d'être autant dépendant intérieurement de ces choses de la vie ? Je pense que non.",
+          "p3": "Je pense que nous devrions considérer chaque chose dans notre vie comme un plus qui nous élève. Une connexion Internet m'aide à travailler. Mais si demain, il n'y en a pas, ce serait très regrettable pour moi, certes, mais cela ne devrait pas m'enlever ma paix intérieure.",
+          "p4": "Parce que si je considère la connexion Internet comme un plus pour moi, alors, quand quelque chose qui est un plus n'est plus là, il reste toujours la version brute : la version sans cette chose. Et il faut simplement essayer de faire avec.",
+          "p5": "J'aime bien avoir cette image mentale : un vieux qui marche seul dans un désert, à pied, et qui, soudain, rencontre des passants avec des véhicules tout-terrain. Ceux-ci décident de l'emmener avec eux. Alors il monte, et il prend un peu de répit. Il n'est plus aussi fatigué, il ne souffre plus autant. Il a reçu un plus.",
+          "p6": "Mais imaginons qu'un peu plus loin, les jeunes qui avaient décidé de le prendre lui disent qu'ils sont désolés, mais qu'ils ne peuvent pas l'emmener plus loin dans le désert. Il va devoir descendre et reprendre son chemin à pied.",
+          "p7": "Naturellement, il ne va pas du tout aimer cela. Personne ne trouve agréable de marcher seul dans un désert. Mais il descend tout simplement et reprend son chemin comme avant.",
+          "p8": "Il a trouvé cela très regrettable, mais il ne va pas perturber sa paix intérieure en disant qu'il ne veut plus avancer s'il ne retrouve pas la voiture qui l'avait aidé. Il continue son chemin à pied, malgré la fatigue et la souffrance, jusqu'à atteindre son objectif.",
+          "p9": "Voilà. C'est cette petite histoire qui m'est venue à l'instant pour illustrer cette philosophie : les choses devraient être des plus pour nous, et non des remplaçants.",
+          "p10": "Aujourd'hui, beaucoup de choses sont de plus en plus accessibles. Nous avons énormément de « plus » dans nos vies. Mais il est très important de bien armer notre esprit pour considérer ces choses comme des éléments qui nous élèvent, et non comme des remplaçants qui pourraient, un jour, avoir tellement de pouvoir sur nous que leur absence nous enlèverait la paix intérieure qui nous habite.",
+          "p11": "Faisons souvent comme le vieux dans le désert lorsque nos « plus », ou certains d'entre eux, ne sont plus là. Ce n'est pas une philosophie facile à suivre, mais elle en vaut la peine.",
+          "p12": "<strong>À l'heure actuelle où j'écris cet article, ma connexion Internet ne cesse de buguer et, malheureusement, certains de mes travaux sont en pause. Au début, j'étais frustré, je n'étais pas tranquille. Mais j'ai décidé de tout couper, de reprendre mon souffle et de faire comme l'homme dans le désert. J'ai ouvert le Bloc-notes et j'ai commencé à écrire cet article. Je vais prendre mon temps, travailler ensuite sur ce que je peux faire sans connexion, et continuer ma vie. Pourquoi ? Parce que cela en vaut la peine.</strong>"
+        }
+      },
+      "lia-devrait-nous-donner-plus-de-temps-pour-devenir-meilleurs": {
+        "title": "L'IA devrait nous donner plus de temps pour devenir meilleurs",
+        "quote": "La vraie opportunité de l'IA n'est pas de faire plus en moins de temps,<br>mais d'avoir enfin plus de temps pour devenir meilleurs.",
+        "body": {
+          "p0": "Je pense que la chance que nous avons aujourd'hui de pouvoir réaliser certaines tâches beaucoup plus rapidement grâce à l'automatisation et à des outils d'IA de plus en plus performants est une grande opportunité pour nous.",
+          "p1": "Une opportunité de consacrer davantage de temps à d'autres choses plus fondamentales : la lecture, la culture générale, l'apprentissage de ce qui nous passionne, un bon repos, des nuits de sommeil suffisantes, le sport, et surtout le fait de nous questionner sur la manière de devenir une version plus optimisée et meilleure de nous-mêmes.",
+          "p2": "Parce que voyons les choses d'une autre manière. Au lieu de toujours dire : « Ah, aujourd'hui, il est plus facile de faire ceci ou cela », ou encore : « Aujourd'hui, les IA font déjà tout, il n'y a donc plus de place pour les humains », je ne pense pas que ce soit la meilleure position à prendre.",
+          "p3": "La posture à adopter serait plutôt d'apprendre davantage à utiliser ces outils d'IA pour optimiser nos tâches quotidiennes. Et une fois que cela est fait, une fois que nous arrivons à concevoir plus vite, à écrire plus vite, à produire plus vite et à accomplir certaines tâches plus rapidement, alors il faut utiliser le temps gagné pour consacrer davantage d'énergie à ce qui rend l'intelligence humaine irremplaçable et intemporelle.",
+          "p4": "Et cela passe par la culture et les bonnes activités qui nous permettent de progresser : lire, travailler sur nos lacunes, dormir suffisamment, faire du sport quotidiennement si possible, développer notre culture générale, chercher à mieux comprendre le monde dans lequel nous vivons, chercher à mieux comprendre comment nous fonctionnons et chercher également à mieux comprendre comment nous pouvons créer de la valeur.",
+          "p5": "Ce sont des choses fondamentales qui, à la base, ne devraient pas être réservées à une fine partie des êtres humains. Elles devraient plutôt constituer une sorte de quête que chaque être humain devrait chercher à mener.",
+          "p6": "Il ne s'agit pas de devenir parfait. Personne ne l'est. Nul n'est parfait. Et c'est justement parce que nous ne sommes pas parfaits que nous devons chercher à devenir meilleurs.",
+          "p7": "Même si la perfection n'est pas une ligne droite que l'on atteint, ni un objectif fixe que l'on atteint un jour, elle peut être considérée comme une ligne de conduite qui nous pousse à devenir chaque jour meilleurs qu'hier.",
+          "p8": "Et je pense que les automatisations et les IA arrivent au bon moment pour nous permettre de consacrer davantage de temps à ces choses fondamentales.",
+          "p9": "<strong>Peut-être que la véritable opportunité que nous offrent les IA n'est donc pas simplement de faire plus de choses en moins de temps, mais de nous permettre d'avoir enfin plus de temps pour devenir davantage humains.</strong>"
+        }
+      },
+      "it-is-worth-it": {
+        "title": "Ça en vaut la peine",
+        "quote": "Le progrès n'est pas toujours quelque chose que l'on peut voir.<br>Mais cela ne veut pas dire qu'il n'est pas réel.",
+        "body": {
+          "p0": "Chaque jour, quand je décide de faire ma séance de sport prévue, je me pose la même question : « Je fais ça tous les jours, mais je ne vois aucun résultat. Je ne remarque aucun changement dans mon corps. »",
+          "p1": "Avec le temps, cette pensée revenait sans cesse, alors j'ai décidé d'en parler à un professionnel. Il m'a écouté et m'a donné un conseil. Il m'a expliqué que c'est souvent comme ça que fonctionne le progrès : on ne remarque pas toujours ses propres progrès, mais cela ne veut pas dire qu'ils ne sont pas réels. Si l'on se compare à une photo de soi-même prise quelques mois plus tôt, on réalise parfois qu'on n'est plus tout à fait la même personne.",
+          "p2": "Il m'a aussi expliqué quelque chose d'important sur le sport : il a un véritable impact sur la santé. Alors je suis allé faire des recherches en ligne sur les bienfaits d'une activité physique régulière. Ce que j'ai découvert m'a impressionné. Le sport aide le cœur à travailler plus efficacement, améliore le sommeil, favorise une bonne circulation sanguine, renforce les os, soutient les défenses naturelles du corps et peut aider à maintenir un poids sain. Il peut aussi réduire le stress en libérant des hormones comme les endorphines, qui améliorent l'humeur et le bien-être général.",
+          "p3": "Quand j'ai appris tout cela, je me suis dit : « Alors, ça en vaut vraiment la peine ! »",
+          "p4": "<strong>C'est pour cela que je dois continuer mon entraînement, même quand je ne vois pas de résultats visibles, parce que je comprends maintenant que le progrès n'est pas toujours quelque chose que l'on peut voir. Et oui, ça en vaut la peine !</strong>"
+        }
       }
     }
   },
@@ -1008,7 +1190,7 @@
       }
     },
     "footer": {
-      "tagline": "\u201cDiscipline is doing what must be done.\u201d",
+      "tagline": "“Discipline is doing what must be done.”",
       "status": "Available for projects",
       "copy": "© 2025 Dias Sare Kpera - All rights reserved."
     },
@@ -1031,8 +1213,122 @@
       "meta": {
         "title": "About - Dias Sare Kpera"
       },
-      "cta": {
-        "contact": "Get in touch"
+      "hero": {
+        "eyebrow": "About",
+        "title": "Curiosity\nin motion.",
+        "subtitle": "Full-stack developer in training, adventurer of knowledge. Based in Cotonou, Benin.",
+        "photo_alt": "Portrait of Dias Sare Kpera",
+        "availability": "Available for new projects",
+        "stamp": "from\nCotonou, Benin",
+        "cta_contact": "Contact me",
+        "cta_projects": "See my projects"
+      },
+      "timeline": {
+        "eyebrow": "Journey",
+        "title": "A self-taught\njourney.",
+        "item1": {
+          "label": "The spark",
+          "desc": "Discovered code through online tutorials. A simple curiosity that turned into a passion."
+        },
+        "item2": {
+          "label": "Learning",
+          "desc": "Hours of learning, practice, and mistakes. HTML, CSS, and JavaScript became my first tools."
+        },
+        "item3": {
+          "label": "First steps",
+          "desc": "Built my first personal projects and explored the world of backend development."
+        },
+        "item4": {
+          "label": "Cultivora",
+          "desc": "Created Cultivora Land and The DSK Journal, my two personal projects."
+        },
+        "item5": {
+          "label": "Today",
+          "desc": "I keep learning, building, and sharing to create a bigger impact."
+        }
+      },
+      "philosophy": {
+        "eyebrow": "Philosophy",
+        "title": "Values that\nguide me.",
+        "card1": {
+          "title": "Curiosity",
+          "desc": "Always exploring, always learning, never ceasing to ask questions."
+        },
+        "card2": {
+          "title": "Discipline",
+          "desc": "Consistency and rigor are my allies for turning ideas into reality."
+        },
+        "card3": {
+          "title": "Continuous learning",
+          "desc": "Knowledge evolves every day. I'm committed to evolving with it."
+        },
+        "card4": {
+          "title": "Attention to detail",
+          "desc": "Every detail matters to create reliable, elegant solutions."
+        }
+      },
+      "beyond": {
+        "eyebrow": "Beyond the code",
+        "title": "A love of learning,\neverywhere, always.",
+        "p1": "I'm convinced that code is only a means. What truly drives me is understanding the world, ideas, and people.",
+        "p2": "Through my personal journal, I share my reflections, my reading, and what I'm learning about development, productivity, and growth.",
+        "p3": "Write to think. Share to inspire.",
+        "journal_title": "The DSK Journal",
+        "journal_desc": "Reflections, learnings, and ideas about code, growth, and everyday life.",
+        "journal_cta": "Read the journal"
+      },
+      "stats": {
+        "eyebrow": "By the numbers",
+        "item1": {
+          "label": "Projects"
+        },
+        "item2": {
+          "label": "Technologies"
+        },
+        "item3": {
+          "label": "Years"
+        },
+        "item4": {
+          "label": "Languages"
+        }
+      },
+      "quote": {
+        "text": "“Every difficulty is an opportunity to grow.”",
+        "attribution": "Dias Sare Kpera"
+      },
+      "details": {
+        "eyebrow": "Details",
+        "title": "The essential\ninfo.",
+        "birthday": {
+          "label": "Date of birth",
+          "value": "December 5, 2006"
+        },
+        "age": {
+          "label": "Age",
+          "value": "20 years old"
+        },
+        "city": {
+          "label": "City",
+          "value": "Cotonou, Benin"
+        },
+        "availability": {
+          "label": "Availability",
+          "value": "Available for new projects"
+        },
+        "formation": {
+          "label": "Background",
+          "value": "Full-stack developer, self-taught in training"
+        },
+        "contact": {
+          "label": "Contact",
+          "value": "diassarekpera@mail.com<br>+229 01 91 15 19 44"
+        }
+      },
+      "final": {
+        "eyebrow": "Let's work together",
+        "title": "Let's talk about\nyour project.",
+        "cta_contact": "Contact me",
+        "cta_projects": "See my projects"
       }
     },
     "blog_page": {
@@ -1516,6 +1812,74 @@
           "p16": "Once the work is done, I check the result. If anything still needs fixing, I point it out precisely and ask for a new zipped version. I repeat this process for as long as there are improvements to make.",
           "p17": "<strong>This is the method I apply to every project, step by step, until I end up with a clean, finished website.</strong>"
         }
+      },
+      "tout-le-monde-peut-il-devenir-riche": {
+        "title": "Can Everyone Become Rich?",
+        "quote": "Wealth isn't a limited quantity to share.<br>It's a value we have to learn to create.",
+        "body": {
+          "p0": "One evening, leaving high school, I was walking in the middle of a crowd of students. There was noise everywhere. We were many, truly many. And suddenly, looking at that crowd, a question came to mind: if everyone eventually tries to become rich, can everyone actually succeed?",
+          "p1": "Back then, my answer was immediate: no. I pictured the world as one giant treasure hunt. Millions of people all racing toward the same goal: financial freedom and economic wealth. And in my mind, there simply wasn't enough room for everyone. I didn't really know what this conviction was based on, but I held it deeply.",
+          "p2": "Then the years went by. I kept observing the world, listening to debates, watching documentaries, reading, trying to understand the economy and how societies work a little better. And recently, while still thinking about economic wealth, an idea came back to me. I thought: what if everyone could, in theory, become rich?",
+          "p3": "That thought surprised even me, because I remembered that a few years earlier I believed exactly the opposite. So I asked myself: what had changed in the way I think? I believe it's mainly my understanding of wealth.",
+          "p4": "I gradually understood that money is not wealth itself. Money is rather a way to represent, exchange, and store part of the value created in the economy. Behind money, then, lies a much more fundamental question: what value do we bring to others?",
+          "p5": "Take an entrepreneur like Aliko Dangote as an example. His wealth doesn't simply come from a number on his bank accounts. It's tied to the economic value of what he owns and controls: companies, infrastructure, production systems, and products that other people need. It's this ability to produce and bring value at scale that lets him generate substantial financial resources.",
+          "p6": "To better understand this idea, imagine a world where only two people exist: X and Y. X has something Y needs. Y has something X needs. They decide to trade. Even before money enters the picture, each of them already holds something of value to the other. Money simply makes the exchange easier.",
+          "p7": "Now let's scale up this little world. Two people become a hundred. A hundred become a thousand. A thousand become millions. We end up with a vast economy in which individuals create products, develop skills, and offer services that others are willing to use — and, in some cases, to pay for.",
+          "p8": "That's where my thinking started to shift. I no longer simply believe that wealth is a limited amount of money that everyone has to share. I now understand wealth more as something that can also be created through producing value.",
+          "p9": "But that immediately leads me to another question: if everyone can theoretically create value, why isn't everyone rich? And that's where reality becomes much more complex.",
+          "p10": "Not everyone has the same resources. Not everyone gets the same opportunities. Not everyone receives the same education. Not everyone grows up in the same conditions. Not everyone has access to the same networks, the same markets, the same infrastructure, or the same capital.",
+          "p11": "And even when someone creates an enormous amount of value, that doesn't automatically mean they'll become rich. The value created also has to be turned into income or assets, and that depends on many factors.",
+          "p12": "That's why I now draw a distinction between what is possible and what is actually accessible under current conditions. Something can be theoretically possible without being easily accessible to everyone.",
+          "p13": "So I'm not claiming to have found some absolute formula that lets everyone become rich. I simply think the way I see wealth has evolved. I went from \"Not everyone can be rich because resources are limited\" to a much more nuanced idea: \"The ability to create value can be widely developed, but the conditions that allow that value to become financial wealth aren't the same for everyone.\"",
+          "p14": "And ultimately, this reflection pushes me to look at my own life differently. Rather than simply wanting to own money, I have to learn to create something valuable enough to be sought after by others. A skill. A product. A service. A business. A solution to a problem.",
+          "p15": "<strong>And maybe the real question isn't just \"How do I become rich?\" but rather: \"What value am I capable of creating, and how can I make it useful to enough people that it becomes economically significant?\" That's the question I prefer to ask myself today. And I remain open to changing my mind again, because I know my current understanding is probably just one more step in my learning.</strong>"
+        }
+      },
+      "les-choses-devraient-etre-des-plus-pas-des-remplacants": {
+        "title": "Things Should Be Extras, Not Replacements",
+        "quote": "Things should be extras that lift us up,<br>not replacements we depend on.",
+        "body": {
+          "p0": "I believe that things in life should be extras for us, not replacements.",
+          "p1": "We often become dependent on certain things. I, for example, am often dependent on my internet connection. When I have no connection, I get worked up, because a big part of what I do stays on hold. And that puts me out of sorts.",
+          "p2": "But is it really a good thing to be this dependent, deep down, on things in life? I don't think so.",
+          "p3": "I think we should see everything in our life as an extra that lifts us up. An internet connection helps me work. But if tomorrow there's none, that would be very unfortunate for me, sure, but it shouldn't take away my inner peace.",
+          "p4": "Because if I see my internet connection as an extra, then when that extra is gone, there's still the raw version left: the version without that thing. And I simply have to make do with it.",
+          "p5": "I like this mental image: an old man walking alone through a desert, on foot, who suddenly meets travelers with off-road vehicles. They decide to take him along. So he climbs in and gets some relief. He's no longer as tired, no longer suffering as much. He received an extra.",
+          "p6": "But imagine that a little further on, the young people who had taken him along tell him they're sorry, but they can't carry him further into the desert. He'll have to get out and continue on foot.",
+          "p7": "Naturally, he won't like that at all. No one enjoys walking alone through a desert. But he simply gets out and continues on as before.",
+          "p8": "He found it very unfortunate, but he won't let it disturb his inner peace by saying he refuses to keep going without the car that had helped him. He continues on foot, despite the fatigue and the hardship, until he reaches his goal.",
+          "p9": "There it is. That's the little story that came to me just now to illustrate this philosophy: things should be extras for us, not replacements.",
+          "p10": "Today, more and more things are becoming accessible. We have an enormous number of \"extras\" in our lives. But it's very important to properly train our minds to see these things as elements that lift us up, not as replacements that could one day gain so much power over us that their absence would take away the inner peace we carry.",
+          "p11": "Let's often act like the old man in the desert when our \"extras,\" or some of them, are no longer there. It's not an easy philosophy to follow, but it's worth it.",
+          "p12": "<strong>As I write this article, my internet connection keeps glitching, and unfortunately some of my work is on hold. At first I was frustrated, I wasn't at peace. But I decided to shut everything off, take a breath, and do as the man in the desert did. I opened Notepad and started writing this article. I'll take my time, then work on what I can do without a connection, and go on with my day. Why? Because it's worth it.</strong>"
+        }
+      },
+      "lia-devrait-nous-donner-plus-de-temps-pour-devenir-meilleurs": {
+        "title": "AI Should Give Us More Time to Become Better",
+        "quote": "AI's real opportunity isn't doing more in less time,<br>it's finally having more time to become better.",
+        "body": {
+          "p0": "I believe that the opportunity we have today to complete certain tasks much faster, thanks to automation and increasingly powerful AI tools, is a great opportunity for us.",
+          "p1": "An opportunity to devote more time to other, more fundamental things: reading, general knowledge, learning what we're passionate about, good rest, enough sleep, exercise, and above all, asking ourselves how to become a more optimized, better version of ourselves.",
+          "p2": "Because let's look at things differently. Instead of always saying, \"Oh, it's easier to do this or that today,\" or \"AI already does everything today, so there's no more room for humans,\" I don't think that's the best position to take.",
+          "p3": "The stance to adopt would rather be to learn more about using these AI tools to optimize our daily tasks. And once that's done — once we manage to design faster, write faster, produce faster, and complete certain tasks more quickly — we should use the time saved to devote more energy to what makes human intelligence irreplaceable and timeless.",
+          "p4": "And that comes through culture and the good habits that let us progress: reading, working on our weaknesses, sleeping enough, exercising daily if possible, developing our general knowledge, trying to better understand the world we live in, trying to better understand how we function, and also trying to better understand how we can create value.",
+          "p5": "These are fundamental things that, at their core, shouldn't be reserved for a small slice of humanity. They should instead be a kind of quest that every human being should pursue.",
+          "p6": "It's not about becoming perfect. No one is. Nobody is perfect. And it's precisely because we're not perfect that we must strive to become better.",
+          "p7": "Even though perfection isn't a straight line we reach, nor a fixed goal we achieve one day, it can be seen as a guiding principle that pushes us to become a little better every day than we were yesterday.",
+          "p8": "And I believe automation and AI are arriving at just the right time to let us devote more time to these fundamental things.",
+          "p9": "<strong>Perhaps the real opportunity AI offers us isn't simply doing more things in less time, but finally letting us have more time to become more human.</strong>"
+        }
+      },
+      "it-is-worth-it": {
+        "title": "It Is Worth It",
+        "quote": "Progress isn't always something you can see.<br>But that doesn't mean it isn't real.",
+        "body": {
+          "p0": "Every day, when I decide to do my planned workout, I ask myself, \"I have been doing this every day, but I don't see any results. I don't see any changes in my body.\"",
+          "p1": "Over time, this thought kept coming back to me, so I decided to talk to a professional. He listened to me and gave me some advice. He told me that this is often how progress works: you don't always notice your own progress, but that doesn't mean it isn't real. If you compare yourself with a picture of yourself from a few months ago, you may realize that you are not the same person anymore.",
+          "p2": "He also told me something important about exercise: it has a real impact on your health. So I went online and researched the benefits of regular exercise. What I discovered impressed me. Exercise helps the heart work more efficiently, improves sleep, supports healthy blood circulation, strengthens the bones, helps the body's natural defenses, and can help maintain a healthy weight. It can also reduce stress by releasing hormones such as endorphins, which can improve your mood and help you feel better.",
+          "p3": "When I learned all of this, I said to myself, \"So, it is worth it!\"",
+          "p4": "<strong>That is why I must continue my training, even when I don't see visible results, because I now understand that progress is not always something you can see. And yes, it is worth it!</strong>"
+        }
       }
     }
   },
@@ -1789,10 +2153,124 @@
     },
     "about_page": {
       "meta": {
-        "title": "Sobre mí - Dias Sare Kpera"
+        "title": "Acerca de - Dias Sare Kpera"
       },
-      "cta": {
-        "contact": "Contactarme"
+      "hero": {
+        "eyebrow": "Acerca de mí",
+        "title": "Curiosidad\nen movimiento.",
+        "subtitle": "Desarrollador full-stack en formación, aventurero del saber. Con base en Cotonú, Benín.",
+        "photo_alt": "Retrato de Dias Sare Kpera",
+        "availability": "Disponible para nuevos proyectos",
+        "stamp": "desde\nCotonú, Benín",
+        "cta_contact": "Contactarme",
+        "cta_projects": "Ver mis proyectos"
+      },
+      "timeline": {
+        "eyebrow": "Trayectoria",
+        "title": "Un viaje\nautodidacta.",
+        "item1": {
+          "label": "La chispa",
+          "desc": "Descubrí la programación a través de tutoriales en línea. Una simple curiosidad que se convirtió en pasión."
+        },
+        "item2": {
+          "label": "Aprendizaje",
+          "desc": "Horas de aprendizaje, práctica y errores. HTML, CSS y JavaScript se convirtieron en mis primeras herramientas."
+        },
+        "item3": {
+          "label": "Primeros pasos",
+          "desc": "Realicé mis primeros proyectos personales y exploré el mundo del desarrollo backend."
+        },
+        "item4": {
+          "label": "Cultivora",
+          "desc": "Creación de Cultivora Land y de The DSK Journal, mis dos proyectos personales."
+        },
+        "item5": {
+          "label": "Hoy",
+          "desc": "Sigo aprendiendo, construyendo y compartiendo para tener un impacto mayor."
+        }
+      },
+      "philosophy": {
+        "eyebrow": "Filosofía",
+        "title": "Valores que\nme guían.",
+        "card1": {
+          "title": "Curiosidad",
+          "desc": "Explorar siempre, aprender siempre, no dejar nunca de hacer preguntas."
+        },
+        "card2": {
+          "title": "Disciplina",
+          "desc": "La constancia y el rigor son mis aliados para convertir las ideas en realidad."
+        },
+        "card3": {
+          "title": "Aprendizaje continuo",
+          "desc": "El saber evoluciona cada día. Me comprometo a evolucionar con él."
+        },
+        "card4": {
+          "title": "Atención al detalle",
+          "desc": "Cada detalle cuenta para crear soluciones fiables y elegantes."
+        }
+      },
+      "beyond": {
+        "eyebrow": "Más allá del código",
+        "title": "El amor por aprender,\nen todas partes, siempre.",
+        "p1": "Estoy convencido de que el código es solo un medio. Lo que realmente me motiva es comprender el mundo, las ideas y a las personas.",
+        "p2": "A través de mi diario personal, comparto mis reflexiones, mis lecturas y lo que aprendo sobre desarrollo, productividad y crecimiento.",
+        "p3": "Escribir para pensar. Compartir para inspirar.",
+        "journal_title": "The DSK Journal",
+        "journal_desc": "Reflexiones, aprendizajes e ideas sobre código, crecimiento y la vida cotidiana.",
+        "journal_cta": "Leer el diario"
+      },
+      "stats": {
+        "eyebrow": "En cifras",
+        "item1": {
+          "label": "Proyectos"
+        },
+        "item2": {
+          "label": "Tecnologías"
+        },
+        "item3": {
+          "label": "Años"
+        },
+        "item4": {
+          "label": "Idiomas"
+        }
+      },
+      "quote": {
+        "text": "«Cada dificultad es una oportunidad para crecer.»",
+        "attribution": "Dias Sare Kpera"
+      },
+      "details": {
+        "eyebrow": "Detalles",
+        "title": "La información\nesencial.",
+        "birthday": {
+          "label": "Fecha de nacimiento",
+          "value": "5 de diciembre de 2006"
+        },
+        "age": {
+          "label": "Edad",
+          "value": "20 años"
+        },
+        "city": {
+          "label": "Ciudad",
+          "value": "Cotonú, Benín"
+        },
+        "availability": {
+          "label": "Disponibilidad",
+          "value": "Disponible para nuevos proyectos"
+        },
+        "formation": {
+          "label": "Formación",
+          "value": "Desarrollador full-stack, formación autodidacta"
+        },
+        "contact": {
+          "label": "Contacto",
+          "value": "diassarekpera@mail.com<br>+229 01 91 15 19 44"
+        }
+      },
+      "final": {
+        "eyebrow": "Trabajemos juntos",
+        "title": "Hablemos de\ntu proyecto.",
+        "cta_contact": "Contactarme",
+        "cta_projects": "Ver mis proyectos"
       }
     },
     "blog_page": {
@@ -2275,6 +2753,74 @@
           "p15": "Una vez que todas las páginas están listas, comprimo la carpeta completa del proyecto y se la envío a Claude AI, pidiéndole que garantice una coherencia total entre las páginas: enlaces internos, header, footer, archivos compartidos. Luego verifico si las páginas son responsive, y si no lo son, uso un prompt que ya tengo preparado para eso.",
           "p16": "Una vez terminado el trabajo, reviso el resultado. Si quedan correcciones por hacer, las señalo con precisión y pido una nueva versión comprimida. Repito este proceso mientras queden mejoras por hacer.",
           "p17": "<strong>Este es el método que aplico en cada proyecto, paso a paso, hasta obtener, al final, un sitio limpio y terminado.</strong>"
+        }
+      },
+      "tout-le-monde-peut-il-devenir-riche": {
+        "title": "¿Puede todo el mundo hacerse rico?",
+        "quote": "La riqueza no es una cantidad limitada para repartir.<br>Es un valor que hay que aprender a crear.",
+        "body": {
+          "p0": "Una tarde, al salir del instituto, caminaba en medio de una multitud de alumnos. Había ruido por todas partes. Éramos muchos, realmente muchos. Y de repente, mirando esa multitud, me vino una pregunta a la mente: si algún día todos buscan hacerse ricos, ¿pueden todos lograrlo realmente?",
+          "p1": "En aquel momento, mi respuesta fue inmediata: no. Me imaginaba el mundo como una inmensa búsqueda del tesoro. Millones de personas corriendo hacia el mismo objetivo: la libertad financiera y la riqueza económica. Y en mi cabeza, sencillamente no había sitio para todos. No sabía muy bien en qué se basaba esa convicción, pero la defendía profundamente.",
+          "p2": "Luego pasaron los años. Seguí observando el mundo, escuchando debates, viendo documentales, leyendo, tratando de entender un poco mejor la economía y cómo funcionan las sociedades. Y hace poco, mientras seguía pensando en la riqueza económica, una idea volvió a mí. Me dije: ¿y si todo el mundo pudiera, en teoría, hacerse rico?",
+          "p3": "Ese pensamiento me sorprendió a mí mismo, porque recordé que unos años antes pensaba exactamente lo contrario. Entonces me pregunté: ¿qué había cambiado en mi manera de pensar? Creo que principalmente mi comprensión de la riqueza.",
+          "p4": "Fui entendiendo poco a poco que el dinero no es la riqueza en sí misma. El dinero es más bien un medio para representar, intercambiar y conservar una parte del valor creado en la economía. Detrás del dinero hay entonces una pregunta mucho más fundamental: ¿qué valor aportamos a los demás?",
+          "p5": "Tomemos el ejemplo de un empresario como Aliko Dangote. Su riqueza no proviene simplemente de una cifra en sus cuentas bancarias. Está ligada al valor económico de lo que posee y controla: empresas, infraestructuras, sistemas de producción y productos que otras personas necesitan. Es esa capacidad de producir y aportar valor a gran escala lo que le permite generar grandes recursos financieros.",
+          "p6": "Para entender mejor esta idea, imaginemos un mundo en el que solo existen dos personas: X e Y. X posee algo que Y necesita. Y posee algo que X necesita. Deciden intercambiar. Incluso antes de hablar de dinero, cada uno ya posee algo que tiene valor para el otro. El dinero solo facilita el intercambio.",
+          "p7": "Ahora, ampliemos este pequeño mundo. Dos personas se convierten en cien. Cien se convierten en mil. Mil se convierten en millones. Obtenemos así una inmensa economía en la que los individuos crean productos, desarrollan habilidades y ofrecen servicios que otros están dispuestos a usar y, en algunos casos, a pagar.",
+          "p8": "Fue a partir de ahí que mi reflexión cambió. Ya no pienso simplemente que la riqueza es una cantidad limitada de dinero que todo el mundo debe repartirse. Entiendo cada vez más la riqueza como algo que también puede crearse a través de la producción de valor.",
+          "p9": "Pero esto me lleva de inmediato a otra pregunta: si todo el mundo puede, en teoría, crear valor, ¿por qué no todo el mundo es rico? Y ahí es donde la realidad se vuelve mucho más compleja.",
+          "p10": "No todo el mundo tiene los mismos recursos. No todo el mundo disfruta de las mismas oportunidades. No todo el mundo recibe la misma educación. No todo el mundo crece en las mismas condiciones. No todo el mundo tiene acceso a las mismas redes, a los mismos mercados, a las mismas infraestructuras o a los mismos capitales.",
+          "p11": "E incluso cuando una persona crea una enorme cantidad de valor, eso no significa automáticamente que vaya a hacerse rica. El valor creado también debe poder transformarse en ingresos o en patrimonio, y eso depende de muchos factores.",
+          "p12": "Por eso hoy distingo entre lo que es posible y lo que es realmente accesible en las condiciones actuales. Algo puede ser teóricamente posible sin ser fácilmente accesible para todos.",
+          "p13": "No pretendo, entonces, haber encontrado una fórmula absoluta que permita a cada persona hacerse rica. Simplemente creo que mi manera de ver la riqueza ha evolucionado. Pasé de «no todo el mundo puede ser rico porque los recursos son limitados» a una reflexión mucho más matizada: «la capacidad de crear valor puede desarrollarse ampliamente, pero las condiciones que permiten transformar ese valor en riqueza financiera no son las mismas para todos.»",
+          "p14": "Y, finalmente, esta reflexión me lleva a mirar mi propia vida de otra manera. En lugar de simplemente querer poseer dinero, debo aprender a crear algo con suficiente valor como para ser buscado por otros. Una habilidad. Un producto. Un servicio. Una empresa. Una solución a un problema.",
+          "p15": "<strong>Y quizás la verdadera pregunta no sea solamente «¿Cómo hacerse rico?», sino más bien: «¿Qué valor soy capaz de crear, y cómo puedo hacerlo útil para suficientes personas como para que se vuelva económicamente importante?» Esa es la pregunta que hoy prefiero hacerme. Y sigo abierto a cambiar de opinión de nuevo, porque sé que mi comprensión actual probablemente sea solo un paso más en mi aprendizaje.</strong>"
+        }
+      },
+      "les-choses-devraient-etre-des-plus-pas-des-remplacants": {
+        "title": "Las cosas deberían ser un plus, no un reemplazo",
+        "quote": "Las cosas deberían ser un plus que nos eleva,<br>no un reemplazo del que dependemos.",
+        "body": {
+          "p0": "Creo que las cosas en la vida deberían ser un plus para nosotros, y no un reemplazo.",
+          "p1": "A menudo desarrollamos cierta dependencia hacia algunas cosas. Yo, por ejemplo, suelo depender de mi conexión a internet. Cuando no tengo conexión, me altero, porque gran parte de lo que hago queda en pausa. Y eso me saca de mis casillas.",
+          "p2": "Pero, ¿es realmente bueno depender tanto, en el fondo, de estas cosas de la vida? Creo que no.",
+          "p3": "Pienso que deberíamos considerar cada cosa en nuestra vida como un plus que nos eleva. Una conexión a internet me ayuda a trabajar. Pero si mañana no la hay, sería muy lamentable para mí, claro, pero eso no debería quitarme mi paz interior.",
+          "p4": "Porque si considero la conexión a internet como un plus para mí, entonces, cuando ese plus ya no está, siempre queda la versión sin adornos: la versión sin esa cosa. Y simplemente hay que intentar arreglárselas.",
+          "p5": "Me gusta tener esta imagen mental: un anciano que camina solo por un desierto, a pie, y que de repente se encuentra con unos viajeros en vehículos todoterreno. Ellos deciden llevarlo con ellos. Entonces él sube, y consigue un poco de descanso. Ya no está tan cansado, ya no sufre tanto. Ha recibido un plus.",
+          "p6": "Pero imaginemos que un poco más adelante, los jóvenes que habían decidido llevarlo le dicen que lo sienten, pero que no pueden llevarlo más lejos en el desierto. Tendrá que bajar y retomar su camino a pie.",
+          "p7": "Naturalmente, eso no le va a gustar nada. A nadie le resulta agradable caminar solo por un desierto. Pero simplemente baja y retoma su camino como antes.",
+          "p8": "Le pareció muy lamentable, pero no va a perturbar su paz interior diciendo que ya no quiere avanzar si no recupera el vehículo que lo había ayudado. Continúa su camino a pie, a pesar del cansancio y del sufrimiento, hasta alcanzar su objetivo.",
+          "p9": "Ahí está. Esta es la pequeña historia que me vino a la mente para ilustrar esta filosofía: las cosas deberían ser un plus para nosotros, y no un reemplazo.",
+          "p10": "Hoy en día, cada vez más cosas están al alcance de la mano. Tenemos enormemente muchos «plus» en nuestras vidas. Pero es muy importante preparar bien nuestra mente para considerar estas cosas como elementos que nos elevan, y no como reemplazos que, algún día, podrían tener tanto poder sobre nosotros que su ausencia nos quitaría la paz interior que llevamos dentro.",
+          "p11": "Hagamos a menudo como el anciano del desierto cuando nuestros «plus», o algunos de ellos, ya no están. No es una filosofía fácil de seguir, pero vale la pena.",
+          "p12": "<strong>En el momento en que escribo este artículo, mi conexión a internet no deja de fallar y, lamentablemente, algunos de mis trabajos están en pausa. Al principio estaba frustrado, no estaba tranquilo. Pero decidí desconectar de todo, respirar hondo y hacer como el hombre del desierto. Abrí el Bloc de notas y empecé a escribir este artículo. Me tomaré mi tiempo, luego trabajaré en lo que pueda hacer sin conexión, y seguiré con mi vida. ¿Por qué? Porque vale la pena.</strong>"
+        }
+      },
+      "lia-devrait-nous-donner-plus-de-temps-pour-devenir-meilleurs": {
+        "title": "La IA debería darnos más tiempo para ser mejores",
+        "quote": "La verdadera oportunidad de la IA no es hacer más en menos tiempo,<br>sino tener por fin más tiempo para ser mejores.",
+        "body": {
+          "p0": "Creo que la oportunidad que tenemos hoy de realizar ciertas tareas mucho más rápido, gracias a la automatización y a herramientas de IA cada vez más potentes, es una gran oportunidad para nosotros.",
+          "p1": "Una oportunidad de dedicar más tiempo a otras cosas más fundamentales: la lectura, la cultura general, aprender aquello que nos apasiona, un buen descanso, dormir lo suficiente, el deporte, y sobre todo, preguntarnos cómo convertirnos en una versión más optimizada y mejor de nosotros mismos.",
+          "p2": "Porque veamos las cosas de otra manera. En lugar de decir siempre: «Ah, hoy es más fácil hacer esto o aquello», o bien: «Hoy la IA ya lo hace todo, así que ya no hay lugar para los humanos», no creo que esa sea la mejor postura a adoptar.",
+          "p3": "La postura a adoptar sería más bien aprender a usar estas herramientas de IA para optimizar nuestras tareas diarias. Y una vez hecho esto, una vez que logramos diseñar más rápido, escribir más rápido, producir más rápido y realizar ciertas tareas con mayor rapidez, entonces hay que usar el tiempo ganado para dedicar más energía a aquello que hace que la inteligencia humana sea insustituible e intemporal.",
+          "p4": "Y eso pasa por la cultura y los buenos hábitos que nos permiten progresar: leer, trabajar en nuestras carencias, dormir lo suficiente, hacer deporte a diario si es posible, desarrollar nuestra cultura general, buscar comprender mejor el mundo en el que vivimos, buscar comprender mejor cómo funcionamos y buscar también comprender mejor cómo podemos crear valor.",
+          "p5": "Son cosas fundamentales que, en el fondo, no deberían estar reservadas a una pequeña parte de los seres humanos. Deberían más bien constituir una especie de búsqueda que cada ser humano debería emprender.",
+          "p6": "No se trata de volverse perfecto. Nadie lo es. Nadie es perfecto. Y es precisamente porque no somos perfectos que debemos buscar ser mejores.",
+          "p7": "Aunque la perfección no sea una línea recta que se alcanza, ni un objetivo fijo que se logra algún día, puede considerarse como una línea de conducta que nos empuja a ser cada día un poco mejores que ayer.",
+          "p8": "Y creo que la automatización y la IA llegan en el momento justo para permitirnos dedicar más tiempo a estas cosas fundamentales.",
+          "p9": "<strong>Quizás la verdadera oportunidad que nos ofrece la IA no sea simplemente hacer más cosas en menos tiempo, sino permitirnos por fin tener más tiempo para ser más humanos.</strong>"
+        }
+      },
+      "it-is-worth-it": {
+        "title": "Vale la pena",
+        "quote": "El progreso no siempre es algo que se pueda ver.<br>Pero eso no significa que no sea real.",
+        "body": {
+          "p0": "Cada día, cuando decido hacer mi entrenamiento planificado, me pregunto: «Llevo haciendo esto todos los días, pero no veo ningún resultado. No noto ningún cambio en mi cuerpo.»",
+          "p1": "Con el tiempo, este pensamiento seguía volviendo, así que decidí hablar con un profesional. Me escuchó y me dio un consejo. Me explicó que así es a menudo como funciona el progreso: no siempre notamos nuestro propio progreso, pero eso no significa que no sea real. Si te comparas con una foto tuya de hace unos meses, puede que te des cuenta de que ya no eres la misma persona.",
+          "p2": "También me contó algo importante sobre el ejercicio: tiene un impacto real en la salud. Así que investigué en internet sobre los beneficios del ejercicio regular. Lo que descubrí me impresionó. El ejercicio ayuda al corazón a trabajar de forma más eficiente, mejora el sueño, favorece una buena circulación sanguínea, fortalece los huesos, apoya las defensas naturales del cuerpo y puede ayudar a mantener un peso saludable. También puede reducir el estrés liberando hormonas como las endorfinas, que mejoran el estado de ánimo y el bienestar general.",
+          "p3": "Cuando aprendí todo esto, me dije: «¡Entonces, sí que vale la pena!»",
+          "p4": "<strong>Por eso debo continuar con mi entrenamiento, incluso cuando no veo resultados visibles, porque ahora entiendo que el progreso no siempre es algo que se pueda ver. Y sí, ¡vale la pena!</strong>"
         }
       }
     }

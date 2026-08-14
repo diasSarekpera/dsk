@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../../styles/bases/reset.css" />
   <link rel="stylesheet" href="../../styles/bases/base.css" />
   <link rel="stylesheet" href="../../styles/components/header.css" />
-  <link rel="stylesheet" href="../../styles/pages/home/about.css" />
+  <link rel="stylesheet" href="../../styles/pages/about-page/about-page.css" />
   <link rel="stylesheet" href="../../styles/pages/home/footer.css" />
 </head>
 <body>
@@ -152,178 +152,438 @@
   </div>
 
   <!-- ============================================================
-    PAGE À PROPOS
-    Reprend le contenu exact de la section teaser de l'accueil
-    (mêmes clés i18n about.*), sans le numéro de section (02/07)
-    puisque cette page est autonome.
+    PAGE À PROPOS — refonte complète en 8 sections éditoriales
+    (hero, parcours, philosophie, au-delà du code, chiffres,
+    citation, détails pratiques, appel à l'action final).
+    Feuille dédiée : styles/pages/about-page/about-page.css
   ============================================================ -->
-  <main class="about" id="about-page" aria-label="À propos">
+  <main class="about-page" id="about-page" aria-label="À propos">
 
-    <div class="about__header" data-reveal>
-      <span class="section-eyebrow" data-i18n="about.eyebrow">À propos de moi</span>
-      <h1 class="section-title" data-i18n="about.title">La curiosité<br>à l'œuvre.</h1>
-      <div class="section-title-rule" aria-hidden="true">
-        <span class="section-title-rule__line"></span>
-        <span class="section-title-rule__dot"></span>
+    <!-- 01 — HERO ============================================ -->
+    <section class="about-page__section" data-reveal>
+      <div class="about-page__inner">
+        <div class="about-page__index" aria-hidden="true">
+          <span class="about-page__index-num">01</span>
+          <span class="about-page__index-line"></span>
+        </div>
+        <div class="about-page__content">
+          <div class="about-hero">
+
+            <div class="about-hero__photo-col">
+              <div class="about-hero__frame">
+                <picture>
+                  <source srcset="../../assets/images/portrait.webp" type="image/webp" />
+                  <img
+                    class="about-hero__photo"
+                    src="../../assets/images/portrait.png"
+                    alt="Portrait de Dias Sare Kpera"
+                    data-i18n-alt="about_page.hero.photo_alt"
+                    width="400"
+                    height="470"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
+              <div class="about-hero__availability">
+                <span class="about-hero__availability-dot" aria-hidden="true"></span>
+                <span data-i18n="about_page.hero.availability">Disponible pour de nouveaux projets</span>
+              </div>
+            </div>
+
+            <div>
+              <span class="section-eyebrow" data-i18n="about_page.hero.eyebrow">À propos</span>
+              <h1 class="section-title" data-i18n="about_page.hero.title">Curiosité<br>en mouvement.</h1>
+              <div class="section-title-rule" aria-hidden="true">
+                <span class="section-title-rule__line"></span>
+                <span class="section-title-rule__dot"></span>
+              </div>
+              <p class="about-hero__subtitle" data-i18n="about_page.hero.subtitle">
+                Développeur full-stack en formation, aventurier du savoir. Basé à Cotonou, Bénin.
+              </p>
+              <div class="about-hero__cta">
+                <a href="../../index.html#contact" class="btn" aria-label="Me contacter">
+                  <span data-i18n="about_page.hero.cta_contact">Me contacter</span>
+                  <svg class="btn__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                  </svg>
+                </a>
+                <a href="../projets/index.html" class="btn btn--caramel" aria-label="Voir mes projets">
+                  <span data-i18n="about_page.hero.cta_projects">Voir mes projets</span>
+                  <svg class="btn__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                  </svg>
+                </a>
+              </div>
+              <span class="about-hero__stamp" aria-hidden="true" data-i18n="about_page.hero.stamp">depuis<br>Cotonou, Bénin</span>
+            </div>
+
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="about__body">
-
-      <div class="about__photo-col" data-reveal="right" style="--reveal-delay: 150ms">
-        <div class="about__photo-frame">
-          <picture>
-            <source srcset="./assets/images/portrait.webp" type="image/webp" />
-            <img
-              class="about__photo"
-              src="../../assets/images/portrait.png"
-              alt="Portrait de Dias Sare Kpera"
-              data-i18n-alt="about.photo.alt"
-              width="340"
-              height="460"
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
+    <!-- 02 — PARCOURS ========================================= -->
+    <section class="about-page__section" data-reveal>
+      <div class="about-page__inner">
+        <div class="about-page__index" aria-hidden="true">
+          <span class="about-page__index-num">02</span>
+          <span class="about-page__index-line"></span>
         </div>
-        <div class="about__availability">
-          <span class="about__availability-dot" aria-hidden="true"></span>
-          <span class="about__availability-label" data-i18n="about.availability">Disponible pour des projets</span>
+        <div class="about-page__content">
+          <div class="about-parcours">
+
+            <div>
+              <span class="section-eyebrow" data-i18n="about_page.timeline.eyebrow">Parcours</span>
+              <h2 class="section-title" data-i18n="about_page.timeline.title">Un voyage<br>autodidacte.</h2>
+              <div class="section-title-rule" aria-hidden="true">
+                <span class="section-title-rule__line"></span>
+                <span class="section-title-rule__dot"></span>
+              </div>
+            </div>
+
+            <ol class="about-timeline">
+
+              <li class="about-timeline__item">
+                <span class="about-timeline__dot" aria-hidden="true"></span>
+                <span class="about-timeline__year">2020</span>
+                <span class="about-timeline__label" data-i18n="about_page.timeline.item1.label">L'étincelle</span>
+                <p class="about-timeline__desc" data-i18n="about_page.timeline.item1.desc">Découverte du code via des tutoriels en ligne. Une simple curiosité qui s'est transformée en passion.</p>
+              </li>
+
+              <li class="about-timeline__item">
+                <span class="about-timeline__dot" aria-hidden="true"></span>
+                <span class="about-timeline__year">2021</span>
+                <span class="about-timeline__label" data-i18n="about_page.timeline.item2.label">Apprentissage</span>
+                <p class="about-timeline__desc" data-i18n="about_page.timeline.item2.desc">Des heures d'apprentissage, de pratique et d'erreurs. HTML, CSS, JavaScript deviennent mes premiers outils.</p>
+              </li>
+
+              <li class="about-timeline__item">
+                <span class="about-timeline__dot" aria-hidden="true"></span>
+                <span class="about-timeline__year">2022</span>
+                <span class="about-timeline__label" data-i18n="about_page.timeline.item3.label">Premiers pas</span>
+                <p class="about-timeline__desc" data-i18n="about_page.timeline.item3.desc">Réalisation de mes premiers projets personnels et exploration du monde du développement backend.</p>
+              </li>
+
+              <li class="about-timeline__item">
+                <span class="about-timeline__dot" aria-hidden="true"></span>
+                <span class="about-timeline__year">2023</span>
+                <span class="about-timeline__label" data-i18n="about_page.timeline.item4.label">Cultivora</span>
+                <p class="about-timeline__desc" data-i18n="about_page.timeline.item4.desc">Création de Cultivora Land et de The DSK Journal, mes deux projets personnels.</p>
+              </li>
+
+              <li class="about-timeline__item">
+                <span class="about-timeline__dot" aria-hidden="true"></span>
+                <span class="about-timeline__year">2024</span>
+                <span class="about-timeline__label" data-i18n="about_page.timeline.item5.label">Aujourd'hui</span>
+                <p class="about-timeline__desc" data-i18n="about_page.timeline.item5.desc">Je continue d'apprendre, de construire et de partager pour avoir un impact plus grand.</p>
+              </li>
+
+            </ol>
+
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="about__content" data-reveal style="--reveal-delay: 250ms">
-
-        <h2 class="about__role" data-i18n="about.role">
-          Développeur Web Full Stack &amp; Aventurier de la culture générale<span class="about__role-dot">.</span>
-        </h2>
-
-        <p class="about__tagline" data-i18n="about.tagline">
-          Je suis développeur web full stack en progression, passionné par la création
-          d'interfaces modernes et animé par une curiosité insatiable pour le savoir et
-          la culture générale. Je construis des expériences numériques avec soin, en
-          apprenant chaque jour.
-        </p>
-
-        <dl class="about__info-grid">
-
-          <div class="about__info-item">
-            <div class="about__info-label">
-              <svg class="about__info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
-              </svg>
-              <dt data-i18n="about.info.birthday.label">Date de naissance</dt>
-            </div>
-            <dd data-i18n="about.info.birthday.value">5 décembre 2006</dd>
-          </div>
-
-          <div class="about__info-item">
-            <div class="about__info-label">
-              <svg class="about__info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-              </svg>
-              <dt data-i18n="about.info.age.label">Âge</dt>
-            </div>
-            <dd data-i18n="about.info.age.value">20 ans</dd>
-          </div>
-
-          <div class="about__info-item">
-            <div class="about__info-label">
-              <svg class="about__info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-              </svg>
-              <dt data-i18n="about.info.website.label">Site web</dt>
-            </div>
-            <dd data-i18n="about.info.website.value">dsk.ink</dd>
-          </div>
-
-          <div class="about__info-item">
-            <div class="about__info-label">
-              <svg class="about__info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
-              </svg>
-              <dt data-i18n="about.info.degree.label">Diplôme</dt>
-            </div>
-            <dd data-i18n="about.info.degree.value">Licence</dd>
-          </div>
-
-          <div class="about__info-item">
-            <div class="about__info-label">
-              <svg class="about__info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.45 5.45l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
-              <dt data-i18n="about.info.phone.label">Téléphone</dt>
-            </div>
-            <dd data-i18n="about.info.phone.value">+229 01 91 15 19 44</dd>
-          </div>
-
-          <div class="about__info-item">
-            <div class="about__info-label">
-              <svg class="about__info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
-              </svg>
-              <dt data-i18n="about.info.email.label">E-mail</dt>
-            </div>
-            <dd data-i18n="about.info.email.value">diassarekpera@mail.com</dd>
-          </div>
-
-          <div class="about__info-item">
-            <div class="about__info-label">
-              <svg class="about__info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-              </svg>
-              <dt data-i18n="about.info.city.label">Ville</dt>
-            </div>
-            <dd data-i18n="about.info.city.value">Cotonou, Bénin</dd>
-          </div>
-
-          <div class="about__info-item">
-            <div class="about__info-label">
-              <svg class="about__info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
-              </svg>
-              <dt data-i18n="about.info.freelance.label">Freelance</dt>
-            </div>
-            <dd data-i18n="about.info.freelance.value">Disponible</dd>
-          </div>
-
-        </dl>
-
-        <p class="about__bio" data-i18n="about.bio">
-          Je suis basé à Cotonou et je conçois des sites vitrines, des maquettes et des
-          interfaces avec une attention particulière à la cohérence visuelle et à
-          l'expérience utilisateur, en tant que développeur web full stack en progression
-          constante. Au-delà du code, je suis avant tout un aventurier curieux de la
-          culture générale et du savoir, animé par une soif d'apprendre sur l'éducation,
-          la connaissance et le développement humain. À travers des projets comme
-          Cultivora Land et The DSK Journal, je cherche à rendre les idées accessibles et
-          à nourrir ma propre réflexion sur le monde. Je crois que chaque difficulté est
-          une occasion de grandir - et qu'apprendre, explorer et se cultiver sans cesse
-          sont les valeurs qui donnent du sens à mon parcours.
-        </p>
-
-        <!-- Appels à l'action : adaptés pour une page autonome
-             (l'original pointait "En savoir plus" vers #about,
-             ce qui n'a pas de sens une fois qu'on est déjà ici). -->
-        <div class="about__cta">
-          <a href="../../index.html#contact" class="btn" aria-label="Me contacter">
-            <span data-i18n="about_page.cta.contact">Me contacter</span>
-            <svg class="btn__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </a>
-          <a href="../projets/index.html" class="btn btn--caramel" aria-label="Voir mes projets réalisés">
-            <span data-i18n="about.cta.cv">Voir mes projets</span>
-            <svg class="btn__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </a>
+    <!-- 03 — PHILOSOPHIE ====================================== -->
+    <section class="about-page__section" data-reveal>
+      <div class="about-page__inner">
+        <div class="about-page__index" aria-hidden="true">
+          <span class="about-page__index-num">03</span>
+          <span class="about-page__index-line"></span>
         </div>
+        <div class="about-page__content">
+          <div class="about-values">
 
-      </div><!-- /about__content -->
-    </div><!-- /about__body -->
+            <div>
+              <span class="section-eyebrow" data-i18n="about_page.philosophy.eyebrow">Philosophie</span>
+              <h2 class="section-title" data-i18n="about_page.philosophy.title">Des valeurs<br>qui guident.</h2>
+              <div class="section-title-rule" aria-hidden="true">
+                <span class="section-title-rule__line"></span>
+                <span class="section-title-rule__dot"></span>
+              </div>
+            </div>
+
+            <div class="about-values__grid">
+
+              <div class="about-values__card">
+                <svg class="about-values__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                </svg>
+                <h3 class="about-values__title" data-i18n="about_page.philosophy.card1.title">Curiosité</h3>
+                <p class="about-values__desc" data-i18n="about_page.philosophy.card1.desc">Toujours explorer, toujours apprendre, ne jamais cesser de poser des questions.</p>
+              </div>
+
+              <div class="about-values__card">
+                <svg class="about-values__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/>
+                </svg>
+                <h3 class="about-values__title" data-i18n="about_page.philosophy.card2.title">Discipline</h3>
+                <p class="about-values__desc" data-i18n="about_page.philosophy.card2.desc">La régularité et la rigueur sont mes alliées pour transformer les idées en réalité.</p>
+              </div>
+
+              <div class="about-values__card">
+                <svg class="about-values__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M2 5.5C2 4.7 2.7 4 3.5 4H11v16H3.5A1.5 1.5 0 0 1 2 18.5v-13z"/>
+                  <path d="M22 5.5c0-.8-.7-1.5-1.5-1.5H13v16h7.5a1.5 1.5 0 0 0 1.5-1.5v-13z"/>
+                </svg>
+                <h3 class="about-values__title" data-i18n="about_page.philosophy.card3.title">Apprentissage continu</h3>
+                <p class="about-values__desc" data-i18n="about_page.philosophy.card3.desc">Le savoir évolue chaque jour. Je m'engage à évoluer avec lui.</p>
+              </div>
+
+              <div class="about-values__card">
+                <svg class="about-values__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/>
+                </svg>
+                <h3 class="about-values__title" data-i18n="about_page.philosophy.card4.title">Attention au détail</h3>
+                <p class="about-values__desc" data-i18n="about_page.philosophy.card4.desc">Chaque détail compte pour créer des solutions fiables et élégantes.</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 — AU-DELÀ DU CODE ================================== -->
+    <section class="about-page__section" data-reveal>
+      <div class="about-page__inner">
+        <div class="about-page__index" aria-hidden="true">
+          <span class="about-page__index-num">04</span>
+          <span class="about-page__index-line"></span>
+        </div>
+        <div class="about-page__content">
+          <div class="about-beyond">
+
+            <div class="about-beyond__text">
+              <span class="section-eyebrow" data-i18n="about_page.beyond.eyebrow">Au-delà du code</span>
+              <h2 class="section-title" data-i18n="about_page.beyond.title">L'amour d'apprendre,<br>partout, toujours.</h2>
+              <div class="section-title-rule" aria-hidden="true">
+                <span class="section-title-rule__line"></span>
+                <span class="section-title-rule__dot"></span>
+              </div>
+              <p data-i18n="about_page.beyond.p1" style="margin-top: var(--space-6);">Je suis convaincu que le code n'est qu'un moyen. Ce qui me motive vraiment, c'est la compréhension du monde, des idées et des gens.</p>
+              <p data-i18n="about_page.beyond.p2">À travers mon journal personnel, je partage mes réflexions, mes lectures et mes apprentissages sur le développement, la productivité et la croissance.</p>
+              <p data-i18n="about_page.beyond.p3">Écrire pour penser. Partager pour inspirer.</p>
+            </div>
+
+            <div class="about-postcard">
+              <div class="about-postcard__card">
+                <div class="about-postcard__stamp" aria-hidden="true"></div>
+                <div class="about-postcard__logo">DSK</div>
+                <div class="about-postcard__title" data-i18n="about_page.beyond.journal_title">The DSK Journal</div>
+                <span class="about-postcard__rule" aria-hidden="true"></span>
+                <p class="about-postcard__desc" data-i18n="about_page.beyond.journal_desc">Réflexions, apprentissages et idées sur le code, la croissance et la vie de tous les jours.</p>
+                <a href="../blog/index.html" class="btn btn--caramel" aria-label="Lire le journal">
+                  <span data-i18n="about_page.beyond.journal_cta">Lire le journal</span>
+                  <svg class="btn__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 — EN CHIFFRES ======================================= -->
+    <section class="about-page__section" data-reveal>
+      <div class="about-page__inner">
+        <div class="about-page__index" aria-hidden="true">
+          <span class="about-page__index-num">05</span>
+          <span class="about-page__index-line"></span>
+        </div>
+        <div class="about-page__content">
+          <div class="about-stats">
+
+            <span class="section-eyebrow" data-i18n="about_page.stats.eyebrow">En chiffres</span>
+
+            <div class="about-stats__grid">
+              <div class="about-stats__item">
+                <span class="about-stats__num">12+</span>
+                <span class="about-stats__label" data-i18n="about_page.stats.item1.label">Projets</span>
+              </div>
+              <div class="about-stats__item">
+                <span class="about-stats__num">8</span>
+                <span class="about-stats__label" data-i18n="about_page.stats.item2.label">Technologies</span>
+              </div>
+              <div class="about-stats__item">
+                <span class="about-stats__num">3</span>
+                <span class="about-stats__label" data-i18n="about_page.stats.item3.label">Années</span>
+              </div>
+              <div class="about-stats__item">
+                <span class="about-stats__num">3</span>
+                <span class="about-stats__label" data-i18n="about_page.stats.item4.label">Langues</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 — CITATION ========================================== -->
+    <section class="about-page__section about-page__section--band" data-reveal>
+      <div class="about-page__inner">
+        <div class="about-page__index" aria-hidden="true">
+          <span class="about-page__index-num">06</span>
+          <span class="about-page__index-line"></span>
+        </div>
+        <div class="about-page__content">
+          <div class="about-quote">
+            <span class="about-quote__mark" aria-hidden="true">&ldquo;</span>
+            <div>
+              <p class="about-quote__text" data-i18n="about_page.quote.text">« Chaque difficulté est une opportunité de grandir. »</p>
+              <span class="about-quote__attribution">— <span data-i18n="about_page.quote.attribution">Dias Sare Kpera</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 — DÉTAILS PRATIQUES ================================= -->
+    <section class="about-page__section" data-reveal>
+      <div class="about-page__inner">
+        <div class="about-page__index" aria-hidden="true">
+          <span class="about-page__index-num">07</span>
+          <span class="about-page__index-line"></span>
+        </div>
+        <div class="about-page__content">
+          <div class="about-details">
+
+            <div>
+              <span class="section-eyebrow" data-i18n="about_page.details.eyebrow">Détails</span>
+              <h2 class="section-title" data-i18n="about_page.details.title">Les infos<br>essentielles.</h2>
+              <div class="section-title-rule" aria-hidden="true">
+                <span class="section-title-rule__line"></span>
+                <span class="section-title-rule__dot"></span>
+              </div>
+            </div>
+
+            <dl class="about-details__card">
+
+              <div class="about-details__item">
+                <svg class="about-details__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                <div>
+                  <dt class="about-details__label" data-i18n="about_page.details.birthday.label">Date de naissance</dt>
+                  <dd class="about-details__value" data-i18n="about_page.details.birthday.value">5 décembre 2006</dd>
+                </div>
+              </div>
+
+              <div class="about-details__item">
+                <svg class="about-details__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                </svg>
+                <div>
+                  <dt class="about-details__label" data-i18n="about_page.details.age.label">Âge</dt>
+                  <dd class="about-details__value" data-i18n="about_page.details.age.value">20 ans</dd>
+                </div>
+              </div>
+
+              <div class="about-details__item">
+                <svg class="about-details__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                </svg>
+                <div>
+                  <dt class="about-details__label" data-i18n="about_page.details.city.label">Ville</dt>
+                  <dd class="about-details__value" data-i18n="about_page.details.city.value">Cotonou, Bénin</dd>
+                </div>
+              </div>
+
+              <div class="about-details__item">
+                <svg class="about-details__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
+                </svg>
+                <div>
+                  <dt class="about-details__label" data-i18n="about_page.details.availability.label">Disponibilité</dt>
+                  <dd class="about-details__value about-details__value--available">
+                    <span class="about-details__available-dot" aria-hidden="true"></span>
+                    <span data-i18n="about_page.details.availability.value">Disponible pour de nouveaux projets</span>
+                  </dd>
+                </div>
+              </div>
+
+              <div class="about-details__item">
+                <svg class="about-details__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+                <div>
+                  <dt class="about-details__label" data-i18n="about_page.details.formation.label">Formation</dt>
+                  <dd class="about-details__value" data-i18n="about_page.details.formation.value">Développeur full-stack en formation autonome</dd>
+                </div>
+              </div>
+
+              <div class="about-details__item">
+                <svg class="about-details__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <div>
+                  <dt class="about-details__label" data-i18n="about_page.details.contact.label">Contact</dt>
+                  <dd class="about-details__value" data-i18n-html="about_page.details.contact.value">diassarekpera@mail.com<br>+229 01 91 15 19 44</dd>
+                </div>
+              </div>
+
+            </dl>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 — CTA FINAL ========================================= -->
+    <section class="about-page__section about-page__section--band" data-reveal>
+      <div class="about-page__inner">
+        <div class="about-page__index" aria-hidden="true">
+          <span class="about-page__index-num">08</span>
+          <span class="about-page__index-line"></span>
+        </div>
+        <div class="about-page__content">
+          <div class="about-final">
+
+            <div>
+              <span class="section-eyebrow" data-i18n="about_page.final.eyebrow">Travaillons ensemble</span>
+              <h2 class="section-title" style="font-size: clamp(2.2rem, 4vw, 3.2rem);" data-i18n="about_page.final.title">Parlons de<br>votre projet.</h2>
+            </div>
+
+            <div class="about-final__cta">
+              <a href="../../index.html#contact" class="btn btn--caramel" aria-label="Me contacter">
+                <span data-i18n="about_page.final.cta_contact">Me contacter</span>
+                <svg class="btn__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+              <a href="../projets/index.html" class="btn" aria-label="Voir mes projets">
+                <span data-i18n="about_page.final.cta_projects">Voir mes projets</span>
+                <svg class="btn__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+            </div>
+
+            <svg class="about-final__scene" viewBox="0 0 200 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M30 78c20-4 120-4 140 0" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+              <path d="M50 78V52c0-10 8-18 8-18s8 8 8 18v26" stroke="currentColor" stroke-width="1"/>
+              <path d="M58 34c-10 2-16 10-16 10s10 4 18-2" stroke="currentColor" stroke-width="1"/>
+              <path d="M58 34c10 2 16 10 16 10s-10 4-18-2" stroke="currentColor" stroke-width="1"/>
+              <path d="M120 78V46c0-12 9-21 9-21s9 9 9 21v32" stroke="currentColor" stroke-width="1"/>
+              <path d="M129 40c-11 2-18 11-18 11s11 5 20-2" stroke="currentColor" stroke-width="1"/>
+              <path d="M129 40c11 2 18 11 18 11s-11 5-20-2" stroke="currentColor" stroke-width="1"/>
+              <path d="M20 76l14-8v8z" stroke="currentColor" stroke-width="1"/>
+            </svg>
+
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
+
 
   <!-- PIED DE PAGE -->
   <div class="footer-wrap">

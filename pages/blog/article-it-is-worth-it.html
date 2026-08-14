@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr" translate="no">
+<head>
+  <meta name="google" content="notranslate" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Je ne voyais aucun résultat malgré mes entraînements quotidiens. Un professionnel m'a rappelé que le progrès n'est pas toujours visible — et que ça en vaut quand même la peine." />
+  <title>Ça en vaut la peine - The DSK Journal</title>
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="../../site.webmanifest" />
+
+  <!-- Open Graph / partage réseaux sociaux -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Dias Sare Kpera" />
+  <meta property="og:title" content="Ça en vaut la peine - The DSK Journal" />
+  <meta property="og:description" content="Je ne voyais aucun résultat malgré mes entraînements quotidiens. Un professionnel m'a rappelé que le progrès n'est pas toujours visible — et que ça en vaut quand même la peine." />
+  <meta property="og:image" content="https://dsk.ink/assets/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://dsk.ink/pages/blog/article-it-is-worth-it.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ça en vaut la peine - The DSK Journal" />
+  <meta name="twitter:description" content="Je ne voyais aucun résultat malgré mes entraînements quotidiens. Un professionnel m'a rappelé que le progrès n'est pas toujours visible — et que ça en vaut quand même la peine." />
+  <meta name="twitter:image" content="https://dsk.ink/assets/images/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../styles/bases/variables.css" />
+  <link rel="stylesheet" href="../../styles/bases/reset.css" />
+  <link rel="stylesheet" href="../../styles/bases/base.css" />
+  <link rel="stylesheet" href="../../styles/components/header.css" />
+  <link rel="stylesheet" href="../../styles/pages/home/footer.css" />
+  <link rel="stylesheet" href="../../styles/pages/article/article.css" />
+  <link rel="stylesheet" href="../../styles/pages/blog-page/journal.css" />
+</head>
+<body>
+
+  <!-- EN-TÊTE (identique au reste du site) -->
+  <header class="header" id="header">
+    <div class="header__inner">
+
+      <a href="../../index.html" class="header__logo" aria-label="DSK - Retour à l'accueil">
+        <span class="header__logo-text">DSK</span>
+      </a>
+
+      <nav class="header__nav" aria-label="Navigation principale">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="../../index.html"         class="header__nav-link" data-i18n="nav.home">Accueil</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../../index.html#about"   class="header__nav-link" data-i18n="nav.about">À propos</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../../index.html#skills"  class="header__nav-link" data-i18n="nav.skills">Compétences</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../../index.html#work"    class="header__nav-link" data-i18n="nav.work">Projets</a>
+          </li>
+          <li class="header__nav-item is-active">
+            <a href="../../index.html#blog"    class="header__nav-link" data-i18n="nav.blog">Blog</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../../index.html#contact" class="header__nav-link" data-i18n="nav.contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="lang-switcher header__lang-desktop" role="group" aria-label="Sélecteur de langue">
+        <button class="lang-switcher__btn is-active" data-lang="fr" aria-pressed="true">FR</button>
+        <button class="lang-switcher__btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-switcher__btn" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+
+      <button
+        class="header__burger"
+        aria-label="Ouvrir le menu"
+        data-i18n-aria-label="header.burger.open"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- MENU MOBILE -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Navigation mobile">
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a href="../../index.html"         class="mobile-menu__link" data-i18n="nav.home">Accueil</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="../../index.html#about"   class="mobile-menu__link" data-i18n="nav.about">À propos</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="../../index.html#skills"  class="mobile-menu__link" data-i18n="nav.skills">Compétences</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="../../index.html#work"    class="mobile-menu__link" data-i18n="nav.work">Projets</a>
+        </li>
+        <li class="mobile-menu__item is-active">
+          <a href="../../index.html#blog"    class="mobile-menu__link" data-i18n="nav.blog">Blog</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="../../index.html#contact" class="mobile-menu__link" data-i18n="nav.contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="mobile-menu__footer">
+      <div class="mobile-menu__lang" role="group" aria-label="Sélecteur de langue">
+        <button class="lang-switcher__btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-switcher__btn is-active" data-lang="fr" aria-pressed="true">FR</button>
+        <button class="lang-switcher__btn" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+
+      <div class="mobile-menu__socials" aria-label="Réseaux sociaux">
+        <a href="#" class="mobile-menu__social-link" aria-label="WhatsApp">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+        </a>
+        <a href="#" class="mobile-menu__social-link" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+        <a href="#" class="mobile-menu__social-link" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        <a href="#" class="mobile-menu__social-link" aria-label="X">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <rect x="-2" y="10.5" width="28" height="3" rx="1.5" transform="rotate(45 12 12)"/>
+            <rect x="-2" y="10.5" width="28" height="3" rx="1.5" transform="rotate(-45 12 12)"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BANNIÈRE AUTEUR / PUBLICATION -->
+  <div class="article-banner">
+    <div class="article-banner__inner">
+      <a href="../about/index.html" class="article-banner__author" aria-label="À propos de l'auteur">
+        <img class="article-banner__photo" src="../../assets/images/portrait.png" alt="Dias Sare Kpera" width="48" height="48" />
+        <span class="article-banner__author-text">
+          <span class="article-banner__name">Dias Sare Kpera</span>
+          <span class="article-banner__pub">The DSK Journal · <em>le blog</em></span>
+        </span>
+      </a>
+      <span class="article-banner__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.5 3.5c-4.2 0-11.3 2-14.4 9.2-1.3 2.9-1.6 5.7-1.6 7.3 3.1-1 6.2-3.1 8.3-6.2M12 15 20.5 3.5"/>
+          <path d="M8.3 13.6c-1.6 1.1-3.2 1.6-4.8 1.6"/>
+        </svg>
+        <span>The DSK Journal</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- ARTICLE -->
+  <main class="article" id="article" aria-label="Article">
+
+    <a href="index.html" class="article__back">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+      </svg>
+      Tous les articles
+    </a>
+
+    <div class="article__header">
+      <span class="article__category" data-i18n="blog_page.filters.discipline">Discipline & habitudes</span>
+      <h1 class="article__title" data-i18n-html="articles.it-is-worth-it.title">Ça en vaut la peine</h1>
+      <time class="article__date" datetime="2026-08-14">14 août 2026</time>
+    </div>
+
+    <div class="article__body">
+      <p data-i18n-html="articles.it-is-worth-it.body.p0">Chaque jour, quand je décide de faire ma séance de sport prévue, je me pose la même question : « Je fais ça tous les jours, mais je ne vois aucun résultat. Je ne remarque aucun changement dans mon corps. »</p>
+
+      <p data-i18n-html="articles.it-is-worth-it.body.p1">Avec le temps, cette pensée revenait sans cesse, alors j'ai décidé d'en parler à un professionnel. Il m'a écouté et m'a donné un conseil. Il m'a expliqué que c'est souvent comme ça que fonctionne le progrès : on ne remarque pas toujours ses propres progrès, mais cela ne veut pas dire qu'ils ne sont pas réels. Si l'on se compare à une photo de soi-même prise quelques mois plus tôt, on réalise parfois qu'on n'est plus tout à fait la même personne.</p>
+
+      <p data-i18n-html="articles.it-is-worth-it.body.p2">Il m'a aussi expliqué quelque chose d'important sur le sport : il a un véritable impact sur la santé. Alors je suis allé faire des recherches en ligne sur les bienfaits d'une activité physique régulière. Ce que j'ai découvert m'a impressionné. Le sport aide le cœur à travailler plus efficacement, améliore le sommeil, favorise une bonne circulation sanguine, renforce les os, soutient les défenses naturelles du corps et peut aider à maintenir un poids sain. Il peut aussi réduire le stress en libérant des hormones comme les endorphines, qui améliorent l'humeur et le bien-être général.</p>
+
+      <p data-i18n-html="articles.it-is-worth-it.body.p3">Quand j'ai appris tout cela, je me suis dit : « Alors, ça en vaut vraiment la peine ! »</p>
+
+      <p data-i18n-html="articles.it-is-worth-it.body.p4"><strong>C'est pour cela que je dois continuer mon entraînement, même quand je ne vois pas de résultats visibles, parce que je comprends maintenant que le progrès n'est pas toujours quelque chose que l'on peut voir. Et oui, ça en vaut la peine !</strong></p>
+    </div>
+
+    <div class="article__author-card">
+      <img class="article__author-photo" src="../../assets/images/portrait.png" alt="Dias Sare Kpera" width="56" height="56" />
+      <div class="article__author-info">
+        <div class="article__author-name">Dias Sare Kpera</div>
+        <div class="article__author-role">Développeur web full stack &amp; aventurier du savoir</div>
+      </div>
+      <a href="../about/index.html" class="article__author-link">À propos</a>
+    </div>
+
+    <div class="article__footer-nav">
+      <a href="index.html" class="article__back">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+        </svg>
+        Retour à tous les articles
+      </a>
+    </div>
+
+  </main>
+
+  <!-- PIED DE PAGE -->
+  <div class="footer-wrap">
+    <footer class="footer" id="footer" aria-label="Pied de page">
+
+      <div class="footer__top-divider" aria-hidden="true" data-reveal>
+        <div class="footer__top-divider-line"></div>
+        <span class="footer__top-divider-label">&copy; 2025 DSK</span>
+        <div class="footer__top-divider-line"></div>
+      </div>
+
+      <div class="footer__main" data-reveal>
+
+        <a href="../../index.html" class="footer__logo" aria-label="Dias - Retour à l'accueil">
+          <span class="footer__logo-text">Dias<span class="footer__logo-dot">.</span></span>
+        </a>
+
+        <p class="footer__tagline" data-i18n="footer.tagline">« La discipline, c'est faire ce qui doit être fait. »</p>
+
+        <div class="footer__status">
+          <span class="footer__status-dot" aria-hidden="true"></span>
+          <span class="footer__status-label" data-i18n="footer.status">Disponible pour des projets</span>
+        </div>
+
+        <div class="footer__socials" aria-label="Réseaux sociaux">
+
+          <a href="#" class="footer__social-link" aria-label="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+          </a>
+
+          <a href="#" class="footer__social-link" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+
+          <a href="#" class="footer__social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+
+          <a href="#" class="footer__social-link" aria-label="X">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <rect x="-2" y="10.5" width="28" height="3" rx="1.5" transform="rotate(45 12 12)"/>
+              <rect x="-2" y="10.5" width="28" height="3" rx="1.5" transform="rotate(-45 12 12)"/>
+            </svg>
+          </a>
+
+        </div>
+
+      </div><!-- /footer__main -->
+
+    </footer>
+  </div><!-- /footer-wrap -->
+
+  <!-- SCRIPTS -->
+  <script src="../../script/sticky-header.js" defer></script>
+  <script src="../../script/burger-menu.js" defer></script>
+  <script src="../../script/scroll-reveal.js" defer></script>
+  <script src="../../script/nav-indicator.js" defer></script>
+  <script src="../../script/i18n.js" defer></script>
+</body>
+</html>
