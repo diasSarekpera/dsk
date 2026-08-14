@@ -28,52 +28,42 @@
   border-top: 1px solid var(--border);
 }
 
-/* Bandes pleine largeur (citation, CTA final) — fond plat et
-   identique sur les deux bandes, aligné sur la maquette. */
+/* Bandes pleine largeur à IMAGE DE FOND (citation + CTA final).
+   Chaque bande référence sa propre photo via une classe modificateur
+   dédiée (voir plus bas about-page__section--quote-bg / --cta-bg).
+   Un halo sombre (scrim) est posé au-dessus de l'image pour garder
+   le texte clair lisible quelle que soit la photo utilisée. */
 .about-page__section--band {
-  background: #f5ece1;
-  overflow:   hidden;
+  position:          relative;
+  overflow:          hidden;
+  background-color:  var(--ink-deep); /* couleur de repli tant que l'image n'est pas encore posée */
+  background-size:    cover;
+  background-position: center;
+  background-repeat:  no-repeat;
 }
 
 .about-page__section--band .about-page__inner {
-  border-top: 1px solid var(--border-on-light);
+  border-top: none;
+  /* Hauteur réduite par rapport aux autres sections : ces deux
+     bandes sont pensées comme des respirations visuelles courtes,
+     pas comme des sections de contenu à part entière. */
+  padding-top:    var(--space-14);
+  padding-bottom: var(--space-14);
 }
 
-/* Image de fond illustrée (citation + CTA final) : la scène SVG
-   est plaquée sur la droite, plein cadre, et un dégradé la fait
-   se fondre dans le fond ivoire de la bande pour ne pas gêner
-   la lecture du texte. */
-.about-page__bg-scene {
-  position:       absolute;
-  inset:          0;
-  z-index:        0;
-  overflow:       hidden;
-  pointer-events: none;
-}
-
-.about-page__bg-scene svg {
-  position:  absolute;
-  right:     -2%;
-  top:       50%;
-  transform: translateY(-50%);
-  height:    150%;
-  width:     auto;
-  min-width: 55%;
-  color:     var(--ink-deep);
-  opacity:   0.5;
-}
-
-.about-page__bg-scene::before {
-  content:    "";
+/* Halo sombre chaud (teinte encre) qui unifie la lisibilité du
+   texte clair par-dessus n'importe quelle photo. */
+.about-page__photo-scrim {
   position:   absolute;
   inset:      0;
+  z-index:    0;
   background: linear-gradient(
-    to right,
-    #f5ece1 0%,
-    rgba(245, 236, 225, 0.92) 30%,
-    rgba(245, 236, 225, 0.55) 55%,
-    rgba(245, 236, 225, 0) 82%
+    100deg,
+    rgba(26, 26, 24, 0.72) 0%,
+    rgba(26, 26, 24, 0.58) 45%,
+    rgba(26, 26, 24, 0.42) 100%
   );
+  pointer-events: none;
 }
 
 .about-page__section--band .about-page__inner,
@@ -82,16 +72,48 @@
   z-index:  1;
 }
 
+/* Couleurs claires pour tout le texte / décor posé sur les photos */
+.about-page__section--band .about-page__index-num  { color: var(--ivory-card); }
+.about-page__section--band .about-page__index-line { background-color: rgba(247, 244, 240, 0.4); }
+.about-page__section--band .section-eyebrow        { color: var(--caramel-light); }
+.about-page__section--band .section-title           { color: var(--ivory-card); }
+.about-page__section--band .section-title-rule__line { background-color: var(--caramel-light); }
+.about-page__section--band .section-title-rule__dot  { background-color: var(--caramel-light); }
+
+.about-page__section--band .btn:not(.btn--caramel) {
+  color:        var(--ivory-card);
+  border-color: rgba(247, 244, 240, 0.45);
+}
+
+.about-page__section--band .btn:not(.btn--caramel):hover {
+  background: var(--ivory-card);
+  color:      var(--ink-deep);
+}
+
+.about-page__section--band .btn--caramel {
+  border-color: var(--caramel-light);
+  color:        var(--caramel-light);
+}
+
+.about-page__section--band .btn--caramel:hover {
+  background: var(--caramel-light);
+  color:      var(--ink-deep);
+}
+
+/* Photo de la section 06 — Citation */
+.about-page__section--quote-bg {
+  background-image: url('../../assets/images/about-quote-bg.png');
+}
+
+/* Photo de la section 08 — CTA final */
+.about-page__section--cta-bg {
+  background-image: url('../../assets/images/about-cta-bg.png');
+}
+
 @media (max-width: 768px) {
-  .about-page__bg-scene svg { min-width: 85%; opacity: 0.32; }
-  .about-page__bg-scene::before {
-    background: linear-gradient(
-      to right,
-      #f5ece1 0%,
-      rgba(245, 236, 225, 0.85) 40%,
-      rgba(245, 236, 225, 0.25) 70%,
-      rgba(245, 236, 225, 0) 100%
-    );
+  .about-page__section--band .about-page__inner {
+    padding-top:    var(--space-10);
+    padding-bottom: var(--space-10);
   }
 }
 
@@ -583,8 +605,8 @@
   font-family: var(--font-display);
   font-size:   4.5rem;
   line-height: 0.6;
-  color:       var(--caramel-light);
-  opacity:     0.55;
+  color:       var(--ivory-card);
+  opacity:     0.35;
 }
 
 .about-quote__text {
@@ -592,7 +614,7 @@
   font-style:  italic;
   font-size:   clamp(1.5rem, 3vw, 2.1rem);
   line-height: 1.35;
-  color:       var(--ink-deep);
+  color:       var(--ivory-card);
 }
 
 .about-quote__attribution {
@@ -601,7 +623,7 @@
   font-family:    var(--font-body);
   font-style:     italic;
   font-size:      var(--text-md);
-  color:          var(--caramel);
+  color:          var(--caramel-light);
 }
 
 @media (max-width: 768px) {
