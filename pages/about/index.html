@@ -225,7 +225,7 @@
         <div class="about-page__content">
           <div class="about-parcours">
 
-            <div>
+            <div class="about-parcours__header">
               <span class="section-eyebrow" data-i18n="about_page.timeline.eyebrow">Parcours</span>
               <h2 class="section-title" data-i18n="about_page.timeline.title">Un voyage<br>autodidacte.</h2>
               <div class="section-title-rule" aria-hidden="true">
@@ -234,44 +234,71 @@
               </div>
             </div>
 
-            <ol class="about-timeline">
+            <div class="about-timeline-zigzag">
 
-              <li class="about-timeline__item">
-                <span class="about-timeline__dot" aria-hidden="true"></span>
-                <span class="about-timeline__year">2020</span>
-                <span class="about-timeline__label" data-i18n="about_page.timeline.item1.label">L'étincelle</span>
-                <p class="about-timeline__desc" data-i18n="about_page.timeline.item1.desc">Découverte du code via des tutoriels en ligne. Une simple curiosité qui s'est transformée en passion.</p>
-              </li>
+              <svg class="about-timeline-zigzag__path" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M12,10 C12,19 88,21 88,30 C88,39 12,41 12,50 C12,59 88,61 88,70 C88,79 12,81 12,90"
+                      fill="none" vector-effect="non-scaling-stroke" />
+                <path d="M13,10.3 C13,19.3 87,20.7 87,29.6 C87,39.3 13,40.7 13,50.4 C13,59.3 87,60.7 87,69.6 C87,79.3 13,80.7 13,89.6"
+                      fill="none" vector-effect="non-scaling-stroke" />
+              </svg>
 
-              <li class="about-timeline__item">
-                <span class="about-timeline__dot" aria-hidden="true"></span>
-                <span class="about-timeline__year">2021</span>
-                <span class="about-timeline__label" data-i18n="about_page.timeline.item2.label">Apprentissage</span>
-                <p class="about-timeline__desc" data-i18n="about_page.timeline.item2.desc">Des heures d'apprentissage, de pratique et d'erreurs. HTML, CSS, JavaScript deviennent mes premiers outils.</p>
-              </li>
+              <div class="about-timeline-zigzag__item about-timeline-zigzag__item--left">
+                <div class="about-timeline-zigzag__photo">
+                  <img src="../../assets/images/portrait.png" alt="" width="88" height="88" loading="lazy" decoding="async" />
+                </div>
+                <div class="about-timeline-zigzag__content">
+                  <span class="about-timeline-zigzag__year">2020</span>
+                  <span class="about-timeline-zigzag__label" data-i18n="about_page.timeline.item1.label">L'étincelle</span>
+                  <p class="about-timeline-zigzag__desc" data-i18n="about_page.timeline.item1.desc">Découverte du code via des tutoriels en ligne. Une simple curiosité qui s'est transformée en passion.</p>
+                </div>
+              </div>
 
-              <li class="about-timeline__item">
-                <span class="about-timeline__dot" aria-hidden="true"></span>
-                <span class="about-timeline__year">2022</span>
-                <span class="about-timeline__label" data-i18n="about_page.timeline.item3.label">Premiers pas</span>
-                <p class="about-timeline__desc" data-i18n="about_page.timeline.item3.desc">Réalisation de mes premiers projets personnels et exploration du monde du développement backend.</p>
-              </li>
+              <div class="about-timeline-zigzag__item about-timeline-zigzag__item--right">
+                <div class="about-timeline-zigzag__photo">
+                  <img src="../../assets/images/portrait.png" alt="" width="88" height="88" loading="lazy" decoding="async" />
+                </div>
+                <div class="about-timeline-zigzag__content">
+                  <span class="about-timeline-zigzag__year">2021</span>
+                  <span class="about-timeline-zigzag__label" data-i18n="about_page.timeline.item2.label">Apprentissage</span>
+                  <p class="about-timeline-zigzag__desc" data-i18n="about_page.timeline.item2.desc">Des heures d'apprentissage, de pratique et d'erreurs. HTML, CSS, JavaScript deviennent mes premiers outils.</p>
+                </div>
+              </div>
 
-              <li class="about-timeline__item">
-                <span class="about-timeline__dot" aria-hidden="true"></span>
-                <span class="about-timeline__year">2023</span>
-                <span class="about-timeline__label" data-i18n="about_page.timeline.item4.label">Cultivora</span>
-                <p class="about-timeline__desc" data-i18n="about_page.timeline.item4.desc">Création de Cultivora Land et de The DSK Journal, mes deux projets personnels.</p>
-              </li>
+              <div class="about-timeline-zigzag__item about-timeline-zigzag__item--left">
+                <div class="about-timeline-zigzag__photo">
+                  <img src="../../assets/images/portrait.png" alt="" width="88" height="88" loading="lazy" decoding="async" />
+                </div>
+                <div class="about-timeline-zigzag__content">
+                  <span class="about-timeline-zigzag__year">2022</span>
+                  <span class="about-timeline-zigzag__label" data-i18n="about_page.timeline.item3.label">Premiers pas</span>
+                  <p class="about-timeline-zigzag__desc" data-i18n="about_page.timeline.item3.desc">Réalisation de mes premiers projets personnels et exploration du monde du développement backend.</p>
+                </div>
+              </div>
 
-              <li class="about-timeline__item">
-                <span class="about-timeline__dot" aria-hidden="true"></span>
-                <span class="about-timeline__year">2024</span>
-                <span class="about-timeline__label" data-i18n="about_page.timeline.item5.label">Aujourd'hui</span>
-                <p class="about-timeline__desc" data-i18n="about_page.timeline.item5.desc">Je continue d'apprendre, de construire et de partager pour avoir un impact plus grand.</p>
-              </li>
+              <div class="about-timeline-zigzag__item about-timeline-zigzag__item--right">
+                <div class="about-timeline-zigzag__photo">
+                  <img src="../../assets/images/portrait.png" alt="" width="88" height="88" loading="lazy" decoding="async" />
+                </div>
+                <div class="about-timeline-zigzag__content">
+                  <span class="about-timeline-zigzag__year">2023</span>
+                  <span class="about-timeline-zigzag__label" data-i18n="about_page.timeline.item4.label">Cultivora</span>
+                  <p class="about-timeline-zigzag__desc" data-i18n="about_page.timeline.item4.desc">Création de Cultivora Land et de The DSK Journal, mes deux projets personnels.</p>
+                </div>
+              </div>
 
-            </ol>
+              <div class="about-timeline-zigzag__item about-timeline-zigzag__item--left">
+                <div class="about-timeline-zigzag__photo">
+                  <img src="../../assets/images/portrait.png" alt="" width="88" height="88" loading="lazy" decoding="async" />
+                </div>
+                <div class="about-timeline-zigzag__content">
+                  <span class="about-timeline-zigzag__year">2024</span>
+                  <span class="about-timeline-zigzag__label" data-i18n="about_page.timeline.item5.label">Aujourd'hui</span>
+                  <p class="about-timeline-zigzag__desc" data-i18n="about_page.timeline.item5.desc">Je continue d'apprendre, de construire et de partager pour avoir un impact plus grand.</p>
+                </div>
+              </div>
+
+            </div>
 
           </div>
         </div>
