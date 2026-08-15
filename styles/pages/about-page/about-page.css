@@ -125,10 +125,25 @@
 
 @media (max-width: 1024px) {
   .about-page__inner { padding: var(--space-16) var(--space-12); }
+
+  /* Même logique que pour le mobile juste en dessous : le header
+     (~101px sur cette plage) chevauche sinon la première section. */
+  .about-page__section:first-child .about-page__inner {
+    padding-top: 132px;
+  }
 }
 
 @media (max-width: 768px) {
   .about-page__inner { padding: var(--space-14) var(--space-6); }
+
+  /* Le header est en position: absolute et mesure ~92px de haut
+     sur mobile : sans dégagement dédié, la toute première section
+     (le hero) se retrouve chevauchée par le header. On ajoute donc
+     ce dégagement uniquement à la première section — les suivantes
+     n'en ont pas besoin, elles s'enchaînent normalement. */
+  .about-page__section:first-child .about-page__inner {
+    padding-top: 128px;
+  }
 }
 
 

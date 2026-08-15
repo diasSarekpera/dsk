@@ -265,7 +265,10 @@
 }
 
 @media (max-width: 768px) {
-  .article-banner        { padding-top: var(--space-16); }
+  /* Le header (position: absolute) mesure ~92px de haut sur
+     mobile : l'ancien padding-top (var(--space-16) = 64px) était
+     insuffisant et laissait la bannière chevaucher le header. */
+  .article-banner        { padding-top: 116px; }
   .article-banner__inner { padding: var(--space-4) var(--space-4); }
   .article-banner__name  { font-size: var(--text-lg); }
   .article-banner__pub   { display: none; }

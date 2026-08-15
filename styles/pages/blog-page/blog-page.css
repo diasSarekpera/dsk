@@ -99,8 +99,39 @@
 
 /* ── Responsive ────────────────────────────────────────────  */
 
+/* Le header (position: absolute) chevauche sinon le masthead sur
+   ces deux paliers : ~101px de haut entre 769-1024px, ~92px en
+   dessous de 768px — la règle partagée .blog de base.css ne
+   prévoit qu'un padding-top de 64px sur mobile, insuffisant. */
+@media (max-width: 1024px) {
+  .blog { padding-top: 132px; }
+}
+
 @media (max-width: 768px) {
+  .blog { padding-top: 116px; }
   .blog-hero            { margin-bottom: var(--space-10); }
   .blog-filters         { margin-bottom: var(--space-10); }
   .blog-filters__pill   { font-size: var(--text-xs); padding: var(--space-2) var(--space-4); }
+}
+
+/* En dessous de ~560px, les libellés les plus longs (« Philosophie
+   & valeurs », « Discipline & habitudes ») ne tiennent plus tous
+   sur une seule ligne : le flex-wrap centré produisait alors un
+   empilement irrégulier (une pastille seule, décalée, sur certaines
+   lignes). On bascule donc sur une grille 2 colonnes bien réglée :
+   chaque pastille occupe toute sa cellule, largeurs et hauteurs
+   alignées, plus aucun décalage. */
+@media (max-width: 560px) {
+  .blog-filters {
+    display:               grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:                   var(--space-2-5);
+  }
+
+  .blog-filters__pill {
+    width:      100%;
+    text-align: center;
+    white-space: normal;
+    line-height: 1.3;
+  }
 }
