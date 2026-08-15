@@ -51,17 +51,20 @@
   padding-bottom: var(--space-14);
 }
 
-/* Halo sombre chaud (teinte encre) qui unifie la lisibilité du
-   texte clair par-dessus n'importe quelle photo. */
+/* Halo encre (scrim) posé au-dessus de la photo pour garantir la
+   lisibilité du texte clair, quelle que soit la luminosité ou la
+   texture de l'image utilisée. Overlay quasi uniforme (léger
+   dégradé résiduel pour éviter un aplat trop plat) et assez
+   opaque pour bien faire ressortir le texte. */
 .about-page__photo-scrim {
   position:   absolute;
   inset:      0;
   z-index:    0;
   background: linear-gradient(
-    100deg,
-    rgba(26, 26, 24, 0.72) 0%,
-    rgba(26, 26, 24, 0.58) 45%,
-    rgba(26, 26, 24, 0.42) 100%
+    115deg,
+    rgba(20, 19, 17, 0.82) 0%,
+    rgba(20, 19, 17, 0.74) 50%,
+    rgba(20, 19, 17, 0.68) 100%
   );
   pointer-events: none;
 }
@@ -365,7 +368,7 @@
 
 .about-values {
   display:               grid;
-  grid-template-columns: minmax(200px, 340px) 1fr;
+  grid-template-columns: minmax(200px, 300px) 1fr;
   gap:                   var(--space-20);
   align-items:           start;
 }
@@ -373,11 +376,11 @@
 .about-values__grid {
   display:               grid;
   grid-template-columns: repeat(4, 1fr);
-  gap:                   var(--space-6);
+  gap:                   var(--space-7);
 }
 
 .about-values__card {
-  padding:       var(--space-7) var(--space-6);
+  padding:       var(--space-8) var(--space-6);
   background:    var(--ivory-card);
   border:        1px solid var(--border-on-light);
   border-radius: var(--radius-sm);
@@ -392,15 +395,14 @@
 
 .about-values__icon {
   display:    block;
-  width:      36px;
-  height:     36px;
-  margin:     0 auto var(--space-4);
-  color:      var(--caramel);
-  transition: color 300ms ease, transform 300ms ease;
+  width:      52px;
+  height:     52px;
+  margin:     0 auto var(--space-5);
+  transition: transform 300ms ease, opacity 300ms ease;
 }
 
 .about-values__card:hover .about-values__icon {
-  color:     var(--caramel-light);
+  opacity:   0.85;
   transform: translateY(-2px);
 }
 
