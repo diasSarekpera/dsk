@@ -310,19 +310,19 @@
         "title": "Des valeurs\nqui guident.",
         "card1": {
           "title": "Curiosité",
-          "desc": "Toujours explorer, toujours apprendre, ne jamais cesser de poser des questions."
+          "desc": "Explorer le monde et les possibilités sans cesse."
         },
         "card2": {
           "title": "Discipline",
-          "desc": "La régularité et la rigueur sont mes alliées pour transformer les idées en réalité."
+          "desc": "La constance et la rigueur mènent aux meilleurs résultats."
         },
         "card3": {
           "title": "Apprentissage continu",
-          "desc": "Le savoir évolue chaque jour. Je m'engage à évoluer avec lui."
+          "desc": "Apprendre chaque jour pour évoluer et créer plus de valeur."
         },
         "card4": {
           "title": "Attention au détail",
-          "desc": "Chaque détail compte pour créer des solutions fiables et élégantes."
+          "desc": "Soigner chaque pixel, chaque ligne, chaque expérience."
         }
       },
       "beyond": {
@@ -336,18 +336,17 @@
         "journal_cta": "Lire le journal"
       },
       "stats": {
-        "eyebrow": "En chiffres",
         "item1": {
-          "label": "Projets"
+          "label": "Projets\nréalisés"
         },
         "item2": {
-          "label": "Technologies"
+          "label": "Technologies\nmaîtrisées"
         },
         "item3": {
-          "label": "Années"
+          "label": "Années de\npratique"
         },
         "item4": {
-          "label": "Langues"
+          "label": "Langues\nparlées"
         }
       },
       "quote": {
@@ -371,15 +370,15 @@
         },
         "availability": {
           "label": "Disponibilité",
-          "value": "Disponible pour de nouveaux projets"
+          "value": "Disponible pour projets"
         },
         "formation": {
           "label": "Formation",
-          "value": "Développeur full-stack en formation autonome"
+          "value": "Développement Web Full-Stack (en cours)"
         },
         "contact": {
           "label": "Contact",
-          "value": "diassarekpera@mail.com<br>+229 01 91 15 19 44"
+          "value": "diassarekpera@gmail.com"
         }
       },
       "final": {
@@ -1252,19 +1251,19 @@
         "title": "Values that\nguide me.",
         "card1": {
           "title": "Curiosity",
-          "desc": "Always exploring, always learning, never ceasing to ask questions."
+          "desc": "Endlessly exploring the world and its possibilities."
         },
         "card2": {
           "title": "Discipline",
-          "desc": "Consistency and rigor are my allies for turning ideas into reality."
+          "desc": "Consistency and rigor lead to the best results."
         },
         "card3": {
           "title": "Continuous learning",
-          "desc": "Knowledge evolves every day. I'm committed to evolving with it."
+          "desc": "Learning every day to grow and create more value."
         },
         "card4": {
           "title": "Attention to detail",
-          "desc": "Every detail matters to create reliable, elegant solutions."
+          "desc": "Caring for every pixel, every line, every experience."
         }
       },
       "beyond": {
@@ -1278,18 +1277,17 @@
         "journal_cta": "Read the journal"
       },
       "stats": {
-        "eyebrow": "By the numbers",
         "item1": {
-          "label": "Projects"
+          "label": "Projects\ncompleted"
         },
         "item2": {
-          "label": "Technologies"
+          "label": "Technologies\nmastered"
         },
         "item3": {
-          "label": "Years"
+          "label": "Years of\npractice"
         },
         "item4": {
-          "label": "Languages"
+          "label": "Languages\nspoken"
         }
       },
       "quote": {
@@ -1313,15 +1311,15 @@
         },
         "availability": {
           "label": "Availability",
-          "value": "Available for new projects"
+          "value": "Available for projects"
         },
         "formation": {
           "label": "Background",
-          "value": "Full-stack developer, self-taught in training"
+          "value": "Full-Stack Web Development (in progress)"
         },
         "contact": {
           "label": "Contact",
-          "value": "diassarekpera@mail.com<br>+229 01 91 15 19 44"
+          "value": "diassarekpera@gmail.com"
         }
       },
       "final": {
@@ -2194,19 +2192,19 @@
         "title": "Valores que\nme guían.",
         "card1": {
           "title": "Curiosidad",
-          "desc": "Explorar siempre, aprender siempre, no dejar nunca de hacer preguntas."
+          "desc": "Explorar el mundo y las posibilidades sin cesar."
         },
         "card2": {
           "title": "Disciplina",
-          "desc": "La constancia y el rigor son mis aliados para convertir las ideas en realidad."
+          "desc": "La constancia y el rigor llevan a los mejores resultados."
         },
         "card3": {
           "title": "Aprendizaje continuo",
-          "desc": "El saber evoluciona cada día. Me comprometo a evolucionar con él."
+          "desc": "Aprender cada día para evolucionar y crear más valor."
         },
         "card4": {
           "title": "Atención al detalle",
-          "desc": "Cada detalle cuenta para crear soluciones fiables y elegantes."
+          "desc": "Cuidar cada píxel, cada línea, cada experiencia."
         }
       },
       "beyond": {
@@ -2220,18 +2218,17 @@
         "journal_cta": "Leer el diario"
       },
       "stats": {
-        "eyebrow": "En cifras",
         "item1": {
-          "label": "Proyectos"
+          "label": "Proyectos\nrealizados"
         },
         "item2": {
-          "label": "Tecnologías"
+          "label": "Tecnologías\ndominadas"
         },
         "item3": {
-          "label": "Años"
+          "label": "Años de\npráctica"
         },
         "item4": {
-          "label": "Idiomas"
+          "label": "Idiomas\nhablados"
         }
       },
       "quote": {
@@ -2255,15 +2252,15 @@
         },
         "availability": {
           "label": "Disponibilidad",
-          "value": "Disponible para nuevos proyectos"
+          "value": "Disponible para proyectos"
         },
         "formation": {
           "label": "Formación",
-          "value": "Desarrollador full-stack, formación autodidacta"
+          "value": "Desarrollo Web Full-Stack (en curso)"
         },
         "contact": {
           "label": "Contacto",
-          "value": "diassarekpera@mail.com<br>+229 01 91 15 19 44"
+          "value": "diassarekpera@gmail.com"
         }
       },
       "final": {
