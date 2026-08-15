@@ -125,7 +125,7 @@
 }
 
 @media (max-width: 768px) {
-  .about-page__inner { padding: var(--space-14) var(--space-4); }
+  .about-page__inner { padding: var(--space-14) var(--space-6); }
 }
 
 
@@ -150,10 +150,17 @@
 
 .about-hero {
   display:               grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 1fr 400px;
   gap:                   var(--space-20);
   align-items:           center;
 }
+
+/* Le texte (eyebrow/titre/CTA) passe visuellement en premier pour
+   démarrer au même bord gauche que le header et toutes les autres
+   sections ; la photo se place à droite. L'ordre du DOM reste
+   photo -> texte (sans incidence pour la lecture/accessibilité). */
+.about-hero__text     { order: 1; }
+.about-hero__photo-col { order: 2; }
 
 .about-hero__photo-col {
   position: relative;
@@ -254,7 +261,8 @@
 
 @media (max-width: 1024px) {
   .about-hero { grid-template-columns: 1fr; gap: var(--space-10); }
-  .about-hero__photo-col { max-width: 340px; }
+  .about-hero__photo-col { max-width: 340px; order: 1; }
+  .about-hero__text      { order: 2; }
   .about-hero__stamp { float: none; margin-left: 0; }
 }
 
@@ -625,7 +633,7 @@
   border-bottom: 1px solid var(--border);
 }
 
-.about-details__card .about-details__item:nth-child(1) { padding-left: 0; }
+.about-details__card .about-details__item:nth-child(3n+1) { padding-left: 0; }
 .about-details__card .about-details__item:nth-child(3n) { padding-right: 0; }
 .about-details__card .about-details__item:not(:nth-child(3n+1)) { border-left: 1px solid var(--border-on-light); }
 
