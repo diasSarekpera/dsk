@@ -20,7 +20,7 @@
 .about-page__inner {
   max-width:    var(--container-max);
   margin:       0 auto;
-  padding:      var(--space-24) var(--space-24);
+  padding:      var(--space-28) var(--space-24);
   position:     relative;
 }
 
@@ -66,22 +66,12 @@
   pointer-events: none;
 }
 
-.about-page__section--band .about-page__inner,
-.about-page__section--band .about-page__index {
+.about-page__section--band .about-page__inner {
   position: relative;
   z-index:  1;
 }
 
-/* Le numéro de section vertical (06, 08) est retiré sur ces deux
-   bandes : sur un fond photo plus compact, il chevauchait le
-   contenu (citation / boutons) au lieu de rester dans la marge. */
-.about-page__section--band .about-page__index {
-  display: none;
-}
-
 /* Couleurs claires pour tout le texte / décor posé sur les photos */
-.about-page__section--band .about-page__index-num  { color: var(--ivory-card); }
-.about-page__section--band .about-page__index-line { background-color: rgba(247, 244, 240, 0.4); }
 .about-page__section--band .section-eyebrow        { color: var(--caramel-light); }
 .about-page__section--band .section-title           { color: var(--ivory-card); }
 .about-page__section--band .section-title-rule__line { background-color: var(--caramel-light); }
@@ -124,52 +114,18 @@
   }
 }
 
-/* ── Numéro de section (01, 02...) façon mockup :
-   chiffre en Cormorant italique + courte ligne verticale,
-   distinct du .section-index sitewide (Jost/majuscule) car
-   ce gabarit répète le numéro à CHAQUE section, pas une fois
-   par grand bloc de page. ── */
-
-.about-page__index {
-  position:         absolute;
-  top:              var(--space-24);
-  left:             var(--space-8);
-  display:          flex;
-  flex-direction:   column;
-  align-items:      center;
-  gap:              var(--space-2);
-}
-
-.about-page__index-num {
-  font-family:    var(--font-display);
-  font-style:     italic;
-  font-weight:    400;
-  font-size:      1.35rem;
-  color:          var(--ink-deep);
-  writing-mode:   vertical-rl;
-  transform:      rotate(180deg);
-}
-
-.about-page__index-line {
-  width:            1px;
-  height:           56px;
-  background-color: var(--ink-mid);
-  opacity:          0.35;
-}
-
 .about-page__content {
-  padding-left: var(--space-24);
+  /* Plus de colonne de numéro à réserver : le contenu peut
+     démarrer directement au bord de .about-page__inner et
+     profiter de toute la largeur disponible. */
 }
 
 @media (max-width: 1024px) {
   .about-page__inner { padding: var(--space-16) var(--space-12); }
-  .about-page__content { padding-left: var(--space-14); }
 }
 
 @media (max-width: 768px) {
   .about-page__inner { padding: var(--space-14) var(--space-4); }
-  .about-page__index { display: none; }
-  .about-page__content { padding-left: 0; }
 }
 
 
@@ -184,7 +140,7 @@
 .about-values .section-title,
 .about-beyond .section-title,
 .about-details .section-title {
-  font-size: clamp(2rem, 3.2vw, 2.85rem);
+  font-size: clamp(2.1rem, 3.4vw, 3rem);
 }
 
 
@@ -309,8 +265,8 @@
 
 .about-parcours {
   display:               grid;
-  grid-template-columns: minmax(180px, 320px) 1fr;
-  gap:                   var(--space-16);
+  grid-template-columns: minmax(200px, 340px) 1fr;
+  gap:                   var(--space-20);
 }
 
 .about-timeline {
@@ -331,7 +287,7 @@
 
 .about-timeline__item {
   position:     relative;
-  padding-bottom: var(--space-8);
+  padding-bottom: var(--space-10);
 }
 
 .about-timeline__item:last-child { padding-bottom: 0; }
@@ -383,19 +339,19 @@
 
 .about-values {
   display:               grid;
-  grid-template-columns: minmax(180px, 320px) 1fr;
-  gap:                   var(--space-16);
+  grid-template-columns: minmax(200px, 340px) 1fr;
+  gap:                   var(--space-20);
   align-items:           start;
 }
 
 .about-values__grid {
   display:               grid;
   grid-template-columns: repeat(4, 1fr);
-  gap:                   var(--space-5);
+  gap:                   var(--space-6);
 }
 
 .about-values__card {
-  padding:       var(--space-6) var(--space-5);
+  padding:       var(--space-7) var(--space-6);
   background:    var(--ivory-card);
   border:        1px solid var(--border-on-light);
   border-radius: var(--radius-sm);
@@ -448,8 +404,8 @@
 
 .about-beyond {
   display:               grid;
-  grid-template-columns: minmax(240px, 380px) 1fr;
-  gap:                   var(--space-16);
+  grid-template-columns: minmax(260px, 400px) 1fr;
+  gap:                   var(--space-20);
   align-items:           center;
 }
 
@@ -646,8 +602,8 @@
 
 .about-details {
   display:               grid;
-  grid-template-columns: minmax(180px, 320px) 1fr;
-  gap:                   var(--space-16);
+  grid-template-columns: minmax(200px, 340px) 1fr;
+  gap:                   var(--space-20);
   align-items:           center;
 }
 
@@ -655,7 +611,7 @@
   display:        grid;
   grid-template-columns: repeat(3, 1fr);
   gap:            0;
-  padding:        var(--space-8);
+  padding:        var(--space-10);
   background:     var(--ivory-card);
   border:         1px solid var(--border-on-light);
   border-radius:  var(--radius-sm);
@@ -760,8 +716,8 @@
 
 .about-final {
   display:               grid;
-  grid-template-columns: minmax(180px, 320px) 1fr;
-  gap:                   var(--space-8);
+  grid-template-columns: minmax(200px, 340px) 1fr;
+  gap:                   var(--space-10);
   align-items:           center;
   position:              relative;
 }
