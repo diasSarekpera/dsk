@@ -403,10 +403,11 @@
 
 .about-values__title {
   font-family:    var(--font-display);
-  font-size:      var(--text-xl);
-  font-weight:    500;
-  letter-spacing: 0;
-  text-transform: none;
+  font-size:      clamp(1.4rem, 1.8vw, 1.75rem);
+  font-weight:    300;
+  font-style:     italic;
+  letter-spacing: -0.02em;
+  line-height:    1.05;
   color:          var(--ink-deep);
   margin-bottom:  var(--space-2-5);
 }
