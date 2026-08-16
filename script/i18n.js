@@ -271,7 +271,7 @@ const i18n = (() => {
             website:  { label: "Site web",           value: "dsk.ink" },
             degree:   { label: "Diplôme",            value: "Licence" },
             phone:    { label: "Téléphone",          value: "+229 01 91 15 19 44" },
-            email:    { label: "E-mail",             value: "diassarekpera@mail.com" },
+            email:    { label: "E-mail",             value: "diassarekpera@gmail.com" },
             city:     { label: "Ville",              value: "Cotonou, Bénin" },
             freelance:{ label: "Freelance",          value: "Disponible" }
           },
@@ -315,7 +315,7 @@ const i18n = (() => {
           info: {
             title: "Une idée, un projet,\nune question ?",
             subtitle: "N'hésite pas à m'écrire - je lis chaque\nmessage et réponds sous 24 heures.",
-            email:    { label: "E-mail",       value: "diassarekpera@mail.com" },
+            email:    { label: "E-mail",       value: "diassarekpera@gmail.com" },
             phone:    { label: "Téléphone",    value: "+229 01 91 15 19 44" },
             location: { label: "Localisation", value: "Cotonou, Bénin" }
           },
@@ -361,7 +361,7 @@ const i18n = (() => {
             website:  { label: "Website",       value: "dsk.ink" },
             degree:   { label: "Degree",        value: "Bachelor's" },
             phone:    { label: "Phone",         value: "+229 01 91 15 19 44" },
-            email:    { label: "E-mail",        value: "diassarekpera@mail.com" },
+            email:    { label: "E-mail",        value: "diassarekpera@gmail.com" },
             city:     { label: "City",          value: "Cotonou, Benin" },
             freelance:{ label: "Freelance",     value: "Available" }
           },
@@ -405,7 +405,7 @@ const i18n = (() => {
           info: {
             title: "An idea, a project,\na question?",
             subtitle: "Don't hesitate to write to me - I read every\nmessage and reply within 24 hours.",
-            email:    { label: "E-mail",   value: "diassarekpera@mail.com" },
+            email:    { label: "E-mail",   value: "diassarekpera@gmail.com" },
             phone:    { label: "Phone",    value: "+229 01 91 15 19 44" },
             location: { label: "Location", value: "Cotonou, Benin" }
           },
@@ -451,7 +451,7 @@ const i18n = (() => {
             website:  { label: "Sitio web",           value: "dsk.ink" },
             degree:   { label: "Título",              value: "Licenciatura" },
             phone:    { label: "Teléfono",            value: "+229 01 91 15 19 44" },
-            email:    { label: "Correo",              value: "diassarekpera@mail.com" },
+            email:    { label: "Correo",              value: "diassarekpera@gmail.com" },
             city:     { label: "Ciudad",              value: "Cotonou, Benín" },
             freelance:{ label: "Freelance",           value: "Disponible" }
           },
@@ -495,7 +495,7 @@ const i18n = (() => {
           info: {
             title: "¿Una idea, un proyecto,\nuna pregunta?",
             subtitle: "No dudes en escribirme - leo cada\nmensaje y respondo en 24 horas.",
-            email:    { label: "Correo",       value: "diassarekpera@mail.com" },
+            email:    { label: "Correo",       value: "diassarekpera@gmail.com" },
             phone:    { label: "Teléfono",     value: "+229 01 91 15 19 44" },
             location: { label: "Localización", value: "Cotonou, Benín" }
           },
