@@ -129,6 +129,7 @@
 .skill__bar-fill::after {
   content:          '';
   position:         absolute;
+  pointer-events:   none;
   right:            -3px;
   top:              50%;
   transform:        translateY(-50%);

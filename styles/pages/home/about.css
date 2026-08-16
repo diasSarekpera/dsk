@@ -24,6 +24,7 @@
 .about__photo-frame::before {
   content:       '';
   position:      absolute;
+  pointer-events: none;
   inset:         -10px -10px 10px 10px;
   border:        1px solid var(--caramel-pale);
   border-radius: 4px;

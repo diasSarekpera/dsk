@@ -43,6 +43,7 @@
 .project__image-wrapper::after {
   content:    '';
   position:   absolute;
+  pointer-events: none;
   inset:      0;
   background: linear-gradient(to bottom, transparent 50%, rgba(176, 125, 82, 0.18) 100%);
   opacity:    0;

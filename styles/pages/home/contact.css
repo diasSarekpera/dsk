@@ -40,6 +40,7 @@
   height:        260px;
   border-radius: var(--radius-pill);
   border:        1px solid rgba(var(--ivory-rgb), var(--alpha-06));
+  pointer-events: none;
 }
 
 .contact__info::after {
@@ -51,6 +52,7 @@
   height:        160px;
   border-radius: var(--radius-pill);
   border:        1px solid rgba(var(--ivory-rgb), var(--alpha-08));
+  pointer-events: none;
 }
 
 .contact__info-heading { margin-bottom: var(--space-10); }

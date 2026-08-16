@@ -87,6 +87,7 @@
 .header__nav-item.is-active::after {
   content:          '';
   position:         absolute;
+  pointer-events:   none;
   bottom:           -8px;
   left:             50%;
   transform:        translateX(-50%);

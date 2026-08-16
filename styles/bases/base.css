@@ -51,6 +51,7 @@ body {
 .contact::before {
   content:          '';
   position:         absolute;
+  pointer-events:   none;
   top:              calc(var(--space-28) + var(--space-8));
   left:             3.25rem;
   width:            1px;

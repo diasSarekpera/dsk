@@ -189,6 +189,7 @@
 .about-hero__frame::before {
   content:      '';
   position:     absolute;
+  pointer-events: none;
   top:          -14px;
   left:         -14px;
   right:        14px;
@@ -517,6 +518,7 @@
 .about-postcard::after {
   content:       '';
   position:      absolute;
+  pointer-events: none;
   inset:         0;
   border:        1px solid var(--border-on-light);
   border-radius: var(--radius-sm);
