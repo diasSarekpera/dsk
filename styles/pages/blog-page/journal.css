@@ -17,8 +17,10 @@
   border: 1px solid var(--caramel);
 }
 
-/* Marque texte + plume utilisée dans la bannière article,
-   themable en CSS (remplace un ancien logo raster). */
+/* Marque texte + plume utilisée dans la bannière article : la
+   plume reprend le tracé de celle du masthead /blog.html (voir
+   .journal-masthead__feather), en version allégée (moins de
+   barbes) et redimensionnée pour un usage compact en ligne. */
 .article-banner__mark {
   display:        inline-flex;
   align-items:    center;
@@ -27,17 +29,18 @@
   color:          var(--caramel);
 }
 
-.article-banner__mark svg {
-  width:  20px;
-  height: 20px;
+.article-banner__mark-feather {
+  width:  17px;
+  height: 22px;
+  flex-shrink: 0;
 }
 
-.article-banner__mark span {
-  font-family:    var(--font-body);
-  font-size:      var(--text-sm);
-  font-weight:    500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+.article-banner__mark-text {
+  font-family:    'Pirata One', var(--font-display), cursive;
+  font-weight:    400;
+  font-size:      1.15rem;
+  letter-spacing: 0.02em;
+  color:          var(--ink-deep);
   white-space:    nowrap;
 }
 
@@ -181,15 +184,38 @@
 }
 
 .journal-card__byline {
-  display:        block;
-  margin-top:     var(--space-8);
-  padding-top:    var(--space-6);
-  border-top:     1px solid var(--border-on-light);
-  width:          100%;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  flex-wrap:       wrap;
+  column-gap:      var(--space-1-5);
+  row-gap:         var(--space-1);
+  margin-top:      var(--space-8);
+  padding-top:     var(--space-6);
+  border-top:      1px solid var(--border-on-light);
+  width:           100%;
+}
+
+.journal-card__byline-feather {
+  width:       11px;
+  height:      14px;
+  flex-shrink: 0;
+  color:       var(--caramel);
+}
+
+.journal-card__byline-brand {
+  font-family:    'Pirata One', var(--font-display), cursive;
+  font-weight:    400;
+  font-size:      0.95rem;
+  letter-spacing: 0.02em;
+  color:          var(--ink-deep);
+}
+
+.journal-card__byline-date {
   font-family:    var(--font-body);
   font-size:      0.6875rem;
   font-weight:    500;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color:          var(--ink-mid);
 }
