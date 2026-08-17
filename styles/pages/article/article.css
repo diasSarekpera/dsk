@@ -184,6 +184,16 @@
   background:    var(--caramel);
 }
 
+.article__subhead {
+  margin-top:    var(--space-12);
+  margin-bottom: var(--space-1);
+  font-family:   var(--font-display);
+  font-style:    italic;
+  font-weight:   500;
+  font-size:     var(--text-xl);
+  color:         var(--ink-deep);
+}
+
 .article__quote {
   margin:       var(--space-10) 0;
   font-family:  var(--font-display);

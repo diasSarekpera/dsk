@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr" translate="no">
+<head>
+  <meta name="google" content="notranslate" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="On dit souvent qu'il faut se méfier de l'IA parce qu'elle fait des erreurs. Je suis allé chercher pourquoi, plutôt que de simplement le répéter." />
+  <title>L'IA fait des erreurs, et alors ! - The DSK Journal</title>
+  <link rel="icon" type="image/x-icon" href="../../assets/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="../../site.webmanifest" />
+
+  <!-- Open Graph / partage réseaux sociaux -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Dias Sare Kpera" />
+  <meta property="og:title" content="L'IA fait des erreurs, et alors ! - The DSK Journal" />
+  <meta property="og:description" content="On dit souvent qu'il faut se méfier de l'IA parce qu'elle fait des erreurs. Je suis allé chercher pourquoi, plutôt que de simplement le répéter." />
+  <meta property="og:image" content="https://dsk.ink/assets/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://dsk.ink/pages/blog/article-lia-fait-des-erreurs-et-alors.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="L'IA fait des erreurs, et alors ! - The DSK Journal" />
+  <meta name="twitter:description" content="On dit souvent qu'il faut se méfier de l'IA parce qu'elle fait des erreurs. Je suis allé chercher pourquoi, plutôt que de simplement le répéter." />
+  <meta name="twitter:image" content="https://dsk.ink/assets/images/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&family=Pirata+One&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../styles/bases/variables.css" />
+  <link rel="stylesheet" href="../../styles/bases/reset.css" />
+  <link rel="stylesheet" href="../../styles/bases/base.css" />
+  <link rel="stylesheet" href="../../styles/components/header.css" />
+  <link rel="stylesheet" href="../../styles/components/footer-simple.css" />
+  <link rel="stylesheet" href="../../styles/pages/article/article.css" />
+  <link rel="stylesheet" href="../../styles/pages/blog-page/journal.css" />
+</head>
+<body>
+
+  <!-- EN-TÊTE (identique au reste du site) -->
+  <header class="header" id="header">
+    <div class="header__inner">
+
+      <a href="../../index.html" class="header__logo" aria-label="DSK - Retour à l'accueil">
+        <span class="header__logo-text">DSK</span>
+      </a>
+
+      <nav class="header__nav" aria-label="Navigation principale">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="../../index.html"         class="header__nav-link" data-i18n="nav.home">Accueil</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../../index.html#about"   class="header__nav-link" data-i18n="nav.about">À propos</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../../index.html#skills"  class="header__nav-link" data-i18n="nav.skills">Compétences</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../../index.html#work"    class="header__nav-link" data-i18n="nav.work">Projets</a>
+          </li>
+          <li class="header__nav-item is-active">
+            <a href="../../index.html#blog"    class="header__nav-link" data-i18n="nav.blog">Blog</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../../index.html#contact" class="header__nav-link" data-i18n="nav.contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="lang-switcher header__lang-desktop" role="group" aria-label="Sélecteur de langue">
+        <button class="lang-switcher__btn is-active" data-lang="fr" aria-pressed="true">FR</button>
+        <button class="lang-switcher__btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-switcher__btn" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+
+      <button
+        class="header__burger"
+        aria-label="Ouvrir le menu"
+        data-i18n-aria-label="header.burger.open"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- MENU MOBILE -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Navigation mobile">
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a href="../../index.html"         class="mobile-menu__link" data-i18n="nav.home">Accueil</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="../../index.html#about"   class="mobile-menu__link" data-i18n="nav.about">À propos</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="../../index.html#skills"  class="mobile-menu__link" data-i18n="nav.skills">Compétences</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="../../index.html#work"    class="mobile-menu__link" data-i18n="nav.work">Projets</a>
+        </li>
+        <li class="mobile-menu__item is-active">
+          <a href="../../index.html#blog"    class="mobile-menu__link" data-i18n="nav.blog">Blog</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="../../index.html#contact" class="mobile-menu__link" data-i18n="nav.contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="mobile-menu__footer">
+      <div class="mobile-menu__lang" role="group" aria-label="Sélecteur de langue">
+        <button class="lang-switcher__btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-switcher__btn is-active" data-lang="fr" aria-pressed="true">FR</button>
+        <button class="lang-switcher__btn" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+
+      <div class="mobile-menu__socials" aria-label="Réseaux sociaux">
+        <a href="https://wa.me/22991151944" target="_blank" rel="noopener" class="mobile-menu__social-link" aria-label="WhatsApp">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61591641221358" target="_blank" rel="noopener" class="mobile-menu__social-link" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/dias-sare-kpera-9072813b3" target="_blank" rel="noopener" class="mobile-menu__social-link" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        <a href="https://x.com/realdsk229" target="_blank" rel="noopener" class="mobile-menu__social-link" aria-label="X">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BANNIÈRE AUTEUR / PUBLICATION -->
+  <div class="article-banner">
+    <div class="article-banner__inner">
+      <a href="../about/index.html" class="article-banner__author" aria-label="À propos de l'auteur">
+        <img class="article-banner__photo" src="../../assets/images/portrait.png" alt="Dias Sare Kpera" width="48" height="48" />
+        <span class="article-banner__author-text">
+          <span class="article-banner__name">Dias Sare Kpera</span>
+          <span class="article-banner__pub">The DSK Journal · <em>le blog</em></span>
+        </span>
+      </a>
+      <span class="article-banner__mark" aria-hidden="true">
+        <svg class="article-banner__mark-feather" viewBox="0 0 200 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 62.0 252.0 C 30.0 175.0, 34.0 80.0, 128.0 18.0" stroke="currentColor" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+        <path d="M 51.4 220.9 Q 52.2 220.3 52.9 219.0" stroke="currentColor" stroke-width="0.59" fill="none" stroke-linecap="round" opacity="0.57"/>
+        <path d="M 48.2 207.1 Q 53.9 203.5 58.7 195.3" stroke="currentColor" stroke-width="0.81" fill="none" stroke-linecap="round" opacity="0.67"/>
+        <path d="M 45.8 193.2 Q 57.7 186.8 68.3 171.0" stroke="currentColor" stroke-width="1.03" fill="none" stroke-linecap="round" opacity="0.78"/>
+        <path d="M 44.4 179.2 Q 63.8 170.4 82.2 146.7" stroke="currentColor" stroke-width="1.25" fill="none" stroke-linecap="round" opacity="0.88"/>
+        <path d="M 43.9 165.2 Q 63.6 157.9 83.4 135.9" stroke="currentColor" stroke-width="1.40" fill="none" stroke-linecap="round" opacity="0.95"/>
+        <path d="M 44.6 151.1 Q 66.7 144.8 90.1 122.5" stroke="currentColor" stroke-width="1.40" fill="none" stroke-linecap="round" opacity="0.95"/>
+        <path d="M 46.3 137.1 Q 70.8 132.2 98.2 110.1" stroke="currentColor" stroke-width="1.40" fill="none" stroke-linecap="round" opacity="0.95"/>
+        <path d="M 49.2 123.2 Q 69.0 121.0 92.3 105.2" stroke="currentColor" stroke-width="1.40" fill="none" stroke-linecap="round" opacity="0.95"/>
+        <path d="M 53.3 109.5 Q 75.3 109.0 102.3 93.9" stroke="currentColor" stroke-width="1.40" fill="none" stroke-linecap="round" opacity="0.95"/>
+        <path d="M 58.7 96.0 Q 82.1 97.6 112.2 84.1" stroke="currentColor" stroke-width="1.38" fill="none" stroke-linecap="round" opacity="0.94"/>
+        <path d="M 65.4 82.8 Q 87.1 86.2 116.5 76.2" stroke="currentColor" stroke-width="1.27" fill="none" stroke-linecap="round" opacity="0.89"/>
+        <path d="M 73.5 69.9 Q 87.3 73.4 106.7 68.7" stroke="currentColor" stroke-width="1.13" fill="none" stroke-linecap="round" opacity="0.82"/>
+        <path d="M 83.1 57.4 Q 93.6 61.1 109.1 58.8" stroke="currentColor" stroke-width="0.96" fill="none" stroke-linecap="round" opacity="0.74"/>
+        <path d="M 94.2 45.3 Q 100.4 48.1 110.0 47.6" stroke="currentColor" stroke-width="0.78" fill="none" stroke-linecap="round" opacity="0.66"/>
+        <path d="M 106.8 33.7 Q 107.7 34.2 109.0 34.2" stroke="currentColor" stroke-width="0.59" fill="none" stroke-linecap="round" opacity="0.57"/>
+        </svg>
+        <span class="article-banner__mark-text">The DSK Journal</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- ARTICLE -->
+  <main class="article" id="article" aria-label="Article">
+
+    <a href="index.html" class="article__back">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+      </svg>
+      Tous les articles
+    </a>
+
+    <div class="article__header">
+      <span class="article__category" data-i18n="blog_page.filters.apprentissage">Apprentissage</span>
+      <h1 class="article__title" data-i18n-html="articles.lia-fait-des-erreurs-et-alors.title">L'IA fait des erreurs, et alors !</h1>
+      <time class="article__date" datetime="2026-08-15">15 août 2026</time>
+    </div>
+
+    <div class="article__body">
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p0">Nous sommes aujourd'hui dans une ère de révolution technologique où les choses évoluent rapidement. Le domaine de la technologie a connu de très grandes révolutions, et l'IA est aujourd'hui au cœur de beaucoup de choses, et même de beaucoup de problématiques.</p>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p1">Mais ce qui m'intrigue souvent, c'est que, au lieu de s'en servir pour mieux faire, mieux apprendre, mieux construire, on entend souvent cette phrase :</p>
+
+      <div class="article__quote" data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p2">« L'usage des outils d'IA n'est pas une bonne chose. Les intelligences artificielles font des erreurs, il faut s'en méfier. »</div>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p3">Moi, je me demande : pourquoi ? Pourquoi ne pas avancer avec la réalité au lieu de ne faire que mettre en avant ce que ces outils, aussi intelligents et aussi intelligemment conçus soient-ils, ne savent pas faire ?</p>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p4">Pourquoi ne pas plutôt se demander : comment apprendre à les utiliser à bon escient ? Comment les améliorer ? Comment en tirer profit pour construire un monde meilleur ? Quelles sont les règles éthiques qu'il faut établir autour de leur utilisation ? Ce sont, selon moi, des questions fondamentales.</p>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p5">Parce qu'après tout, quand on fait des recherches sur le fonctionnement de ces outils, on se rend compte qu'ils nous sont souvent présentés d'une manière très bien décorée, qui peut donner l'impression d'un outil possédant une intelligence propre. Mais lorsqu'on fait des recherches plus approfondies sur la manière dont ils sont conçus, tout change : des quantités énormes de données traitées, des modèles mathématiques entraînés et optimisés, des systèmes extrêmement complexes derrière ce que nous voyons. Nous ne voyons finalement que la partie visible de ces outils.</p>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p6">Et, dans ce contexte, ce serait presque plus intrigant qu'une IA ne fasse jamais d'erreur. Mais de quelle erreur parle-t-on exactement ? Prenons un exemple simple : on pose une question à ChatGPT et sa réponse contient des erreurs. Oui, cela peut être trompeur. Mais est-ce qu'on se demande réellement pourquoi cette erreur s'est produite ?</p>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p7">Je ne vais pas jouer les savants, puisque je n'ai évidemment pas toutes les réponses. Je vais plutôt faire ce que je ferais naturellement : chercher à comprendre. Je me suis donc posé deux questions très simples : qu'est-ce qu'une intelligence artificielle, et pourquoi les intelligences artificielles font-elles des erreurs ? Avant de continuer ma réflexion, j'ai voulu mettre de côté mes propres suppositions et regarder ce que disent différentes sources sur le fonctionnement réel de l'intelligence artificielle — non pas pour faire un cours universitaire, mais simplement pour comprendre ce qui se cache derrière ces outils que nous utilisons aujourd'hui.</p>
+
+      <h3 class="article__subhead" data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p8">Qu'est-ce qu'une intelligence artificielle ?</h3>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p9">Selon le National Institute of Standards and Technology (NIST), une intelligence artificielle peut être comprise comme un système capable, pour des objectifs définis par l'humain, de produire des prédictions, des recommandations ou des décisions qui influencent un environnement réel ou virtuel. De son côté, IBM explique l'intelligence artificielle comme une technologie permettant aux ordinateurs et aux machines de simuler certaines capacités associées à l'apprentissage, à la compréhension, à la résolution de problèmes, à la prise de décision ou encore à la créativité humaine.</p>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p10">Dit plus simplement, une IA est donc un système informatique capable d'effectuer certaines tâches que nous associons habituellement à une forme d'intelligence humaine. Elle peut par exemple reconnaître des objets ou des images, comprendre et traiter du langage, traduire une langue, faire des prédictions, prendre certaines décisions, ou générer du texte, des images, du son ou de la vidéo.</p>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p11">Mais il faut déjà faire attention à une chose : le mot « intelligence » peut être trompeur. Une IA n'est pas nécessairement intelligente au sens où un être humain l'est. Elle fonctionne grâce à des systèmes informatiques, des modèles mathématiques, des données et des algorithmes.</p>
+
+      <h3 class="article__subhead" data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p12">Alors, comment une IA apprend-elle ?</h3>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p13">C'est ici qu'intervient notamment le machine learning, ou apprentissage automatique. Le NIST le définit comme le développement et l'utilisation de systèmes informatiques capables de s'adapter et d'apprendre à partir de données afin notamment d'améliorer leur précision. IBM explique également que l'on entraîne des modèles à partir de données afin qu'ils puissent ensuite effectuer des prédictions ou prendre certaines décisions, sans que toutes les règles nécessaires à chaque situation aient été écrites explicitement par un programmeur.</p>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p14">Prenons un exemple très simple. Supposons que nous voulions créer un système capable de distinguer des chats et des chiens. On peut lui présenter de nombreuses images accompagnées de leurs réponses, et le système va alors apprendre des régularités présentes dans ces données. Il ne reçoit donc pas nécessairement une règle écrite par un humain disant qu'un chat possède quatre pattes, deux oreilles et des moustaches : il reçoit surtout des exemples, et apprend progressivement à reconnaître certaines relations présentes dans ces exemples.</p>
+
+      <h3 class="article__subhead" data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p15">Le modèle et ses paramètres</h3>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p16">Pour effectuer cet apprentissage, les systèmes modernes utilisent notamment des modèles contenant de nombreux paramètres. Ces paramètres sont des valeurs numériques qui sont ajustées pendant l'entraînement afin que le modèle améliore ses prédictions. Dans les réseaux neuronaux modernes, le nombre de paramètres peut être extrêmement important : ils sont constitués de différentes couches de calcul, particulièrement utilisées pour apprendre des relations complexes présentes dans de grandes quantités de données.</p>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p17">On peut donc imaginer, de manière très simplifiée : données → modèle → prédiction. Puis le système compare sa prédiction avec ce qui était attendu. S'il se trompe, les paramètres peuvent être ajustés afin d'améliorer les prédictions suivantes.</p>
+
+      <h3 class="article__subhead" data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p18">Comment l'apprentissage se fait-il ?</h3>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p19">Imaginons que le modèle reçoive une image de chat et réponde « chien ». La prédiction est incorrecte. Pendant l'entraînement, le système mesure l'erreur entre sa prédiction et la réponse attendue, et cette erreur est utilisée pour ajuster les paramètres du modèle. On peut donc simplifier le processus ainsi : prédiction → mesure de l'erreur → ajustement du modèle → nouvelle prédiction. Puis le processus est répété encore et encore sur de très nombreuses données. C'est cette répétition qui permet au modèle d'améliorer progressivement ses performances.</p>
+
+      <h3 class="article__subhead" data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p20">Et les réseaux neuronaux dans tout ça ?</h3>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p21">Les réseaux neuronaux artificiels sont une famille de modèles particulièrement importante dans l'IA moderne. IBM explique qu'ils sont constitués de couches de nœuds interconnectés et qu'ils sont particulièrement adaptés à l'identification de relations et de modèles complexes dans de grandes quantités de données. Le terme « neuronal » vient de leur inspiration biologique, mais il ne faut pas pour autant imaginer un cerveau humain miniature : derrière ces réseaux, il y a essentiellement des opérations mathématiques effectuées à très grande échelle. C'est l'empilement de nombreuses opérations, combiné à de grandes quantités de données et de puissance de calcul, qui permet d'obtenir des systèmes capables de réaliser des tâches extrêmement complexes.</p>
+
+      <h3 class="article__subhead" data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p22">Et ChatGPT, comment cela fonctionne-t-il ?</h3>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p23">C'est ici que nous arrivons aux modèles de langage. Selon la documentation de Google for Developers, un modèle de langage estime la probabilité qu'un token, ou une séquence de tokens, apparaisse dans un contexte donné. Mais qu'est-ce qu'un token ? C'est une unité de texte traitée par le modèle : un mot, une partie d'un mot ou, selon le système, un caractère. OpenAI explique également que ses modèles de langage traitent le texte sous forme de tokens et apprennent les relations statistiques entre ces tokens afin notamment de produire le token suivant.</p>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p24">On peut donc représenter très simplement le processus comme ceci : texte → tokens → traitement par le modèle → prédiction → nouveau token → texte. Prenons une phrase : « Le soleil se lève à l'... » Le modèle va évaluer les possibilités qui pourraient raisonnablement venir ensuite en fonction du contexte. C'est évidemment beaucoup plus complexe que de simplement chercher le prochain mot dans une base de données : les grands modèles de langage apprennent des relations et des structures beaucoup plus riches dans les données sur lesquelles ils sont entraînés.</p>
+
+      <h3 class="article__subhead" data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p25">Alors, pourquoi cela paraît-il aussi intelligent ?</h3>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p26">C'est probablement l'une des choses les plus fascinantes. Lorsqu'un modèle a été entraîné sur énormément de données et possède énormément de paramètres, il peut apprendre des relations extrêmement complexes dans le langage. Il peut alors produire des réponses qui paraissent cohérentes, pertinentes et parfois même très proches de ce qu'un humain aurait écrit. Les grands modèles de langage modernes utilisent notamment des architectures comme les Transformers, qui permettent de traiter de grandes quantités de contexte et d'améliorer les prédictions.</p>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p27"><strong>Et c'est justement ici que je trouve important de faire une distinction. Une réponse qui paraît intelligente n'implique pas nécessairement que la machine comprend les choses exactement comme un être humain les comprend. Elle produit une sortie à partir de ce qu'elle a appris et des relations statistiques qu'elle a développées dans son modèle.</strong></p>
+
+      <h3 class="article__subhead" data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p28">Une IA n'est donc pas programmée exactement comme un logiciel classique</h3>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p29">C'est une distinction particulièrement intéressante pour moi en tant qu'étudiant en informatique. Dans un programme classique, le développeur peut écrire explicitement les règles qui déterminent ce que le programme doit faire. Dans le machine learning, le principe est différent : on fournit des données au système et on entraîne un modèle afin qu'il puisse apprendre des relations permettant ensuite de produire des prédictions ou des décisions. Cela ne signifie évidemment pas que les humains n'interviennent plus : ils choisissent le problème, préparent les données, choisissent les méthodes, entraînent les modèles, évaluent leurs performances et décident de la manière dont le système sera utilisé.</p>
+
+      <h3 class="article__subhead" data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p30">Et comment construit-on une IA ?</h3>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p31">Même si la réalité est beaucoup plus complexe, on peut représenter grossièrement le processus ainsi : un problème, des données, leur préparation et leur nettoyage, le choix d'un modèle, son entraînement, son évaluation, son amélioration, puis son déploiement et son utilisation réelle. C'est donc loin d'être une boîte magique dans laquelle on met quelques informations et qui devient soudainement intelligente. Derrière une IA moderne, il y a des données, des mathématiques, des statistiques, des algorithmes, des architectures de modèles, de la puissance informatique et énormément de travail humain.</p>
+
+      <h3 class="article__subhead" data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p32">Alors, pourquoi une IA fait-elle des erreurs ?</h3>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p33">Et nous arrivons enfin à la question qui m'intéressait depuis le début. Pourquoi une IA peut-elle produire une mauvaise réponse ? Il n'y a pas une seule raison. Un modèle peut notamment être confronté à des données imparfaites, à un manque de contexte ou à une situation pour laquelle sa prédiction n'est pas correcte. Les grands modèles de langage présentent également un phénomène souvent appelé hallucination, lorsqu'ils produisent une information qui paraît plausible mais qui est en réalité fausse. Google cite d'ailleurs les hallucinations parmi les problèmes associés aux grands modèles de langage.</p>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p34">Et c'est ici que toute cette recherche devient intéressante. Parce qu'au lieu de simplement dire « l'IA fait des erreurs, donc il faut s'en méfier », on peut maintenant poser une meilleure question : « je sais qu'elle peut faire des erreurs, mais maintenant que je comprends un peu mieux pourquoi, comment dois-je l'utiliser correctement ? »</p>
+
+      <h3 class="article__subhead" data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p35">Alors, l'IA fait des erreurs. Et alors ?</h3>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p36">Après avoir lu tout cela, je trouve même que nous avons parfois tendance à trop idéaliser les outils d'IA. Nous oublions parfois que derrière ces outils se trouvent des modèles entraînés sur d'énormes quantités de données, qui fonctionnent notamment sur des probabilités. Et surtout, je pense que c'est mieux compris ainsi.</p>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p37">Donc oui, l'IA fait des erreurs. Et alors ? Faut-il s'en priver à cause de cela ? Ou faut-il plutôt apprendre à les utiliser comme elles doivent l'être, en vérifiant certaines informations lorsqu'il y a un doute, en se rappelant qu'il s'agit d'une machine et non d'un « connais-tout », et en cherchant constamment à améliorer ces outils ?</p>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p38">Moi, je pense que c'est cette deuxième voie qui est la plus intéressante. Il faut utiliser les IA comme des outils qui nous aident dans nos tâches, et non comme des outils qui remplacent le cerveau humain derrière. Parce que ce cerveau humain reste celui qui prend les décisions. C'est lui qui tient les rênes du navire.</p>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p39">Les intelligences artificielles ne sont pas des extraterrestres sortis de nulle part. Ce sont des outils pensés et créés par des êtres humains, grâce à l'intelligence humaine, pour nous permettre notamment de faire certaines choses plus vite. Et comme pour tout autre outil, il faut savoir les utiliser. Il faut savoir de quelle manière les utiliser, comprendre leur fonctionnement et comprendre leurs limites.</p>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p40"><strong>Pourquoi ? Pour ne pas en devenir prisonnier, mais en rester maître.</strong></p>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p41">Chacun peut évidemment avoir son opinion, et c'est très bien ainsi. Je ne prétends pas détenir toute la vérité dans cet article. Mais il y a une chose que je trouve importante : certaines explications que j'ai présentées ici ne reposent pas simplement sur mon opinion. Elles proviennent de définitions et d'explications que j'ai recherchées et que j'ai voulu comprendre avant de revenir à ma propre réflexion. Et cela compte.</p>
+
+      <p data-i18n-html="articles.lia-fait-des-erreurs-et-alors.body.p42"><strong>On peut dire que les IA font des erreurs. Mais il faut aussi parfois prendre le temps de se demander pourquoi elles en font. Et lorsqu'on commence à chercher ce qui se cache réellement derrière ces outils, certaines illusions commencent à se dissiper. On comprend alors que derrière cette interface avec laquelle nous discutons se trouvent des données, des mathématiques, des algorithmes, des probabilités, de la puissance de calcul et énormément de travail humain. Et peut-être que c'est justement en comprenant cela que nous pouvons commencer à utiliser l'IA de la bonne manière : ni comme une magie, ni comme une menace absolue, mais comme un outil puissant dont nous devons apprendre à rester maîtres.</strong></p>
+    </div>
+
+    <div class="article__author-card">
+      <img class="article__author-photo" src="../../assets/images/portrait.png" alt="Dias Sare Kpera" width="56" height="56" />
+      <div class="article__author-info">
+        <div class="article__author-name">Dias Sare Kpera</div>
+        <div class="article__author-role">Développeur web full stack &amp; aventurier du savoir</div>
+      </div>
+      <a href="../about/index.html" class="article__author-link">À propos</a>
+    </div>
+
+    <div class="article__footer-nav">
+      <a href="index.html" class="article__back">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+        </svg>
+        Retour à tous les articles
+      </a>
+    </div>
+
+  </main>
+
+  <!-- PIED DE PAGE -->
+  <!-- PIED DE PAGE -->
+  <footer class="site-footer" aria-label="Pied de page">
+
+    <div class="site-footer__inner">
+
+      <div class="site-footer__brand">
+        <a href="../../index.html" class="site-footer__logo" aria-label="Dias - Retour à l'accueil">
+          Dias<span class="site-footer__logo-dot">.</span>
+        </a>
+        <p class="site-footer__tagline" data-i18n="footer.tagline">Aventurier du savoir et de la création.</p>
+        <div class="section-title-rule" aria-hidden="true">
+          <span class="section-title-rule__line"></span>
+          <span class="section-title-rule__dot"></span>
+        </div>
+      </div>
+
+      <div class="site-footer__socials" aria-label="Réseaux sociaux">
+
+        <a href="https://wa.me/22991151944" class="site-footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+        </a>
+
+        <a href="https://www.facebook.com/profile.php?id=61591641221358" class="site-footer__social-link" aria-label="Facebook" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+
+        <a href="https://www.linkedin.com/in/dias-sare-kpera-9072813b3" class="site-footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+
+        <a href="https://x.com/realdsk229" class="site-footer__social-link" aria-label="X" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=diassarekpera@gmail.com" class="site-footer__social-link" aria-label="Gmail" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z"/>
+            <path d="M3 7l7.1 5.3a3 3 0 0 0 3.6 0L21 7"/>
+          </svg>
+        </a>
+      </div><!-- /site-footer__socials -->
+
+    </div><!-- /site-footer__inner -->
+
+    <p class="site-footer__copyright">&copy; 2025 Dias Sare Kpera. Tous droits réservés.</p>
+
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="../../script/sticky-header.js" defer></script>
+  <script src="../../script/burger-menu.js" defer></script>
+  <script src="../../script/scroll-reveal.js" defer></script>
+  <script src="../../script/nav-indicator.js" defer></script>
+  <script src="../../script/i18n.js" defer></script>
+</body>
+</html>
