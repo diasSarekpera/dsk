@@ -1,0 +1,50 @@
+name: Régénérer les images Open Graph
+
+# Se déclenche automatiquement dès que le contenu des articles change
+# (nouvelle page article, mise à jour de pages/blog/index.html), et
+# peut aussi être lancé manuellement depuis l'onglet Actions.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pages/blog/index.html"
+      - "pages/blog/article-*.html"
+      - "scripts/**"
+  workflow_dispatch:
+
+jobs:
+  og-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Installer les dépendances
+        run: npm ci
+
+      - name: Extraire les données des articles
+        run: npm run og:extract
+
+      - name: Générer les images OG
+        run: npm run og:generate
+
+      - name: Mettre à jour les balises og:image
+        run: npm run og:tags
+
+      - name: Commiter les changements (si nécessaire)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/images/og scripts/og-data.json pages/blog/article-*.html
+          if git diff --cached --quiet; then
+            echo "Rien à commiter, images déjà à jour."
+          else
+            git commit -m "chore: régénère les images Open Graph des articles"
+            git push
+          fi

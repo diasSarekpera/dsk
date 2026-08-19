@@ -4,7 +4,7 @@
   <meta name="google" content="notranslate" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Tous les projets de Dias Sare Kpera - plateformes d'apprentissage, blog personnel, sites vitrines." />
+  <meta name="description" content="Tous les projets de Dias Sare Kpera - plateformes d'apprentissage, blog personnel, sites vitrines, e-commerce, et templates gratuits à télécharger." />
   <title data-i18n="projects_page.meta.title">Projets - Dias Sare Kpera</title>
   <link rel="icon" type="image/x-icon" href="../../assets/favicon/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png" />
@@ -16,14 +16,14 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Dias Sare Kpera" />
   <meta property="og:title" content="Projets - Dias Sare Kpera" />
-  <meta property="og:description" content="Tous les projets de Dias Sare Kpera - plateformes d'apprentissage, blog personnel, sites vitrines." />
+  <meta property="og:description" content="Tous les projets de Dias Sare Kpera - plateformes d'apprentissage, blog personnel, sites vitrines, e-commerce, et templates gratuits à télécharger." />
   <meta property="og:image" content="https://dsk.ink/assets/images/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://dsk.ink/pages/projets/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Projets - Dias Sare Kpera" />
-  <meta name="twitter:description" content="Tous les projets de Dias Sare Kpera - plateformes d'apprentissage, blog personnel, sites vitrines." />
+  <meta name="twitter:description" content="Tous les projets de Dias Sare Kpera - plateformes d'apprentissage, blog personnel, sites vitrines, e-commerce, et templates gratuits à télécharger." />
   <meta name="twitter:image" content="https://dsk.ink/assets/images/og-image.png" />
 
   <!-- Fonts -->
@@ -36,7 +36,6 @@
   <link rel="stylesheet" href="../../styles/bases/reset.css" />
   <link rel="stylesheet" href="../../styles/bases/base.css" />
   <link rel="stylesheet" href="../../styles/components/header.css" />
-  <link rel="stylesheet" href="../../styles/pages/home/work.css" />
   <link rel="stylesheet" href="../../styles/components/footer-simple.css" />
   <link rel="stylesheet" href="../../styles/pages/projects/projects.css" />
 </head>
@@ -157,242 +156,365 @@
   <!-- ============================================================
     PAGE PROJETS
   ============================================================ -->
-  <main class="work projects-page" id="projects" aria-label="Tous les projets">
+  <main class="main" id="projects" aria-label="Tous les projets">
 
-    <!-- En-tête de page -->
-    <div class="projects-hero" data-reveal>
-      <span class="section-eyebrow" data-i18n="projects_page.eyebrow">Portfolio complet</span>
-      <h1 class="section-title" data-i18n="projects_page.title">Tous mes<br>projets.</h1>
-      <div class="section-title-rule" aria-hidden="true">
-        <span class="section-title-rule__line"></span>
-        <span class="section-title-rule__dot"></span>
+    <!-- ==========================================================
+         HERO — Introduction de la page + statistiques clés
+    =========================================================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__container">
+
+        <div class="hero__intro" data-reveal>
+          <p class="hero__eyebrow">Portfolio complet</p>
+          <h1 id="hero-title" class="hero__title">Tous mes projets.</h1>
+          <p class="hero__description">
+            Une sélection de réalisations pour des clients et des ressources libres à télécharger.
+          </p>
+        </div>
+
+        <dl class="hero__stats" data-reveal style="--reveal-delay: 100ms">
+          <div class="hero__stat">
+            <dt class="hero__stat-label">Projets livrés</dt>
+            <dd class="hero__stat-value">12+</dd>
+          </div>
+          <div class="hero__stat">
+            <dt class="hero__stat-label">Secteurs d'activité</dt>
+            <dd class="hero__stat-value">6</dd>
+          </div>
+          <div class="hero__stat">
+            <dt class="hero__stat-label">Ans de pratique</dt>
+            <dd class="hero__stat-value">3</dd>
+          </div>
+        </dl>
+
       </div>
-      <p class="projects-hero__subtitle" data-i18n="projects_page.subtitle">
-        Plateformes d'apprentissage, écriture personnelle, sites vitrines -
-        chaque projet est une manière différente d'apprendre et de transmettre.
-      </p>
-    </div>
+    </section>
 
-    <!-- Filtres par catégorie -->
-    <div class="projects-filters" role="group" aria-label="Filtrer les projets par catégorie" data-reveal style="--reveal-delay: 100ms">
-      <button class="projects-filters__pill is-active" data-filter="all" aria-pressed="true" data-i18n="projects_page.filters.all">
-        Tous
-      </button>
-      <button class="projects-filters__pill" data-filter="education" aria-pressed="false" data-i18n="projects_page.filters.education">
-        Éducation &amp; Apprentissage
-      </button>
-      <button class="projects-filters__pill" data-filter="blog" aria-pressed="false" data-i18n="projects_page.filters.blog">
-        Blog &amp; Réflexions
-      </button>
-      <button class="projects-filters__pill" data-filter="vitrine" aria-pressed="false" data-i18n="projects_page.filters.vitrine">
-        Sites vitrines
-      </button>
-    </div>
 
-    <!-- Grille de projets -->
-    <div class="work__grid projects-grid">
+    <!-- ==========================================================
+         PROJECTS — Filtres + grille de projets
+    =========================================================== -->
+    <section class="projects" aria-labelledby="projects-title">
+      <div class="projects__container">
 
-      <article class="project" data-reveal data-category="education">
-        <a href="#" class="project__link" aria-label="Voir Cultivora Land" data-i18n-aria-label="work.project1.aria">
-          <div class="project__image-wrapper">
-            <span class="project__num" aria-hidden="true">01</span>
-            <img
-              class="project__image"
-              src="/assets/images/logo-cultivora-land.png"
-              alt="Cultivora Land - Le Jardin du Savoir"
-              data-i18n-alt="work.project1.img.alt"
-              width="600"
-              height="400"
-            />
-          </div>
-          <div class="project__body">
-            <div class="project__body-text">
-              <span class="project__category" data-i18n="work.project1.category">Éducation &amp; Savoir</span>
-              <h3 class="project__name" data-i18n="work.project1.name">Cultivora Land</h3>
-              <p class="project__desc" data-i18n="work.project1.desc">
-                Le Jardin du Savoir - une plateforme pour<br />
-                rendre l'apprentissage inspirant et accessible.
-              </p>
-            </div>
-            <span class="project__arrow" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </span>
-          </div>
-        </a>
-      </article>
+        <h2 id="projects-title" class="visually-hidden">Liste des projets</h2>
 
-      <article class="project" data-reveal style="--reveal-delay: 120ms" data-category="education">
-        <a href="#" class="project__link" aria-label="Voir T3W" data-i18n-aria-label="work.project2.aria">
-          <div class="project__image-wrapper">
-            <span class="project__num" aria-hidden="true">02</span>
-            <img
-              class="project__image"
-              src="/assets/images/logo-t3w.png"
-              alt="T3W - The 3 Words, plateforme d'apprentissage" data-i18n-alt="work.project2.img.alt"
-              width="600"
-              height="400"
-            />
-          </div>
-          <div class="project__body">
-            <div class="project__body-text">
-              <span class="project__category" data-i18n="work.project2.category">Éducation &amp; Apprentissage</span>
-              <h3 class="project__name" data-i18n="work.project2.name">T3W</h3>
-              <p class="project__desc" data-i18n="work.project2.desc">
-                The 3 Words - une plateforme d'apprentissage<br />
-                pensée pour aller à l'essentiel et progresser efficacement.
-              </p>
-            </div>
-            <span class="project__arrow" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </span>
-          </div>
-        </a>
-      </article>
+        <!-- Filtres de catégories -->
+        <nav class="filters" aria-label="Filtrer les projets par catégorie" data-reveal style="--reveal-delay: 100ms">
+          <ul class="filters__list">
+            <li class="filters__item">
+              <button type="button" class="filters__button" data-filter="all" aria-pressed="true">Tous</button>
+            </li>
+            <li class="filters__item">
+              <button type="button" class="filters__button" data-filter="education" aria-pressed="false">Éducation &amp; apprentissage</button>
+            </li>
+            <li class="filters__item">
+              <button type="button" class="filters__button" data-filter="blog" aria-pressed="false">Blog &amp; réflexions</button>
+            </li>
+            <li class="filters__item">
+              <button type="button" class="filters__button" data-filter="vitrine" aria-pressed="false">Sites vitrines</button>
+            </li>
+            <li class="filters__item">
+              <button type="button" class="filters__button" data-filter="ecommerce" aria-pressed="false">E-commerce</button>
+            </li>
+          </ul>
+        </nav>
 
-      <article class="project" data-reveal style="--reveal-delay: 240ms" data-category="blog">
-        <a href="#" class="project__link" aria-label="Voir The DSK Journal" data-i18n-aria-label="work.project3.aria">
-          <div class="project__image-wrapper">
-            <span class="project__num" aria-hidden="true">03</span>
-            <img
-              class="project__image"
-              src="/assets/images/logo-the-dsk-journal.png"
-              alt="The DSK Journal - carnet de réflexions" data-i18n-alt="work.project3.img.alt"
-              width="600"
-              height="400"
-            />
-          </div>
-          <div class="project__body">
-            <div class="project__body-text">
-              <span class="project__category" data-i18n="work.project3.category">Blog &amp; Réflexions</span>
-              <h3 class="project__name" data-i18n="work.project3.name">The DSK Journal</h3>
-              <p class="project__desc" data-i18n="work.project3.desc">
-                Un espace d'écriture pour partager des idées,<br />
-                observer et réfléchir sur le monde.
-              </p>
-            </div>
-            <span class="project__arrow" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </span>
-          </div>
-        </a>
-      </article>
+        <!-- Grille de projets -->
+        <ul class="project-grid">
 
-      <article class="project" data-reveal style="--reveal-delay: 360ms" data-category="vitrine">
-        <a href="#" class="project__link" aria-label="Voir VIGO Services" data-i18n-aria-label="work.project4.aria">
-          <div class="project__image-wrapper">
-            <span class="project__num" aria-hidden="true">04</span>
-            <img
-              class="project__image"
-              src="/assets/images/logo-vigo-services.png"
-              alt="VIGO Services - site institutionnel professionnel"
-              data-i18n-alt="work.project4.img.alt"
-              width="600"
-              height="400"
-            />
-          </div>
-          <div class="project__body">
-            <div class="project__body-text">
-              <span class="project__category" data-i18n="work.project4.category">Site institutionnel</span>
-              <h3 class="project__name" data-i18n="work.project4.name">VIGO Services</h3>
-              <p class="project__desc" data-i18n="work.project4.desc">
-                Site institutionnel pour une entreprise de<br />
-                prestations administratives, clair et rassurant.
-              </p>
-            </div>
-            <span class="project__arrow" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </span>
-          </div>
-        </a>
-      </article>
+          <li class="project-grid__item" data-category="education" data-reveal>
+            <article class="project-card">
+              <figure class="project-card__figure">
+                <img class="project-card__image" src="/assets/images/project-edulearn.jpg" alt="Capture d'écran de la plateforme EduLearn" loading="lazy" />
+              </figure>
+              <div class="project-card__body">
+                <header class="project-card__header">
+                  <h3 class="project-card__title">EduLearn</h3>
+                  <p class="project-card__category">Éducation &amp; apprentissage</p>
+                </header>
+                <p class="project-card__description">
+                  Plateforme e-learning complète avec cours en ligne, suivi des apprenants et certificats.
+                </p>
+                <div class="project-card__actions">
+                  <a href="#" class="button button--primary">
+                    Voir le projet
+                    <span class="button__icon" aria-hidden="true">→</span>
+                  </a>
+                  <a href="#" class="link">
+                    J'aime ce style
+                    <span class="link__icon" aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </li>
 
-      <article class="project" data-reveal style="--reveal-delay: 480ms" data-category="vitrine">
-        <a href="#" class="project__link" aria-label="Voir Arie's Accessoires" data-i18n-aria-label="work.project5.aria">
-          <div class="project__image-wrapper">
-            <span class="project__num" aria-hidden="true">05</span>
-            <img
-              class="project__image"
-              src="/assets/images/logo-aries-accessoires.png"
-              alt="Arie's Accessoires - site e-commerce premium"
-              data-i18n-alt="work.project5.img.alt"
-              width="600"
-              height="400"
-            />
-          </div>
-          <div class="project__body">
-            <div class="project__body-text">
-              <span class="project__category" data-i18n="work.project5.category">Site e-commerce</span>
-              <h3 class="project__name" data-i18n="work.project5.name">Arie's Accessoires</h3>
-              <p class="project__desc" data-i18n="work.project5.desc">
-                Boutique en ligne d'accessoires, au design<br />
-                premium pensé pour convertir et séduire.
-              </p>
-            </div>
-            <span class="project__arrow" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </span>
-          </div>
-        </a>
-      </article>
+          <li class="project-grid__item" data-category="vitrine" data-reveal style="--reveal-delay: 80ms">
+            <article class="project-card">
+              <figure class="project-card__figure">
+                <img class="project-card__image" src="/assets/images/project-saveurs-du-benin.jpg" alt="Capture d'écran du site Saveurs du Bénin" loading="lazy" />
+              </figure>
+              <div class="project-card__body">
+                <header class="project-card__header">
+                  <h3 class="project-card__title">Saveurs du Bénin</h3>
+                  <p class="project-card__category">Sites vitrines</p>
+                </header>
+                <p class="project-card__description">
+                  Site vitrine élégant pour un restaurant avec réservation en ligne et galerie photos.
+                </p>
+                <div class="project-card__actions">
+                  <a href="#" class="button button--primary">
+                    Voir le projet
+                    <span class="button__icon" aria-hidden="true">→</span>
+                  </a>
+                  <a href="#" class="link">
+                    J'aime ce style
+                    <span class="link__icon" aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </li>
 
-      <article class="project" data-reveal style="--reveal-delay: 600ms" data-category="vitrine">
-        <a href="#" class="project__link" aria-label="Voir Eliano Shoes" data-i18n-aria-label="work.project6.aria">
-          <div class="project__image-wrapper">
-            <span class="project__num" aria-hidden="true">06</span>
-            <img
-              class="project__image"
-              src="/assets/images/logo-eliano-shoes.png"
-              alt="Eliano Shoes - site vitrine premium pour marque de chaussures"
-              data-i18n-alt="work.project6.img.alt"
-              width="600"
-              height="400"
-            />
-          </div>
-          <div class="project__body">
-            <div class="project__body-text">
-              <span class="project__category" data-i18n="work.project6.category">Site de marque</span>
-              <h3 class="project__name" data-i18n="work.project6.name">Eliano Shoes</h3>
-              <p class="project__desc" data-i18n="work.project6.desc">
-                Site premium pour une marque de chaussures<br />
-                en cuir, à l'identité forte et soignée.
-              </p>
-            </div>
-            <span class="project__arrow" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </span>
-          </div>
-        </a>
-      </article>
+          <li class="project-grid__item" data-category="blog" data-reveal style="--reveal-delay: 160ms">
+            <article class="project-card">
+              <figure class="project-card__figure">
+                <img class="project-card__image" src="/assets/images/project-code-et-reflexion.jpg" alt="Capture d'écran du blog Code &amp; Réflexion" loading="lazy" />
+              </figure>
+              <div class="project-card__body">
+                <header class="project-card__header">
+                  <h3 class="project-card__title">Code &amp; Réflexion</h3>
+                  <p class="project-card__category">Blog &amp; réflexions</p>
+                </header>
+                <p class="project-card__description">
+                  Blog technique pour partager des tutoriels, conseils et retours d'expérience.
+                </p>
+                <div class="project-card__actions">
+                  <a href="#" class="button button--primary">
+                    Voir le projet
+                    <span class="button__icon" aria-hidden="true">→</span>
+                  </a>
+                  <a href="#" class="link">
+                    J'aime ce style
+                    <span class="link__icon" aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </li>
 
-    </div><!-- /projects-grid -->
+          <li class="project-grid__item" data-category="ecommerce" data-reveal style="--reveal-delay: 240ms">
+            <article class="project-card">
+              <figure class="project-card__figure">
+                <img class="project-card__image" src="/assets/images/project-artisanat-store.jpg" alt="Capture d'écran de la boutique Artisanat Store" loading="lazy" />
+              </figure>
+              <div class="project-card__body">
+                <header class="project-card__header">
+                  <h3 class="project-card__title">Artisanat Store</h3>
+                  <p class="project-card__category">E-commerce</p>
+                </header>
+                <p class="project-card__description">
+                  Boutique en ligne pour artisans locaux avec paiement sécurisé et gestion des commandes.
+                </p>
+                <div class="project-card__actions">
+                  <a href="#" class="button button--primary">
+                    Voir le projet
+                    <span class="button__icon" aria-hidden="true">→</span>
+                  </a>
+                  <a href="#" class="link">
+                    J'aime ce style
+                    <span class="link__icon" aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </li>
 
-    <!-- État vide (affiché par JS si un filtre ne retourne aucun résultat) -->
-    <p class="projects-empty" data-i18n="projects_page.empty" hidden>
-      Aucun projet dans cette catégorie pour le moment.
-    </p>
+        </ul>
+
+        <!-- État vide (affiché par JS si un filtre ne retourne aucun résultat) -->
+        <p class="projects-empty" hidden>
+          Aucun projet dans cette catégorie pour le moment.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         RESOURCES — Templates gratuits à télécharger
+    =========================================================== -->
+    <section class="resources" id="resources" aria-labelledby="resources-title">
+      <div class="resources__container">
+
+        <header class="resources__intro" data-reveal>
+          <p class="resources__eyebrow">Ressources</p>
+          <h2 id="resources-title" class="resources__title">Des bases prêtes à l'emploi</h2>
+          <p class="resources__description">
+            Des maquettes libres de droits, prêtes à personnaliser pour démarrer vos projets plus vite.
+          </p>
+        </header>
+
+        <ul class="resource-grid">
+
+          <li class="resource-grid__item" data-reveal style="--reveal-delay: 80ms">
+            <article class="resource-card">
+              <figure class="resource-card__figure">
+                <img class="resource-card__image" src="/assets/images/resource-portfolio-minimal.jpg" alt="Aperçu du template Portfolio Minimal" loading="lazy" />
+                <figcaption class="resource-card__badge">Gratuit</figcaption>
+              </figure>
+              <div class="resource-card__body">
+                <h3 class="resource-card__title">Portfolio Minimal</h3>
+                <ul class="resource-card__tags">
+                  <li class="resource-card__tag">Portfolio</li>
+                  <li class="resource-card__tag">One-page</li>
+                  <li class="resource-card__tag">Figma</li>
+                </ul>
+                <a href="#" class="button button--secondary">
+                  Télécharger
+                  <span class="button__icon" aria-hidden="true">↓</span>
+                </a>
+              </div>
+            </article>
+          </li>
+
+          <li class="resource-grid__item" data-reveal style="--reveal-delay: 160ms">
+            <article class="resource-card">
+              <figure class="resource-card__figure">
+                <img class="resource-card__image" src="/assets/images/resource-landing-saas.jpg" alt="Aperçu du template Landing SaaS" loading="lazy" />
+                <figcaption class="resource-card__badge">Gratuit</figcaption>
+              </figure>
+              <div class="resource-card__body">
+                <h3 class="resource-card__title">Landing SaaS</h3>
+                <ul class="resource-card__tags">
+                  <li class="resource-card__tag">SaaS</li>
+                  <li class="resource-card__tag">Landing page</li>
+                  <li class="resource-card__tag">Figma</li>
+                </ul>
+                <a href="#" class="button button--secondary">
+                  Télécharger
+                  <span class="button__icon" aria-hidden="true">↓</span>
+                </a>
+              </div>
+            </article>
+          </li>
+
+          <li class="resource-grid__item" data-reveal style="--reveal-delay: 240ms">
+            <article class="resource-card">
+              <figure class="resource-card__figure">
+                <img class="resource-card__image" src="/assets/images/resource-blog-editorial.jpg" alt="Aperçu du template Blog Éditorial" loading="lazy" />
+                <figcaption class="resource-card__badge">Gratuit</figcaption>
+              </figure>
+              <div class="resource-card__body">
+                <h3 class="resource-card__title">Blog Éditorial</h3>
+                <ul class="resource-card__tags">
+                  <li class="resource-card__tag">Blog</li>
+                  <li class="resource-card__tag">Éditorial</li>
+                  <li class="resource-card__tag">Figma</li>
+                </ul>
+                <a href="#" class="button button--secondary">
+                  Télécharger
+                  <span class="button__icon" aria-hidden="true">↓</span>
+                </a>
+              </div>
+            </article>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         PROCESS — Étapes de collaboration
+    =========================================================== -->
+    <section class="process" aria-labelledby="process-title">
+      <div class="process__container">
+
+        <header class="process__intro" data-reveal>
+          <p class="process__eyebrow">Processus</p>
+          <h2 id="process-title" class="process__title">De l'idée à la livraison</h2>
+        </header>
+
+        <ol class="process-steps">
+
+          <li class="process-step" data-reveal style="--reveal-delay: 80ms">
+            <span class="process-step__number" aria-hidden="true">01</span>
+            <span class="process-step__icon" aria-hidden="true"></span>
+            <h3 class="process-step__title">Tu explores</h3>
+            <p class="process-step__description">Parcours les projets et templates disponibles.</p>
+          </li>
+
+          <li class="process-step" data-reveal style="--reveal-delay: 160ms">
+            <span class="process-step__number" aria-hidden="true">02</span>
+            <span class="process-step__icon" aria-hidden="true"></span>
+            <h3 class="process-step__title">Tu remplis le formulaire</h3>
+            <p class="process-step__description">Décris ton besoin en quelques lignes.</p>
+          </li>
+
+          <li class="process-step" data-reveal style="--reveal-delay: 240ms">
+            <span class="process-step__number" aria-hidden="true">03</span>
+            <span class="process-step__icon" aria-hidden="true"></span>
+            <h3 class="process-step__title">Je te propose une piste</h3>
+            <p class="process-step__description">Un devis et une maquette rapide.</p>
+          </li>
+
+          <li class="process-step" data-reveal style="--reveal-delay: 320ms">
+            <span class="process-step__number" aria-hidden="true">04</span>
+            <span class="process-step__icon" aria-hidden="true"></span>
+            <h3 class="process-step__title">On affine ensemble</h3>
+            <p class="process-step__description">Itérations jusqu'à la livraison finale.</p>
+          </li>
+
+        </ol>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         TESTIMONIAL — Citation
+    =========================================================== -->
+    <section class="testimonial" aria-labelledby="testimonial-title">
+      <div class="testimonial__container">
+        <h2 id="testimonial-title" class="visually-hidden">Témoignage</h2>
+        <blockquote class="testimonial__quote" data-reveal>
+          <p class="testimonial__text">
+            Chaque projet est une collaboration. Mon objectif n'est pas seulement de livrer un site, mais de construire un outil qui vous ressemble et qui dure.
+          </p>
+          <footer class="testimonial__attribution">
+            <cite class="testimonial__author">Dias Sare Kpera</cite>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================
+         CTA — Appel à l'action final
+    =========================================================== -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="cta__container" data-reveal>
+        <h2 id="cta-title" class="cta__title">Un projet en tête ?</h2>
+        <p class="cta__description">Discutons de vos besoins et voyons comment je peux vous accompagner.</p>
+        <div class="cta__actions">
+          <a href="../../index.html#contact" class="button button--primary">
+            Me contacter
+            <span class="button__icon" aria-hidden="true">→</span>
+          </a>
+          <a href="#resources" class="button button--outline">
+            Voir les templates
+            <span class="button__icon" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
   <!-- PIED DE PAGE (identique au reste du site) -->
-  <!-- PIED DE PAGE -->
   <footer class="site-footer" aria-label="Pied de page">
 
     <div class="site-footer__inner">

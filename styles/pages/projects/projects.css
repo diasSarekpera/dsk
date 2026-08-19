@@ -1,121 +1,1453 @@
 /* ============================================================
-   projects.css — Page dédiée "/projets.html"
-   Réutilise .work / .work__grid / .project* définis dans
-   work.css pour garantir une cohérence visuelle à 100% avec le
-   teaser de la page d'accueil. Ce fichier ne couvre que ce qui
-   est spécifique à cette page : l'en-tête de page et les filtres.
+   projects.css — Page "Tous mes projets"
+   Nouvelle maquette (2026) : hero + stats, filtres, grille de
+   projets, ressources téléchargeables, processus, témoignage, CTA.
+
+   Structure : geometry (ex-layout.css) puis skin (ex-theme.css)
+   puis responsive (ex-responsive.css), fusionnés en un seul
+   fichier pour suivre la convention du site (un fichier CSS par
+   page). Les couleurs/rayons/polices pointent vers les tokens
+   de marque définis dans styles/bases/variables.css — aucune
+   valeur codée en dur ici pour rester cohérent avec le reste du
+   site si la charte évolue un jour.
 ============================================================ */
 
-/* ── En-tête de page ──────────────────────────────────────
-   Sur la page d'accueil, .section-eyebrow/.section-title/
-   .section-title-rule vivent dans .work__header (flex row avec
-   le bouton "Voir tous les projets"). Ici il n'y a pas de bouton :
-   bloc simple, empilé, centré sur la largeur du contenu. */
 
-.projects-hero {
-  max-width:     640px;
-  margin-bottom: var(--space-16);
+/* ============================================================
+   GÉOMÉTRIE
+============================================================ */
+
+/* ==========================================================================
+   LAYOUT ENGINEERING — Phase 2
+   Géométrie pure : conteneurs, dimensions, espacements, alignements.
+   ========================================================================== */
+
+/* Utilitaire d'accessibilité — masque visuellement sans retirer du DOM
+   (le reset/base du site ne fournit pas déjà cette classe) */
+.visually-hidden {
+  position: absolute;
+  width:    1px;
+  height:   1px;
+  padding:  0;
+  margin:   -1px;
+  overflow: hidden;
+  clip:     rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border:   0;
 }
 
-.projects-hero__subtitle {
-  margin-top:  var(--space-6);
-  max-width:   46ch;
-  font-family: var(--font-body);
-  font-size:   var(--text-xl);
-  line-height: 1.7;
-  color:       var(--ink-mid);
+
+/* --------------------------------------------------------------------------
+   1. TOKENS DE LAYOUT
+   -------------------------------------------------------------------------- */
+
+:root {
+  /* Largeurs de conteneur */
+  --container-max-width: 80rem;   /* 1280px */
+  --container-padding-x: 2.5rem;     /* 40px   */
+  --container-padding-x-mobile: 1.5rem;
+
+  /* Rythme vertical entre sections */
+  --section-spacing-y: 7.5rem;      /* 120px  */
+
+  /* Gaps récurrents */
+  --gap-xs: 0.5rem;
+  --gap-sm: 1rem;
+  --gap-md: 1.5rem;
+  --gap-lg: 2.5rem;
+  --gap-xl: 4rem;
+  --gap-2xl: 5rem;
+
+  /* Niveaux de gris neutres — placeholders, à remplacer en Phase 3 */
+  --grey-000: #ffffff;
+  --grey-100: #f2f2f2;
+  --grey-200: #e0e0e0;
+  --grey-300: #cccccc;
+  --grey-400: #999999;
+  --grey-500: #777777;
+  --grey-600: #555555;
+  --grey-900: #111111;
 }
 
 
-/* ── Filtres par catégorie ─────────────────────────────────
-   Pills cliquables, même langage typographique que
-   .project__category (Jost, petites capitales, lettres
-   espacées) pour que le lien visuel avec les cartes soit
-   immédiat. */
+/* --------------------------------------------------------------------------
+   2. CONTENEUR GÉNÉRIQUE
+   -------------------------------------------------------------------------- */
 
-.projects-filters {
-  display:       flex;
-  flex-wrap:     wrap;
-  gap:           var(--space-3);
-  margin-bottom: var(--space-14);
+.hero__container,
+.projects__container,
+.resources__container,
+.process__container,
+.testimonial__container,
+.cta__container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
 }
 
-.projects-filters__pill {
-  padding:        var(--space-2) var(--space-5);
-  font-family:    var(--font-body);
-  font-size:      var(--text-sm);
-  font-weight:    500;
-  letter-spacing: 0.12em;
+
+/* --------------------------------------------------------------------------
+   4. HERO
+   -------------------------------------------------------------------------- */
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--section-spacing-y);
+}
+
+.hero__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 37.5rem; /* 600px : largeur de lecture du bloc de texte */
+  gap: var(--gap-sm);
+}
+
+.hero__eyebrow {
+  font-size: 0.8125rem;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color:          var(--ink-mid);
-  background:     transparent;
-  border:         1px solid var(--border-on-light);
-  border-radius:  var(--radius-pill);
-  cursor:         pointer;
-  white-space:    nowrap;
-  transition:
-    background   250ms cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 250ms cubic-bezier(0.16, 1, 0.3, 1),
-    color        250ms cubic-bezier(0.16, 1, 0.3, 1),
-    transform    100ms ease;
 }
 
-.projects-filters__pill:hover {
-  border-color: var(--caramel);
-  color:        var(--caramel);
+.hero__title {
+  font-size: 4rem;
+  line-height: 1.05;
 }
 
-.projects-filters__pill:active { transform: scale(0.96); }
-
-.projects-filters__pill.is-active {
-  background:   var(--ink-deep);
-  border-color: var(--ink-deep);
-  color:        var(--color-bg);
+.hero__description {
+  max-width: 26.25rem; /* 420px */
+  font-size: 1.0625rem;
 }
 
-.projects-filters__pill.is-active:hover {
-  border-color: var(--ink-deep);
-  color:        var(--color-bg);
+/* Statistiques : rangée horizontale, séparateurs verticaux entre items */
+.hero__stats {
+  display: flex;
+  align-items: stretch;
+  gap: var(--gap-2xl);
+  margin-top: var(--gap-2xl);
 }
 
-
-/* ── Grille ────────────────────────────────────────────────
-   .projects-grid réutilise .work__grid tel quel (voir work.css).
-   On ajoute seulement la transition de sortie/entrée des cartes
-   filtrées, pour éviter un simple "pop" disparition/apparition. */
-
-.project {
-  transition:
-    opacity   250ms ease,
-    transform 250ms cubic-bezier(0.16, 1, 0.3, 1);
+.hero__stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xs);
+  padding-inline-start: var(--gap-2xl);
+  border-left: 1px solid var(--grey-300);
 }
 
-.project[data-hidden] {
-  display: none;
+.hero__stat:first-child {
+  padding-inline-start: 0;
+  border-left: none;
 }
 
+.hero__stat-value {
+  order: -1; /* la valeur (dd) apparaît visuellement au-dessus du label (dt) */
+  font-size: 2.25rem;
+  line-height: 1;
+}
 
-/* ── État vide ─────────────────────────────────────────────
-   Affiché par projects-filter.js quand un filtre ne retourne
-   aucune carte (prévu pour l'évolutivité : si une catégorie
-   n'a par exemple plus qu'un seul projet retiré du site). */
-
-.projects-empty {
-  margin-top:  var(--space-10);
-  font-family: var(--font-body);
-  font-size:   var(--text-lg);
-  color:       var(--ink-mid);
-  text-align:  center;
+.hero__stat-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 
-/* ── Responsive ────────────────────────────────────────────
-   .work et .work__grid héritent déjà de leurs propres règles
-   responsive depuis work.css et base.css. On ajuste seulement
-   les espacements propres à ce fichier. */
+/* --------------------------------------------------------------------------
+   5. PROJECTS — Filtres + grille
+   -------------------------------------------------------------------------- */
+
+.projects__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xl);
+  padding-block-end: var(--section-spacing-y);
+}
+
+/* Filtres : rangée centrée, wrap sur petits écrans */
+.filters__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gap-sm);
+}
+
+.filters__button {
+  flex: 0 0 auto;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  white-space: nowrap;
+}
+
+/* Grille de projets : 4 colonnes égales en flexbox */
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-md);
+}
+
+.project-grid__item {
+  flex: 1 1 calc(25% - var(--gap-md) * 3 / 4);
+  min-width: 16.25rem; /* évite l'écrasement avant la Phase 4 (responsive) */
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--grey-200);
+}
+
+.project-card__figure {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-bottom: 1px solid var(--grey-200);
+}
+
+.project-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: var(--gap-sm);
+  padding: var(--gap-md);
+}
+
+.project-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.project-card__title {
+  font-size: 1.25rem;
+}
+
+.project-card__category {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.project-card__description {
+  flex-grow: 1; /* pousse la zone d'actions en bas, hauteur de carte homogène */
+  font-size: 0.875rem;
+}
+
+.project-card__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-sm);
+  padding-top: var(--gap-sm);
+  border-top: 1px solid var(--grey-200);
+}
+
+
+/* --------------------------------------------------------------------------
+   6. BOUTONS & LIENS (composants transverses)
+   -------------------------------------------------------------------------- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xs);
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  border: 1px solid var(--grey-400);
+  font-size: 0.8125rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-xs);
+  font-size: 0.8125rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+
+/* --------------------------------------------------------------------------
+   7. RESOURCES — Intro + grille de ressources
+   -------------------------------------------------------------------------- */
+
+.resources {
+  background-color: var(--grey-100);
+}
+
+.resources__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--gap-2xl);
+  padding-block: var(--section-spacing-y);
+}
+
+.resources__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  flex: 1 1 17.5rem; /* ~280px : colonne étroite */
+  max-width: 20rem;
+}
+
+.resources__eyebrow {
+  font-size: 0.8125rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.resources__title {
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+.resources__description {
+  font-size: 0.9375rem;
+}
+
+.resource-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 3 1 37.5rem; /* colonne large : 3 cartes */
+  gap: var(--gap-md);
+}
+
+.resource-grid__item {
+  flex: 1 1 calc(33.333% - var(--gap-md) * 2 / 3);
+  min-width: 15rem;
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--grey-200);
+}
+
+.resource-card__figure {
+  position: relative; /* ancre le badge "Gratuit" en overlay */
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-bottom: 1px solid var(--grey-200);
+}
+
+.resource-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.resource-card__badge {
+  position: absolute;
+  top: var(--gap-sm);
+  right: var(--gap-sm);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: var(--grey-000);
+}
+
+.resource-card__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-start;
+  gap: var(--gap-sm);
+  padding: var(--gap-md);
+}
+
+.resource-card__title {
+  font-size: 1.125rem;
+}
+
+.resource-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1; /* pousse le bouton en bas de carte, hauteur homogène */
+  align-content: flex-start;
+  gap: var(--gap-xs);
+}
+
+.resource-card__tag {
+  padding: 0.25rem 0.625rem;
+  border: 1px solid var(--grey-300);
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.resource-card__body > .button {
+  width: 100%;
+}
+
+
+/* --------------------------------------------------------------------------
+   8. PROCESS — Intro + étapes reliées
+   -------------------------------------------------------------------------- */
+
+.process__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--gap-2xl);
+  padding-block: var(--section-spacing-y);
+}
+
+.process__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  flex: 1 1 15rem;
+  max-width: 17.5rem;
+}
+
+.process__eyebrow {
+  font-size: 0.8125rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.process__title {
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+/* Rangée d'étapes : chaque étape occupe une part égale, ligne de connexion
+   passant par le centre horizontal des pastilles numérotées */
+.process-steps {
+  display: flex;
+  flex: 3 1 37.5rem;
+  gap: var(--gap-lg);
+}
+
+.process-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 1 0;
+  gap: var(--gap-xs);
+  padding-top: 3rem; /* réserve l'espace de la pastille numérotée */
+}
+
+/* Ligne de connexion horizontale entre les pastilles numérotées */
+.process-step::before {
+  content: "";
+  position: absolute;
+  top: 1.25rem; /* centre vertical de la pastille (hauteur 2.5rem / 2) */
+  left: -1.75rem; /* comble la moitié du gap avec l'étape précédente */
+  width: calc(100% + var(--gap-lg));
+  height: 1px;
+  background-color: var(--grey-300);
+}
+
+.process-step:first-child::before {
+  left: 1.25rem;
+  width: calc(100% + var(--gap-lg) - 1.25rem);
+}
+
+.process-step:last-child::before {
+  width: calc(100% - 1.25rem);
+}
+
+.process-step__number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--grey-400);
+  border-radius: 50%;
+  font-size: 0.8125rem;
+  background-color: var(--grey-000);
+}
+
+.process-step__icon {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-block: var(--gap-xs);
+  border: 1px solid var(--grey-300); /* placeholder — icône définitive en Phase 3 */
+}
+
+.process-step__title {
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.process-step__description {
+  font-size: 0.875rem;
+}
+
+
+/* --------------------------------------------------------------------------
+   9. TESTIMONIAL
+   -------------------------------------------------------------------------- */
+
+.testimonial {
+  border-block: 1px solid var(--grey-200);
+}
+
+.testimonial__container {
+  display: flex;
+  justify-content: center;
+  padding-block: var(--section-spacing-y);
+}
+
+.testimonial__quote {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-lg);
+  max-width: 45rem; /* 720px : largeur de lecture centrée */
+  text-align: center;
+}
+
+.testimonial__text {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.testimonial__attribution {
+  font-size: 0.875rem;
+}
+
+
+/* --------------------------------------------------------------------------
+   10. CTA — Appel à l'action final
+   -------------------------------------------------------------------------- */
+
+.cta__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-lg);
+  padding-block: var(--gap-2xl);
+}
+
+.cta__title {
+  font-size: 1.75rem;
+}
+
+.cta__description {
+  max-width: 22.5rem;
+  font-size: 0.875rem;
+}
+
+.cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  gap: var(--gap-sm);
+}
+
+.cta__actions .button {
+  width: auto;
+}
+
+
+/* --------------------------------------------------------------------------
+   11. GARDE-FOU RESPONSIVE MINIMAL
+   Empêche uniquement la casse de la composition sur petit écran.
+   La véritable stratégie responsive est traitée dans responsive.css.
+   -------------------------------------------------------------------------- */
 
 @media (max-width: 768px) {
-  .projects-hero        { margin-bottom: var(--space-10); }
-  .projects-filters     { margin-bottom: var(--space-10); }
-  .projects-filters__pill { font-size: var(--text-xs); padding: var(--space-2) var(--space-4); }
+  :root {
+    --container-padding-x: var(--container-padding-x-mobile);
+    --section-spacing-y: 4rem;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__stats {
+    flex-wrap: wrap;
+    row-gap: var(--gap-md);
+  }
+
+  .process-steps {
+    flex-direction: column;
+    gap: var(--gap-lg);
+  }
+
+  .process-step::before {
+    display: none; /* la ligne de connexion horizontale n'a plus de sens empilée */
+  }
+
+  .cta__container {
+    justify-content: flex-start;
+  }
+}
+
+
+
+/* ============================================================
+   HABILLAGE VISUEL
+============================================================ */
+
+/* ==========================================================================
+   UI PIXEL-PERFECT IMPLEMENTATION — Phase 3
+   Direction artistique complète : couleurs, typographie, ombres, textures.
+   Ce fichier s'applique PAR-DESSUS layout.css : la géométrie n'est jamais
+   modifiée ici, seule l'habillage visuel est ajouté.
+
+   Adapté à l'identité visuelle réelle du site (voir styles/bases/variables.css) :
+   les polices sont déjà chargées globalement (pas de @import ici), et les
+   tokens ci-dessous pointent vers les couleurs/rayons de marque existants
+   au lieu d'une palette autonome, pour rester cohérent avec le reste du site.
+   Les noms --radius-sm / --radius-md / --font-display ne sont volontairement
+   PAS redéfinis ici : ils restent ceux du site global (déjà chargés avant ce
+   fichier), pour ne pas casser le header/footer partagés sur cette page.
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   0. PALETTE & TOKENS VISUELS — alias vers les tokens de marque du site
+   -------------------------------------------------------------------------- */
+
+:root {
+  /* --- Couleurs de fond --- */
+  --color-bg-page:    var(--color-bg);       /* crème principal, fond de page */
+  --color-bg-surface:  var(--ivory-card);     /* cartes, boutons clairs */
+  --color-bg-muted:    var(--color-bg);       /* fond section ressources */
+  --color-bg-inverse:  var(--ink-deep);       /* footer, quasi-noir */
+
+  /* --- Couleurs de texte --- */
+  --color-text-primary:        var(--ink-deep);
+  --color-text-secondary:      var(--ink-mid);
+  --color-text-muted:          var(--ink-mid);
+  --color-text-inverse:        var(--color-bg);
+  --color-text-inverse-muted:  var(--text-on-ink-mid);
+
+  /* --- Couleur d'accent (caramel, identité de marque) --- */
+  --color-accent:       var(--caramel);
+  --color-accent-hover: var(--caramel-light);
+  --color-accent-soft:  var(--caramel-pale);
+
+  /* --- Bordures --- */
+  --color-border:         var(--border-on-light);
+  --color-border-strong:  var(--ink-deep);
+  --color-border-inverse: var(--border-on-ink);
+
+  /* --- Ombres (mêmes tokens que le reste du site) --- */
+  --shadow-card:       0 1px 2px rgba(var(--ink-deep-rgb), var(--alpha-08)), 0 8px 24px rgba(var(--ink-deep-rgb), var(--alpha-08));
+  --shadow-card-hover: 0 4px 8px rgba(var(--ink-deep-rgb), var(--alpha-10)), 0 16px 32px rgba(var(--ink-deep-rgb), var(--alpha-10));
+  --shadow-badge:      0 2px 6px rgba(var(--ink-deep-rgb), var(--alpha-18));
+
+  /* --- Typographie --- */
+  --font-ui: var(--font-body); /* Jost, déjà chargée globalement */
+
+  /* --- Transitions (courbe déjà utilisée par le header du site) --- */
+  --ease-standard: cubic-bezier(0.25, 0, 0, 1);
+  --duration-fast: 150ms;
+}
+
+
+/* --------------------------------------------------------------------------
+   1. STYLES GLOBAUX
+   -------------------------------------------------------------------------- */
+
+body {
+  font-family: var(--font-ui);
+  font-weight: 400;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-page);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-accent-soft);
+  color: var(--color-text-primary);
+}
+
+
+
+/* --------------------------------------------------------------------------
+   2. HERO
+   -------------------------------------------------------------------------- */
+
+.hero__eyebrow {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.hero__title {
+  position: relative;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  padding-bottom: var(--gap-md);
+}
+
+/* Trait d'accent sous le titre, avec point terracotta */
+.hero__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3.75rem;
+  height: 2px;
+  background-color: var(--color-accent);
+}
+
+.hero__description {
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+.hero__stat {
+  border-left-color: var(--color-border);
+}
+
+.hero__stat-value {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.hero__stat-label {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. FILTRES
+   -------------------------------------------------------------------------- */
+
+.filters__button {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-secondary);
+  font-family: var(--font-ui);
+  font-weight: 500;
+  transition: border-color var(--duration-fast) var(--ease-standard),
+              color var(--duration-fast) var(--ease-standard),
+              background-color var(--duration-fast) var(--ease-standard);
+}
+
+.filters__button:hover {
+  border-color: var(--color-text-primary);
+  color: var(--color-text-primary);
+}
+
+/* État actif : rempli en accent, porté par aria-pressed plutôt qu'une classe */
+.filters__button[aria-pressed="true"] {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent);
+  color: var(--color-bg-surface);
+}
+
+.filters__button[aria-pressed="true"]:hover {
+  border-color: var(--color-accent-hover);
+  background-color: var(--color-accent-hover);
+}
+
+
+/* --------------------------------------------------------------------------
+   5. CARTES — Composant transverse (project-card / resource-card)
+   -------------------------------------------------------------------------- */
+
+.project-card,
+.resource-card {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden; /* applique le rayon à l'image interne */
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--duration-fast) var(--ease-standard),
+              transform var(--duration-fast) var(--ease-standard);
+}
+
+.project-card:hover,
+.resource-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.project-card__figure,
+.resource-card__figure {
+  border-bottom-color: var(--color-border);
+  background-color: var(--color-bg-muted); /* évite le flash blanc au chargement image */
+}
+
+.project-card__title,
+.resource-card__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.project-card__category {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.project-card__description,
+.resources__description {
+  color: var(--color-text-secondary);
+}
+
+.project-card__actions {
+  border-top-color: var(--color-border);
+}
+
+.resource-card__badge {
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  box-shadow: var(--shadow-badge);
+}
+
+.resource-card__tag {
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+}
+
+
+/* --------------------------------------------------------------------------
+   6. BOUTONS & LIENS
+   -------------------------------------------------------------------------- */
+
+.button {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--duration-fast) var(--ease-standard),
+              color var(--duration-fast) var(--ease-standard),
+              border-color var(--duration-fast) var(--ease-standard);
+}
+
+/* Primaire : fond sombre plein */
+.button--primary {
+  background-color: var(--color-text-primary);
+  border-color: var(--color-text-primary);
+  color: var(--color-bg-surface);
+}
+
+.button--primary:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* Secondaire : contour neutre, utilisé pour les téléchargements */
+.button--secondary {
+  background-color: var(--color-bg-surface);
+  border-color: var(--color-border-strong);
+  color: var(--color-text-primary);
+}
+
+.button--secondary:hover {
+  background-color: var(--color-text-primary);
+  color: var(--color-bg-surface);
+}
+
+/* Outline accent : utilisé dans le CTA final */
+.button--outline {
+  background-color: transparent;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.button--outline:hover {
+  background-color: var(--color-accent);
+  color: var(--color-bg-surface);
+}
+
+.link {
+  color: var(--color-text-primary);
+  font-weight: 600;
+  position: relative;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.125rem;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+}
+
+.link__icon,
+.button__icon {
+  color: var(--color-accent);
+}
+
+.button--primary .button__icon,
+.button--outline:hover .button__icon,
+.button--secondary:hover .button__icon {
+  color: currentColor;
+}
+
+
+/* --------------------------------------------------------------------------
+   7. RESOURCES
+   -------------------------------------------------------------------------- */
+
+.resources {
+  background-color: var(--color-bg-muted);
+}
+
+.resources__eyebrow {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.resources__title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+
+/* --------------------------------------------------------------------------
+   8. PROCESS
+   -------------------------------------------------------------------------- */
+
+.process__eyebrow {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.process__title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.process-step::before {
+  background-color: var(--color-border);
+}
+
+.process-step__number {
+  background-color: var(--color-bg-surface);
+  border-color: var(--color-border-strong);
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.process-step__icon {
+  border-color: var(--color-accent);
+  border-radius: var(--radius-sm);
+}
+
+.process-step__title {
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+
+.process-step__description {
+  color: var(--color-text-secondary);
+}
+
+
+/* --------------------------------------------------------------------------
+   9. TESTIMONIAL
+   -------------------------------------------------------------------------- */
+
+.testimonial {
+  border-block-color: var(--color-border);
+}
+
+.testimonial__quote {
+  padding-inline: var(--gap-xl);
+}
+
+/* Guillemets décoratifs positionnés aux coins du bloc de citation */
+.testimonial__quote::before,
+.testimonial__quote::after {
+  position: absolute;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 3.75rem;
+  line-height: 1;
+  color: var(--color-accent);
+  opacity: 0.6;
+}
+
+.testimonial__quote::before {
+  content: "\201C"; /* “ */
+  top: -0.625rem;
+  left: 0;
+}
+
+.testimonial__quote::after {
+  content: "\201D"; /* ” */
+  bottom: -1.875rem;
+  right: 0;
+}
+
+.testimonial__text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.testimonial__author {
+  color: var(--color-text-secondary);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.testimonial__author::before {
+  content: "— ";
+}
+
+
+/* --------------------------------------------------------------------------
+   10. CTA FINAL
+   -------------------------------------------------------------------------- */
+
+.cta {
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-bg-page);
+}
+
+.cta__title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.cta__description {
+  color: var(--color-text-secondary);
+}
+
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+/* ==========================================================================
+   RESPONSIVE EXPERIENCE DESIGN — Phase 4
+   Ce fichier se charge après layout.css et theme.css : il affine la
+   géométrie et redistribue certains blocs selon l'appareil, sans jamais
+   trahir l'identité visuelle posée en Phase 3.
+
+   Stratégie : desktop-first (la base = grand écran), affinée par paliers.
+   La typographie et les espacements principaux sont rendus FLUIDES via
+   clamp() sur les variables CSS globales : la majorité des tailles
+   s'adaptent donc en continu, sans à-coups à chaque breakpoint.
+
+   Sommaire
+   0. Typographie & espacements fluides (clamp)
+   1. ≥1600px — Très grand écran
+   2. ≤1279px — Laptop / petit laptop
+   3. ≤991px  — Tablette (navigation mobile, sections empilées)
+   4. ≤767px  — Grand smartphone (grilles 1 colonne, timeline verticale)
+   5. ≤575px  — Smartphone standard
+   6. ≤374px  — Petit smartphone
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   0. TYPOGRAPHIE & ESPACEMENTS FLUIDES
+   En surchargeant directement les variables consommées par layout.css et
+   theme.css, chaque section bénéficie du comportement fluide sans dupliquer
+   les media queries partout dans le code.
+   -------------------------------------------------------------------------- */
+
+:root {
+  /* Le padding de conteneur respire davantage sur grand écran, se resserre
+     sur mobile, sans jamais descendre sous un minimum confortable */
+  --container-padding-x: clamp(1.25rem, 0.75rem + 3.5vw, 2.5rem);
+
+  /* Le rythme vertical entre sections s'allège proportionnellement */
+  --section-spacing-y: clamp(3.5rem, 1.875rem + 8vw, 7.5rem);
+
+  /* Les grands gaps (colonnes intro / process / resources) suivent le même principe */
+  --gap-2xl: clamp(2rem, 1rem + 5vw, 5rem);
+  --gap-xl: clamp(1.75rem, 1.125rem + 3vw, 4rem);
+}
+
+/* Titres display : passent de ~36px sur petit mobile à leur taille pleine */
+.hero__title {
+  font-size: clamp(2.25rem, 1.5rem + 4.2vw, 4rem);
+}
+
+.resources__title,
+.process__title,
+.cta__title {
+  font-size: clamp(1.5rem, 1.1875rem + 1.8vw, 2rem);
+}
+
+.testimonial__text {
+  font-size: clamp(1.125rem, 0.9375rem + 1.2vw, 1.5rem);
+}
+
+.hero__stat-value {
+  font-size: clamp(1.75rem, 1.375rem + 1.8vw, 2.25rem);
+}
+
+.project-card__title {
+  font-size: clamp(1.125rem, 1rem + 0.6vw, 1.25rem);
+}
+
+
+/* --------------------------------------------------------------------------
+   1. ≥1600px — TRÈS GRAND ÉCRAN
+   La composition ne doit pas s'étirer indéfiniment : on élargit légèrement
+   le conteneur pour équilibrer les marges, sans jamais dépasser une largeur
+   de lecture confortable pour le texte.
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 1600px) {
+  :root {
+    --container-max-width: 90rem; /* 1440px */
+  }
+
+  /* Sur très grand écran, l'intro hero peut respirer davantage sans que
+     le texte ne s'étire au-delà d'une largeur de lecture confortable */
+  .hero__description {
+    max-width: 28.75rem;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   2. ≤1279px — LAPTOP / PETIT LAPTOP
+   Le contenu commence à se resserrer : on passe de 4 à 2 colonnes pour les
+   projets afin que chaque carte conserve une image lisible et un texte
+   confortable, plutôt que de comprimer 4 colonnes étroites.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1279px) {
+  .project-grid__item {
+    flex-basis: calc(50% - var(--gap-md) / 2);
+  }
+
+  .resource-grid__item {
+    flex-basis: calc(50% - var(--gap-md) / 2);
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   3. ≤991px — TABLETTE
+   Deux transformations structurelles majeures :
+   - la navigation bascule en panneau mobile (hamburger) ;
+   - les sections à deux colonnes (ressources, process) passent en
+     composition verticale : l'intro devient un vrai chapô au-dessus du
+     contenu plutôt qu'une colonne latérale étriquée.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+  /* --- Ressources : intro en chapô, grille pleine largeur --- */
+  .resources__container {
+    flex-direction: column;
+  }
+
+  .resources__intro {
+    max-width: 32.5rem;
+  }
+
+  .resource-grid {
+    width: 100%;
+  }
+
+  /* --- Process : intro en chapô au-dessus de la timeline --- */
+  .process__container {
+    flex-direction: column;
+  }
+
+  .process__intro {
+    max-width: 32.5rem;
+  }
+
+  .process-steps {
+    width: 100%;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   4. ≤767px — GRAND SMARTPHONE
+   Les grilles passent en une colonne pleine largeur : sur mobile, l'usager
+   fait défiler verticalement, une carte à la fois — bien plus confortable
+   qu'une grille compressée. Le process se transforme en véritable timeline
+   verticale (et non un simple empilement des 4 blocs desktop).
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+  /* --- Hero : stats en grille 2x2 avec séparateurs horizontaux --- */
+  .hero__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap-lg) var(--gap-md);
+  }
+
+  .hero__stat {
+    padding-inline-start: 0;
+    padding-top: var(--gap-md);
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+  }
+
+  /* Le premier stat n'a pas de bordure verticale à retirer, mais garde
+     sa bordure horizontale comme les autres, sauf s'il est seul sur sa ligne */
+  .hero__stat:first-child {
+    padding-top: var(--gap-md);
+    border-top: 1px solid var(--color-border);
+  }
+
+  /* --- Grilles projets & ressources : 1 colonne pleine largeur --- */
+  .project-grid__item,
+  .resource-grid__item {
+    flex-basis: 100%;
+  }
+
+  /* Cartes projet : image un peu plus haute pour rester impactante en
+     pleine largeur sur mobile plutôt que réduite proportionnellement */
+  .project-card__figure {
+    aspect-ratio: 16 / 10;
+  }
+
+  /* --- Process : timeline verticale avec ligne de connexion latérale --- */
+  .process-steps {
+    flex-direction: column;
+    gap: var(--gap-xl);
+  }
+
+  .process-step {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--gap-md);
+    padding-top: 0;
+    padding-left: 3.5rem;
+  }
+
+  .process-step__number {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .process-step__icon {
+    display: none; /* redondant avec le numéro dans la timeline compacte */
+  }
+
+  /* La ligne de connexion devient verticale, reliant les pastilles entre elles */
+  .process-step::before {
+    top: 2.5rem;
+    left: 1.25rem;
+    width: 1px;
+    height: calc(100% + var(--gap-xl) - 2.5rem);
+  }
+
+  .process-step:first-child::before,
+  .process-step:last-child::before {
+    width: 1px; /* neutralise les ajustements horizontaux hérités du desktop */
+  }
+
+  .process-step:last-child::before {
+    display: none; /* pas de ligne après la dernière étape */
+  }
+
+  /* --- CTA : composition centrée et empilée --- */
+  .cta__container {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .cta__actions {
+    width: 100%;
+  }
+}
+
+
+
+/* --------------------------------------------------------------------------
+   5. ≤575px — SMARTPHONE STANDARD
+   Ajustements fins : boutons pleine largeur (plus faciles à atteindre au
+   pouce), filtres transformés en rangée à défilement horizontal plutôt
+   qu'un empilement multi-lignes qui pousserait la grille trop bas, badges
+   ressources réorganisés en carte horizontale plus compacte.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 575px) {
+
+  .hero__intro {
+    max-width: 100%;
+  }
+
+  .hero__description {
+    max-width: 100%;
+  }
+
+  /* --- Filtres : défilement horizontal type "chips", sans retour à la ligne --- */
+  .filters {
+    margin-inline: calc(var(--container-padding-x) * -1);
+    padding-inline: var(--container-padding-x);
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filters::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+
+  .filters__list {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: max-content;
+    scroll-snap-type: x proximity;
+  }
+
+  .filters__item {
+    scroll-snap-align: start;
+  }
+
+  .filters__button {
+    min-height: 2.75rem; /* confort tactile */
+  }
+
+  /* --- Cartes projet : actions en pleine largeur, plus faciles à toucher --- */
+  .project-card__actions {
+    align-items: stretch;
+  }
+
+  .project-card__actions .link {
+    justify-content: center;
+  }
+
+  /* --- Cartes ressources : bascule en format compact horizontal --- */
+  .resource-grid {
+    flex-direction: column;
+  }
+
+  .resource-grid__item {
+    flex-basis: 100%;
+  }
+
+  .resource-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .resource-card__figure {
+    flex: 0 0 7.5rem;
+    aspect-ratio: auto;
+    border-bottom: none;
+    border-right: 1px solid var(--color-border);
+  }
+
+  .resource-card__badge {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.1875rem 0.625rem;
+    font-size: 0.625rem;
+  }
+
+  .resource-card__body {
+    flex: 1 1 auto;
+    padding: var(--gap-sm) var(--gap-md);
+  }
+
+  .resource-card__body > .button {
+    width: auto;
+    align-self: flex-start;
+    min-height: 2.75rem;
+    padding-inline: 1rem;
+  }
+
+  /* --- Testimonial : guillemets recadrés pour ne pas déborder l'écran --- */
+  .testimonial__quote {
+    padding-inline: var(--gap-md);
+  }
+
+  .testimonial__quote::before,
+  .testimonial__quote::after {
+    font-size: 2.5rem;
+  }
+
+  .testimonial__quote::before {
+    top: -0.25rem;
+  }
+
+  /* --- CTA : boutons empilés pleine largeur --- */
+  .cta__actions {
+    flex-direction: column;
+  }
+
+  .cta__actions .button {
+    width: 100%;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   6. ≤374px — PETIT SMARTPHONE
+   Derniers ajustements pour les appareils les plus étroits : on resserre
+   le strict nécessaire sans jamais compresser les zones tactiles.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 374px) {
+  .hero__stats {
+    grid-template-columns: 1fr; /* une seule colonne : 2 colonnes seraient trop étroites */
+  }
+
+  .hero__stat {
+    flex-direction: row;
+    align-items: baseline;
+    gap: var(--gap-xs);
+  }
+
+  .resource-card {
+    flex-direction: column;
+  }
+
+  .resource-card__figure {
+    flex-basis: auto;
+    aspect-ratio: 16 / 10;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
 }

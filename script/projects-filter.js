@@ -1,39 +1,35 @@
 /* ============================================================
    projects-filter.js
-   Filtre les cartes .project affichées sur /projets.html selon
-   la pill de catégorie active. Purement additif : sans JS (ou
-   si le script échoue), toutes les cartes restent visibles.
+   Filtre les cartes .project-card affichées sur /pages/projets/
+   selon le bouton de catégorie actif. Purement additif : sans
+   JS (ou si le script échoue), toutes les cartes restent visibles.
 ============================================================ */
 
 (function () {
 
-  const pills = document.querySelectorAll('.projects-filters__pill');
-  const cards = document.querySelectorAll('.projects-grid .project');
-  const emptyState = document.querySelector('.projects-empty');
+  const buttons    = document.querySelectorAll('.filters__button');
+  const items       = document.querySelectorAll('.project-grid__item');
+  const emptyState  = document.querySelector('.projects-empty');
 
-  if (!pills.length || !cards.length) return;
+  if (!buttons.length || !items.length) return;
 
   function applyFilter(filter) {
     let visibleCount = 0;
 
-    cards.forEach(card => {
-      const matches = filter === 'all' || card.dataset.category === filter;
-      card.toggleAttribute('data-hidden', !matches);
+    items.forEach(item => {
+      const matches = filter === 'all' || item.dataset.category === filter;
+      item.hidden = !matches;
       if (matches) visibleCount += 1;
     });
 
     if (emptyState) emptyState.hidden = visibleCount > 0;
   }
 
-  pills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      pills.forEach(p => {
-        p.classList.remove('is-active');
-        p.setAttribute('aria-pressed', 'false');
-      });
-      pill.classList.add('is-active');
-      pill.setAttribute('aria-pressed', 'true');
-      applyFilter(pill.dataset.filter);
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      buttons.forEach(b => b.setAttribute('aria-pressed', 'false'));
+      button.setAttribute('aria-pressed', 'true');
+      applyFilter(button.dataset.filter);
     });
   });
 

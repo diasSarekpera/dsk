@@ -1,0 +1,35 @@
+{
+  "name": "dsk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "og:extract": "node scripts/extract-og-data.js",
+    "og:generate": "node scripts/generate-og-images.js",
+    "og:tags": "node scripts/update-og-tags.js",
+    "og:build": "npm run og:extract && npm run og:generate && npm run og:tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diasSarekpera/dsk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diasSarekpera/dsk/issues"
+  },
+  "homepage": "https://github.com/diasSarekpera/dsk#readme",
+  "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.3.0",
+    "@fontsource/jost": "^5.3.0",
+    "@fontsource/pirata-one": "^5.3.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "cheerio": "^1.2.0",
+    "satori": "^0.29.0"
+  }
+}
