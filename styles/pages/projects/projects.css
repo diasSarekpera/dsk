@@ -1,7 +1,7 @@
 /* ============================================================
    projects.css — Page "Tous mes projets"
    Nouvelle maquette (2026) : hero + stats, filtres, grille de
-   projets, ressources téléchargeables, processus, témoignage, CTA.
+   projets, ressources téléchargeables, témoignage, CTA.
 
    Structure : geometry (ex-layout.css) puis skin (ex-theme.css)
    puis responsive (ex-responsive.css), fusionnés en un seul
@@ -43,7 +43,7 @@
 
 :root {
   /* Largeurs de conteneur */
-  --container-max-width: 80rem;   /* 1280px */
+  --container-max-width: 90rem;   /* 1440px — aligné sur --container-max du reste du site */
   --container-padding-x: 2.5rem;     /* 40px   */
   --container-padding-x-mobile: 1.5rem;
 
@@ -77,7 +77,6 @@
 .hero__container,
 .projects__container,
 .resources__container,
-.process__container,
 .testimonial__container,
 .cta__container {
   width: 100%;
@@ -399,109 +398,6 @@
 
 
 /* --------------------------------------------------------------------------
-   8. PROCESS — Intro + étapes reliées
-   -------------------------------------------------------------------------- */
-
-.process__container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: var(--gap-2xl);
-  padding-block: var(--section-spacing-y);
-}
-
-.process__intro {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-sm);
-  flex: 1 1 15rem;
-  max-width: 17.5rem;
-}
-
-.process__eyebrow {
-  font-size: 0.8125rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
-.process__title {
-  font-size: 2rem;
-  line-height: 1.15;
-}
-
-/* Rangée d'étapes : chaque étape occupe une part égale, ligne de connexion
-   passant par le centre horizontal des pastilles numérotées */
-.process-steps {
-  display: flex;
-  flex: 3 1 37.5rem;
-  gap: var(--gap-lg);
-}
-
-.process-step {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex: 1 1 0;
-  gap: var(--gap-xs);
-  padding-top: 3rem; /* réserve l'espace de la pastille numérotée */
-}
-
-/* Ligne de connexion horizontale entre les pastilles numérotées */
-.process-step::before {
-  content: "";
-  position: absolute;
-  top: 1.25rem; /* centre vertical de la pastille (hauteur 2.5rem / 2) */
-  left: -1.75rem; /* comble la moitié du gap avec l'étape précédente */
-  width: calc(100% + var(--gap-lg));
-  height: 1px;
-  background-color: var(--grey-300);
-}
-
-.process-step:first-child::before {
-  left: 1.25rem;
-  width: calc(100% + var(--gap-lg) - 1.25rem);
-}
-
-.process-step:last-child::before {
-  width: calc(100% - 1.25rem);
-}
-
-.process-step__number {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border: 1px solid var(--grey-400);
-  border-radius: 50%;
-  font-size: 0.8125rem;
-  background-color: var(--grey-000);
-}
-
-.process-step__icon {
-  display: block;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-block: var(--gap-xs);
-  border: 1px solid var(--grey-300); /* placeholder — icône définitive en Phase 3 */
-}
-
-.process-step__title {
-  font-size: 0.875rem;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
-.process-step__description {
-  font-size: 0.875rem;
-}
-
-
-/* --------------------------------------------------------------------------
    9. TESTIMONIAL
    -------------------------------------------------------------------------- */
 
@@ -588,15 +484,6 @@
   .hero__stats {
     flex-wrap: wrap;
     row-gap: var(--gap-md);
-  }
-
-  .process-steps {
-    flex-direction: column;
-    gap: var(--gap-lg);
-  }
-
-  .process-step::before {
-    display: none; /* la ligne de connexion horizontale n'a plus de sens empilée */
   }
 
   .cta__container {
@@ -941,48 +828,6 @@ body {
 
 
 /* --------------------------------------------------------------------------
-   8. PROCESS
-   -------------------------------------------------------------------------- */
-
-.process__eyebrow {
-  color: var(--color-text-secondary);
-  font-weight: 600;
-}
-
-.process__title {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 500;
-  color: var(--color-text-primary);
-}
-
-.process-step::before {
-  background-color: var(--color-border);
-}
-
-.process-step__number {
-  background-color: var(--color-bg-surface);
-  border-color: var(--color-border-strong);
-  color: var(--color-text-primary);
-  font-weight: 600;
-}
-
-.process-step__icon {
-  border-color: var(--color-accent);
-  border-radius: var(--radius-sm);
-}
-
-.process-step__title {
-  color: var(--color-text-primary);
-  font-weight: 700;
-}
-
-.process-step__description {
-  color: var(--color-text-secondary);
-}
-
-
-/* --------------------------------------------------------------------------
    9. TESTIMONIAL
    -------------------------------------------------------------------------- */
 
@@ -1099,7 +944,7 @@ body {
   /* Le rythme vertical entre sections s'allège proportionnellement */
   --section-spacing-y: clamp(3.5rem, 1.875rem + 8vw, 7.5rem);
 
-  /* Les grands gaps (colonnes intro / process / resources) suivent le même principe */
+  /* Les grands gaps (colonnes intro / resources) suivent le même principe */
   --gap-2xl: clamp(2rem, 1rem + 5vw, 5rem);
   --gap-xl: clamp(1.75rem, 1.125rem + 3vw, 4rem);
 }
@@ -1110,7 +955,6 @@ body {
 }
 
 .resources__title,
-.process__title,
 .cta__title {
   font-size: clamp(1.5rem, 1.1875rem + 1.8vw, 2rem);
 }
@@ -1136,10 +980,6 @@ body {
    -------------------------------------------------------------------------- */
 
 @media (min-width: 1600px) {
-  :root {
-    --container-max-width: 90rem; /* 1440px */
-  }
-
   /* Sur très grand écran, l'intro hero peut respirer davantage sans que
      le texte ne s'étire au-delà d'une largeur de lecture confortable */
   .hero__description {
@@ -1170,7 +1010,7 @@ body {
    3. ≤991px — TABLETTE
    Deux transformations structurelles majeures :
    - la navigation bascule en panneau mobile (hamburger) ;
-   - les sections à deux colonnes (ressources, process) passent en
+   - les sections à deux colonnes (ressources) passent en
      composition verticale : l'intro devient un vrai chapô au-dessus du
      contenu plutôt qu'une colonne latérale étriquée.
    -------------------------------------------------------------------------- */
@@ -1189,19 +1029,6 @@ body {
   .resource-grid {
     width: 100%;
   }
-
-  /* --- Process : intro en chapô au-dessus de la timeline --- */
-  .process__container {
-    flex-direction: column;
-  }
-
-  .process__intro {
-    max-width: 32.5rem;
-  }
-
-  .process-steps {
-    width: 100%;
-  }
 }
 
 
@@ -1209,8 +1036,7 @@ body {
    4. ≤767px — GRAND SMARTPHONE
    Les grilles passent en une colonne pleine largeur : sur mobile, l'usager
    fait défiler verticalement, une carte à la fois — bien plus confortable
-   qu'une grille compressée. Le process se transforme en véritable timeline
-   verticale (et non un simple empilement des 4 blocs desktop).
+   qu'une grille compressée.
    -------------------------------------------------------------------------- */
 
 @media (max-width: 767px) {
@@ -1246,47 +1072,6 @@ body {
      pleine largeur sur mobile plutôt que réduite proportionnellement */
   .project-card__figure {
     aspect-ratio: 16 / 10;
-  }
-
-  /* --- Process : timeline verticale avec ligne de connexion latérale --- */
-  .process-steps {
-    flex-direction: column;
-    gap: var(--gap-xl);
-  }
-
-  .process-step {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: var(--gap-md);
-    padding-top: 0;
-    padding-left: 3.5rem;
-  }
-
-  .process-step__number {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .process-step__icon {
-    display: none; /* redondant avec le numéro dans la timeline compacte */
-  }
-
-  /* La ligne de connexion devient verticale, reliant les pastilles entre elles */
-  .process-step::before {
-    top: 2.5rem;
-    left: 1.25rem;
-    width: 1px;
-    height: calc(100% + var(--gap-xl) - 2.5rem);
-  }
-
-  .process-step:first-child::before,
-  .process-step:last-child::before {
-    width: 1px; /* neutralise les ajustements horizontaux hérités du desktop */
-  }
-
-  .process-step:last-child::before {
-    display: none; /* pas de ligne après la dernière étape */
   }
 
   /* --- CTA : composition centrée et empilée --- */

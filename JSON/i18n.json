@@ -684,15 +684,6 @@
           "p15": "<strong>Ce sont les trois plantes que je choisis de cultiver aujourd'hui dans le jardin de mon esprit.</strong>"
         }
       },
-      "my-morning-ritual": {
-        "title": "Mon rituel du matin - et l'habitude qui me ralentit",
-        "quote": "Une habitude me construit.<br>Une autre me freine, discrètement.",
-        "body": {
-          "p0": "J'ai beaucoup d'habitudes qui m'aident au quotidien, mais s'il fallait n'en citer qu'une, ce serait ma routine de lecture matinale en trois langues : français, anglais et espagnol.",
-          "p1": "Pendant ce temps, je ne regarde pas mes messages et j'évite les distractions. Je reste simplement concentré. Je crois que cette habitude est celle qui m'aidera le plus dans les années à venir.",
-          "p2": "En revanche, l'habitude qui réduit le plus ma productivité, c'est la procrastination. Quand je prévois de faire quelque chose, il m'arrive de procrastiner. Je deviens alors trop concentré sur ce que je n'ai pas, mes problèmes, ce que je pourrais mieux faire, et la tâche à choisir ensuite. Cette habitude me rend moins productif."
-        }
-      },
       "nous-ne-sommes-pas-limites-par-notre-passe": {
         "title": "Nous ne sommes pas limités par notre passé",
         "quote": "Nous ne choisissons pas toujours notre point de départ.<br>Mais nous choisissons la direction.",
@@ -1707,15 +1698,6 @@
           "p15": "<strong>These are the three plants I choose to cultivate today in the garden of my mind.</strong>"
         }
       },
-      "my-morning-ritual": {
-        "title": "My Morning Ritual - and the Habit That Slows Me Down",
-        "quote": "One habit builds me up.<br>Another quietly holds me back.",
-        "body": {
-          "p0": "I have many habits that help me during the day, but if I had to mention one, it would be my morning reading routine in three languages: French, English, and Spanish.",
-          "p1": "During that time, I don't check my messages, and I avoid distractions. I just stay focused. I believe this habit will help me the most in the coming years.",
-          "p2": "However, the habit that reduces my productivity the most is procrastination. When I plan to do something, I sometimes procrastinate. Then I become too focused on what I don't have, my problems, what I could do better, and which task I should choose next. This habit makes me less productive."
-        }
-      },
       "nous-ne-sommes-pas-limites-par-notre-passe": {
         "title": "We Are Not Limited by Our Past",
         "quote": "We don't always choose our starting point.<br>But we choose the direction.",
@@ -2728,15 +2710,6 @@
           "p13": "La disciplina no hace el trabajo por nosotros. Pero hace que nuestros esfuerzos sean más eficaces y coherentes.",
           "p14": "En el fondo, estas tres plantas se complementan. El pragmatismo me ayuda a aceptar la realidad. El pensamiento crítico me ayuda a comprenderla. Y la disciplina me ayuda a actuar a pesar de las dificultades.",
           "p15": "<strong>Estas son las tres plantas que elijo cultivar hoy en el jardín de mi mente.</strong>"
-        }
-      },
-      "my-morning-ritual": {
-        "title": "Mi ritual matutino - y el hábito que me frena",
-        "quote": "Un hábito me construye.<br>Otro me frena, en silencio.",
-        "body": {
-          "p0": "Tengo muchos hábitos que me ayudan durante el día, pero si tuviera que mencionar uno, sería mi rutina de lectura matutina en tres idiomas: francés, inglés y español.",
-          "p1": "Durante ese tiempo, no reviso mis mensajes y evito las distracciones. Simplemente me mantengo concentrado. Creo que este hábito es el que más me ayudará en los próximos años.",
-          "p2": "Sin embargo, el hábito que más reduce mi productividad es la procrastinación. Cuando planeo hacer algo, a veces lo postergo. Entonces me concentro demasiado en lo que no tengo, mis problemas, lo que podría hacer mejor, y qué tarea elegir a continuación. Este hábito me hace menos productivo."
         }
       },
       "nous-ne-sommes-pas-limites-par-notre-passe": {
