@@ -270,15 +270,6 @@
   white-space: nowrap;
 }
 
-.link {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--gap-xs);
-  font-size: 0.8125rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
 
 /* --------------------------------------------------------------------------
    7. RESOURCES — Intro + grille de ressources
@@ -771,30 +762,6 @@ body {
   color: var(--color-bg-surface);
 }
 
-.link {
-  color: var(--color-text-primary);
-  font-weight: 600;
-  position: relative;
-}
-
-.link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -0.125rem;
-  height: 1px;
-  background-color: currentColor;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--duration-fast) var(--ease-standard);
-}
-
-.link:hover::after {
-  transform: scaleX(1);
-}
-
-.link__icon,
 .button__icon {
   color: var(--color-accent);
 }
@@ -1017,6 +984,13 @@ body {
 
 @media (max-width: 991px) {
 
+  /* Dégagement supplémentaire pour cette plage tablette : le
+     header (~101px) laisse sinon un espace trop serré (5-16px)
+     avec le rythme fluide par défaut. */
+  .hero__container {
+    padding-block-start: 132px;
+  }
+
   /* --- Ressources : intro en chapô, grille pleine largeur --- */
   .resources__container {
     flex-direction: column;
@@ -1040,6 +1014,13 @@ body {
    -------------------------------------------------------------------------- */
 
 @media (max-width: 767px) {
+
+  /* Le header (position: absolute) mesure ~92px de haut sur mobile :
+     le padding-block fluide (--section-spacing-y, ~60px à cette largeur)
+     ne suffit pas à le dégager, d'où le chevauchement. */
+  .hero__container {
+    padding-block-start: 116px;
+  }
 
   /* --- Hero : stats en grille 2x2 avec séparateurs horizontaux --- */
   .hero__stats {
@@ -1139,13 +1120,11 @@ body {
     align-items: stretch;
   }
 
-  .project-card__actions .link {
-    justify-content: center;
-  }
-
   /* --- Cartes ressources : bascule en format compact horizontal --- */
   .resource-grid {
     flex-direction: column;
+    flex-wrap: nowrap;  /* évite le retour en mode "colonnes côte à côte" hérité du desktop */
+    flex-basis: auto;   /* neutralise le flex-basis desktop (600px), interprété comme hauteur en flex-direction: column */
   }
 
   .resource-grid__item {
